@@ -1,0 +1,33 @@
+{
+  "name": "web-standard-functions",
+  "version": "0.0.1",
+  "description": "GeneXus JavaScript standard functions library for web generators",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genexuslabs/web-standard-functions.git"
+  },
+  "keywords": [
+    "genexus",
+    "javascript",
+    "library",
+    "funtions"
+  ],
+  "author": "GeneXus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/genexuslabs/web-standard-functions/issues"
+  },
+  "homepage": "https://github.com/genexuslabs/web-standard-functions#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "ts-loader": "^4.5.0",
+    "typescript": "^3.0.1",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
