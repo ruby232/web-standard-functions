@@ -1,4 +1,4 @@
-import { subtract } from "../src/subtract";
+import { subtract } from "../subtract";
 import { testCases } from "./add-subtract-cases";
 
 describe("add operation", () => {

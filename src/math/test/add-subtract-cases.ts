@@ -1,5 +1,7 @@
-// test[0] + test[1] => test[2]
+// test[0] + test[1] = test[2]
+// test[2] - test[0] = test[1]
 
+// Add and subtract test cases
 export const testCases = [
   ["1", "2", "3"],
   ["1.1", "2.2", "3.3"],

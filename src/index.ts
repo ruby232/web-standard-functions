@@ -1,2 +1,1 @@
-export { add } from "./add";
-export { subtract } from "./subtract";
+export { math } from "./math";
