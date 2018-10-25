@@ -2,8 +2,7 @@
 
 # GeneXus Web Standard Functions
 
-A library containing the implementation of all the GeneXus standard functions, in JavaScript, 
-to be used by applications generated with GeneXus.
+GeneXus standard functions written in TypeScript, to be used by web applications generated with GeneXus.
 
 ## Getting Started
 
