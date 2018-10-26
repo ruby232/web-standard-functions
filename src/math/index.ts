@@ -1,9 +1,11 @@
 import { add } from "./add";
-import { multiply } from "./multiply";
+import { divide } from "./divide";
+import { divide } from "./multiply";
 import { subtract } from "./subtract";
 
 export const math = {
   add,
-  multiply,
+  divide,
+  divide,
   subtract
 };

@@ -1,3 +1,3 @@
 import { defineOperation } from "./operation";
 
-export const multiply = defineOperation("multipliedBy");
+export const divide = defineOperation("multipliedBy");
