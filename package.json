@@ -14,7 +14,8 @@
     "test": "jest --no-cache",
     "test.prod": "npm run lint && npm run test -- --coverage --no-cache",
     "test.watch": "jest --watch --no-cache",
-    "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'"
+    "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "validate": "npm run lint && npm run test && npm run build"
   },
   "files": [
     "dist"
