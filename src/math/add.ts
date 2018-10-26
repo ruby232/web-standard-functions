@@ -1,3 +1,3 @@
-import { defineOperation } from './operation';
+import { defineBinaryOperation } from "./operation";
 
-export const add = defineOperation("plus");
+export const add = defineBinaryOperation("plus");

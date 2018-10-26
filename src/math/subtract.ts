@@ -1,3 +1,3 @@
-import { defineOperation } from "./operation";
+import { defineBinaryOperation } from "./operation";
 
-export const subtract = defineOperation("minus");
+export const subtract = defineBinaryOperation("minus");

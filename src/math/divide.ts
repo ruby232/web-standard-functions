@@ -1,3 +1,3 @@
-import { defineOperation } from "./operation";
+import { defineBinaryOperation } from "./operation";
 
-export const divide = defineOperation("dividedBy");
+export const divide = defineBinaryOperation("dividedBy");
