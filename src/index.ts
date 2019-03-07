@@ -1,2 +1,2 @@
 export { math } from "./math";
-export { text } from "./string";
+export { text } from "./text";
