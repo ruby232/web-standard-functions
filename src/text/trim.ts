@@ -1,6 +1,5 @@
-import { rtrim } from "./rtrim";
-import { ltrim } from "./ltrim";
+const regExp = /^ +| +$/g;
 
 export const trim = (s: string): string => {
-  return rtrim(ltrim(s));
+  return s.replace(regExp,'');
 };
