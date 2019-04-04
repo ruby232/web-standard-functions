@@ -6,18 +6,19 @@
   "module": "dist/lib-esm/index.js",
   "typings": "dist/types/index.d.ts",
   "scripts": {
-    "build": "npm run clean && npm run build.commonjs && npm run build.es6 && webpack --mode=production",
+    "build": "npm run clean && npm run build.commonjs && npm run build.es6",
     "build.commonjs": "tsc",
     "build.es6": "tsc -m es6 --outDir ./dist/lib-esm",
     "clean": "shx rm -rf ./dist",
     "precommit": "pretty-quick --staged && npm run lint",
     "pretty-quick": "pretty-quick",
-    "start": "webpack --watch --mode=development",
-    "test": "jest --no-cache",
+    "start": "tsc --watch",
+    "test": "jest --no-cache --maxWorkers 2",
     "test.prod": "npm run lint && npm run test -- --coverage --no-cache",
     "test.watch": "jest --watch --no-cache",
     "lint": "tslint  --project tsconfig.json -t codeFrame src/**/*.ts test/**/*.ts",
-    "validate": "npm run lint && npm run test && npm run build"
+    "validate": "npm run lint && npm run test && npm run build",
+    "generate-api": "cd ./node_modules/standard-api-generator && node ./index.js -o ../../src/generator/options.json && cd ../.."
   },
   "files": [
     "dist"
@@ -42,22 +43,23 @@
   "homepage": "https://github.com/genexuslabs/web-standard-functions#readme",
   "devDependencies": {
     "@types/bignumber.js": "^5.0.0",
-    "@types/jest": "^23.3.1",
-    "awesome-typescript-loader": "^5.2.0",
-    "jest": "^24.1.0",
+    "@types/jest": "^23.3.14",
     "prettier": "^1.16.4",
     "pretty-quick": "^1.10.0",
     "shx": "^0.3.2",
-    "ts-jest": "^23.1.4",
-    "tslint": "^5.11.0",
-    "tslint-config-prettier": "^1.15.0",
+    "standard-api-generator": "git+https://github.com/genexuslabs/standard-api-generator.git",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^8.0.1",
-    "typescript": "^3.0.1",
-    "webpack": "^4.17.1",
-    "webpack-cli": "^3.1.0"
+    "typescript": "^3.4.1",
+    "jest": "^23.6.0"
   },
   "dependencies": {
-    "bignumber.js": "^7.2.1"
+    "bignumber.js": "^7.2.1",
+    "htmltidy": "0.0.6",
+    "jdu": "^1.0.0",
+    "unicode-substring": "^1.0.0"
   },
   "jest": {
     "transform": {
