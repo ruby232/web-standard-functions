@@ -288,7 +288,7 @@
         {
           "name": "Int",
           "externalName": "int",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer"
         },
         {
           "name": "IsNull",
@@ -418,12 +418,12 @@
         {
           "name": "Round",
           "externalName": "round",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/round"
         },
         {
           "name": "RoundToEven",
           "externalName": "roundToEven",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven"
         },
         {
           "name": "Rows",
@@ -578,7 +578,7 @@
         {
           "name": "Trunc",
           "externalName": "trunc",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate"
         },
         {
           "name": "TtoC",
@@ -866,37 +866,37 @@
         {
           "name": "Integer",
           "externalName": "integer",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer"
         },
         {
           "name": "IsEmpty",
           "externalName": "isEmpty",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/isEmpty"
         },
         {
           "name": "FromString",
           "externalName": "fromString",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/fromString"
         },
         {
           "name": "Round",
           "externalName": "round",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/round"
         },
         {
           "name": "RoundToEven",
           "externalName": "roundToEven",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven"
         },
         {
           "name": "ToString",
           "externalName": "toString",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString"
         },
         {
           "name": "Truncate",
           "externalName": "truncate",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate"
         }
       ]
     },

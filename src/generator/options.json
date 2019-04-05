@@ -15,6 +15,22 @@
         "RTrim": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
           "name": "rtrim"
+        },
+        "Int": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
+          "name": "integer"
+        },
+        "Round": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
+          "name": "round"
+        },
+        "RoundToEven": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
+          "name": "roundToEven"
+        },
+        "Trunc": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
+          "name": "truncate"
         }
       }
     },
@@ -367,6 +383,38 @@
         "ToString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/bool/toString",
           "name": "toString"
+        }
+      }
+    },
+    "Numeric": {
+      "members": {
+        "Integer": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
+          "name": "integer"
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/isEmpty",
+          "name": "isEmpty"
+        },
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/fromString",
+          "name": "fromString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
+          "name": "toString"
+        },
+        "Round": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
+          "name": "round"
+        },
+        "RoundToEven": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
+          "name": "roundToEven"
+        },
+        "Truncate": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
+          "name": "truncate"
         }
       }
     }
