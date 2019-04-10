@@ -398,6 +398,9 @@
         }
       }
     },
+    "GUID": {
+      "path": "@genexus/web-standard-functions/dist/lib-esm/types/guid"
+    },
     "Numeric": {
       "members": {
         "Integer": {
@@ -490,6 +493,7 @@
       "XOrder",
       "XUse"
     ],
+    "GUID": ["AutogenerateGuid", "IsMatch"],
     "WApiActionPerformedEvent": "all",
     "WApiActivity": "all",
     "WApiApplicationData": "all",
