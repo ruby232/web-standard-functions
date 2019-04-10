@@ -32,6 +32,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
           "name": "truncate"
         },
+        "Concat": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/concat",
+          "name": "concat"
+        },
         "Compare": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/compare",
           "name": "compare"
