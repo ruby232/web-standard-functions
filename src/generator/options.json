@@ -16,6 +16,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/chr",
           "name": "chr"
         },
+        "Iif": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/iif",
+          "name": "iif"
+        },
         "HTMLClean": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean",
           "name": "htmlClean"
