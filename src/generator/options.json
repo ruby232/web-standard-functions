@@ -6,6 +6,9 @@
     "defaultModulesPath": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
   },
   "implemented": {
+    "Cookie": {
+      "path": "@genexus/web-standard-functions/dist/lib-esm/types/cookie"
+    },
     "Core": {
       "members": {
         "Asc": {
@@ -31,6 +34,10 @@
         "FromBase64": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromBase64",
           "name": "fromBase64"
+        },
+        "GetCookie": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/web/getCookie",
+          "name": "getCookie"
         },
         "Iif": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/iif",
@@ -80,9 +87,9 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
           "name": "rtrim"
         },
-        "ToBase64": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toBase64",
-          "name": "toBase64"
+        "SetCookie": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/web/setCookie",
+          "name": "setCookie"
         },
         "Str": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
@@ -104,13 +111,17 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
           "name": "subString"
         },
-        "Trim": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
-          "name": "trim"
+        "ToBase64": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toBase64",
+          "name": "toBase64"
         },
         "Today": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/today",
           "name": "today"
+        },
+        "Trim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
+          "name": "trim"
         },
         "Trunc": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
@@ -127,18 +138,6 @@
         "XSLTApply": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
           "name": "xsltApply"
-        },
-        "Concat": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/concat",
-          "name": "concat"
-        },
-        "Compare": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/compare",
-          "name": "compare"
-        },
-        "Format": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/format",
-          "name": "format"
         }
       }
     },
