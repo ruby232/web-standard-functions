@@ -569,7 +569,11 @@
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/isEmpty",
           "name": "isEmpty"
-        }
+        },
+        "MonthName": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/monthName",
+          "name": "monthName"
+        }  
       }
     }
   },
