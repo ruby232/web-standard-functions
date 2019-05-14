@@ -4,7 +4,8 @@
   "angularMappingsOutputFilePath": "../../src/generator/out/angular_metadata.json",
   "angularIndexOutputFilePath": "../../src/index.ts",
   "angularMappings": {
-    "defaultModulesPath": "./generator/out/not_implemented"
+    "defaultModulesPath": "./generator/out/not_implemented",
+    "angularIndexPath": "@genexus/web-standard-functions/dist/lib-esm/index"
   },
   "implemented": {
     "Cookie": {
