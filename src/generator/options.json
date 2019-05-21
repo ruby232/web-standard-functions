@@ -49,6 +49,10 @@
           "path": "./text/htmlClean",
           "name": "htmlClean"
         },
+        "Iif": {
+          "path": "./misc/iif",
+          "name": "iif"
+        },
         "Int": {
           "path": "./numeric/integer",
           "name": "integer",
@@ -71,6 +75,10 @@
         "Mod": {
           "path": "./math/mod",
           "name": "mod"
+        },
+        "NewLine": {
+          "path": "./text/newline",
+          "name": "newLine"
         },
         "PadL": {
           "path": "./text/padLeft",
@@ -676,48 +684,48 @@
           "name": "endOfMonth",
           "alias": "dEndOfMonth"
         },
-        "Month": {
-          "path": "./date/month",
-          "name": "month",
-          "alias": "dMonth"
+        "FromString": {
+          "path": "./date/fromString",
+          "name": "fromString",
+          "alias": "dFromString"
         },
         "IsEmpty": {
           "path": "./date/isEmpty",
           "name": "isEmpty",
           "alias": "dIsEmpty"
         },
-        "Year": {
-          "path": "./date/year",
-          "name": "year",
-          "alias": "dYear"
+        "Month": {
+          "path": "./date/month",
+          "name": "month",
+          "alias": "dMonth"
         },
         "MonthName": {
           "path": "./date/monthName",
           "name": "monthName",
           "alias": "dMonthName"
         },
-        "ToDate": {
-          "path": "./date/toDate",
-          "name": "toDate"
-        },
-        "FromString": {
-          "path": "./date/fromString",
-          "name": "fromString",
-          "alias": "dFromString"
+        "New": {
+          "path": "./date/newInstance",
+          "name": "newInstance"
         },
         "Set": {
           "path": "./date/set",
           "name": "set",
           "alias": "dSet"
         },
-        "New": {
-          "path": "./date/newInstance",
-          "name": "newInstance"
+        "ToDate": {
+          "path": "./date/toDate",
+          "name": "toDate"
         },
         "ToString": {
           "path": "./date/toString",
           "name": "toString",
           "alias": "dToString"
+        },
+        "Year": {
+          "path": "./date/year",
+          "name": "year",
+          "alias": "dYear"
         }
       }
     },
