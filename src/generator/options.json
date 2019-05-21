@@ -720,6 +720,30 @@
           "alias": "dToString"
         }
       }
+    },
+    "GeneXus.Client.ClientStorage": {
+      "members": {
+        "Set": {
+          "path": "./gxcore/client/client-storage/set",
+          "name": "set",
+          "alias": "clientStorageSet"
+        },
+        "Get": {
+          "path": "./gxcore/client/client-storage/get",
+          "name": "get",
+          "alias": "clientStorageGet"
+        },
+        "Remove": {
+          "path": "./gxcore/client/client-storage/remove",
+          "name": "remove",
+          "alias": "clientStorageRemove"
+        },
+        "Clear": {
+          "path": "./gxcore/client/client-storage/clear",
+          "name": "clear",
+          "alias": "clientStorageClear"
+        }
+      }
     }
   },
   "disambiguated": {
@@ -731,9 +755,6 @@
       "Delete": "textSearchdelete",
       "Find": "textSearchfind",
       "Update": "textSearchupdate"
-    },
-    "GeneXus.Client.ClientStorage": {
-      "Set": "setValue"
     },
     "GeneXus.Common.Analytics": {
       "SetUserId": "setAnalyticsUserId"
