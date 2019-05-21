@@ -752,6 +752,9 @@
           "alias": "clientStorageClear"
         }
       }
+    },
+    "GeneXus.Client.ClientInformation": {
+      "path": "./gxcore/client/client-information"
     }
   },
   "disambiguated": {
