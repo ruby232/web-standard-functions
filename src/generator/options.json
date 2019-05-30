@@ -759,6 +759,12 @@
     },
     "GeneXus.Client.ClientInformation": {
       "path": "./gxcore/client/client-information"
+    },
+    "XMLReader": {
+      "path": "./types/xmlreader"
+    },
+    "XMLWriter": {
+      "path": "./types/xmlwriter"
     }
   },
   "disambiguated": {
