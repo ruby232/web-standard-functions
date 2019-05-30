@@ -760,6 +760,9 @@
     "GeneXus.Client.ClientInformation": {
       "path": "./gxcore/client/client-information"
     },
+    "GeneXus.SD.Synchronization.SynchronizationEvents": {
+      "path": "./gxcore/sd/synchronization/synchronizationEvents"
+    },
     "XMLReader": {
       "path": "./types/xmlreader"
     },
