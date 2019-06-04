@@ -15,6 +15,16 @@ describe("Global Events Tests", () => {
     expect(result).toEqual(numberData);
   });
 
+  it(`should emit the event with no data parameters`, async () => {
+    let result = 0;
+    suscribe(EVENT_NAME, () => {
+      result = numberData;
+    });
+
+    await emit(EVENT_NAME);
+    expect(result).toEqual(numberData);
+  });
+
   it(`should NOT listen to the emitted event`, async () => {
     let result = null;
     emit(EVENT_NAME, numberData);
