@@ -1,76 +1,72 @@
-import { emit, suscribe, unSuscribe } from "../globalEvents";
+import {
+  publish,
+  subscribe,
+  unSubscribe,
+  unSubscribeAll
+} from "../globalEvents";
+import waitForExpect from "wait-for-expect";
 
-const EVENT_NAME = "TEST";
+const TOPIC_NAME = "TEST";
 
 describe("Global Events Tests", () => {
+  beforeEach(() => {
+    unSubscribeAll();
+  });
   const numberData = 1500;
 
-  it(`should emit the event with data: 1500`, async () => {
+  it(`should publish the message with data`, async () => {
     let result = 0;
-    suscribe(EVENT_NAME, data => {
+    subscribe(TOPIC_NAME, data => {
       result += data;
     });
 
-    await emit(EVENT_NAME, numberData);
-    expect(result).toEqual(numberData);
+    publish(TOPIC_NAME, numberData);
+    await waitForExpect(() => expect(result).toEqual(numberData));
   });
 
-  it(`should emit the event with no data parameters`, async () => {
+  it(`should publish the message with no data parameters`, async () => {
     let result = 0;
-    suscribe(EVENT_NAME, () => {
+    subscribe(TOPIC_NAME, () => {
       result = numberData;
     });
 
-    await emit(EVENT_NAME);
-    expect(result).toEqual(numberData);
+    publish(TOPIC_NAME);
+    await waitForExpect(() => expect(result).toEqual(numberData));
   });
 
   it(`should NOT listen to the emitted event`, async () => {
     let result = null;
-    emit(EVENT_NAME, numberData);
-    suscribe(EVENT_NAME, data => {
+    publish(TOPIC_NAME, numberData);
+    subscribe(TOPIC_NAME, data => {
       result += data;
     });
 
-    expect(result).toBeNull();
+    await waitForExpect(() => expect(result).toBeNull());
   });
 
   it(`should emit the event with data multiple times`, async () => {
     let result = 0,
       index = 1;
-    suscribe(EVENT_NAME, data => {
+    subscribe(TOPIC_NAME, data => {
       result += data;
     });
 
     for (index = 1; index <= 3; index++) {
-      emit(EVENT_NAME, numberData);
+      publish(TOPIC_NAME, numberData);
     }
-    expect(result).toEqual(numberData * (index - 1));
+    await waitForExpect(() => expect(result).toEqual(numberData * (index - 1)));
   });
 
-  it(`should unsuscribe listener`, async () => {
+  it(`should unsubscribe listener`, async () => {
     let result = null;
-    const subscription = suscribe(EVENT_NAME, data => {
+    const subscription = subscribe(TOPIC_NAME, data => {
       result = data;
     });
-    emit(EVENT_NAME, numberData);
-    expect(result).toEqual(numberData);
-    unSuscribe(subscription);
+    publish(TOPIC_NAME, numberData);
+    await waitForExpect(() => expect(result).toEqual(numberData));
+    unSubscribe(subscription);
     result = null;
-    emit(EVENT_NAME, numberData);
-    expect(result).toBeNull();
-  });
-
-  //AWAIT is not working OK.
-  it.skip(`should wait to emit the data`, async () => {
-    let result;
-    suscribe(EVENT_NAME, async data => {
-      await new Promise((resolve, reject) => setTimeout(resolve, 1500));
-      result = data;
-    });
-
-    await emit(EVENT_NAME, numberData);
-
-    expect(result).toEqual(numberData);
+    publish(TOPIC_NAME, numberData);
+    await waitForExpect(() => expect(result).toBeNull());
   });
 });

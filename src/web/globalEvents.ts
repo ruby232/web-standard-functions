@@ -1,34 +1,42 @@
-import EventEmitter from "../observable/eventEmitter";
-import EventSubscription from "../observable/eventSubscription";
-
-const emitter = new EventEmitter();
-const subscriptions = new Array<any>();
+import {
+  cancelSubscription as cancel,
+  publish as publishTopic,
+  subscribe as subscribeTopic,
+  cancelAllSubscriptions
+} from "../pubSub/pubSub";
+import EventSubscription from "../pubSub/pubSubscription";
 
 /**
- * Starts listening to custom event name. Automatically gets notified when someone emits the event name.
- * Returns Subscription object
- * @param name The event name to be subscribed.
- * @param handler The function to be called when someone emits the event name.
+ * Subscribe to topic name. Automatically gets notified when someone publish to the topic name.
+ * @param topicName The topic name to be subscribed.
+ * @param handler The function to be called when someone publish to the topic name.
+ * @return Returns Subscription object
  */
-export function suscribe(name: string, handler: Function): EventSubscription {
-  const s: EventSubscription = emitter.suscribe(name, handler);
-  subscriptions.push(s);
-  return s;
+export function subscribe(name: string, handler: Function): EventSubscription {
+  return subscribeTopic(name, handler);
 }
 
 /**
- * Stops listening to Subscription
+ * Cancel a specific subscription.
  * @param suscription The suscription object
  */
-export function unSuscribe(s: EventSubscription) {
-  emitter.unSuscribe(s);
+export function unSubscribe(suscription: EventSubscription) {
+  cancel(suscription);
 }
 
 /**
- * Emits the data to all suscribed clients with the event name specified.
- * @param name The event name to emit
- * @param data The data arguments of the event to emit.
+ * Cancel all subscriptions
  */
-export async function emit(name: string, ...data: any) {
-  await emitter.emit.apply(emitter, [name].concat(data));
+export function unSubscribeAll() {
+  cancelAllSubscriptions();
+}
+
+/**
+ * Asynchronously publishes the message, passing the data to it's subscribers
+ * @param topicName The topic name to publish the data
+ * @param data  The data to pass to subscribers
+ * @return Returns true if there are subscribers to the topic
+ */
+export function publish(topicName: string, ...data: any): boolean {
+  return publishTopic.apply(this, [topicName].concat(data));
 }
