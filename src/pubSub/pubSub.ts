@@ -32,6 +32,7 @@ export const subscribe = (
   };
 
   if (options && options.once) {
+    // @ts-ignore
     token = PubSubJs.subscribeOnce(topicName, subscribeWrapper(handler));
   } else {
     token = PubSubJs.subscribe(topicName, subscribeWrapper(handler));
