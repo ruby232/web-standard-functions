@@ -8,8 +8,8 @@ import PubSubscriptionOptions from "./pubSubscribeOptions";
  * @param data  The data to pass to subscribers
  * @return Returns true if there are subscribers to the topic
  */
-export const publish = (topicName: string, ...data: any): Boolean => {
-  return PubSubJs.publish.apply(PubSubJs, [topicName].concat([data]));
+export const publish = (topicName: string, ...data: any[]): Boolean => {
+  return PubSubJs.publish(topicName, data);
 };
 
 /**
@@ -24,19 +24,18 @@ export const subscribe = (
   handler: Function,
   options?: PubSubscriptionOptions
 ): EventSubscription => {
-  let token = null;
-  const subscribeWrapper = function(handler) {
+  const subscribeWrapper = handler => {
     return function(topic: string, data: any) {
       handler.apply(this, data);
     };
   };
 
-  if (options && options.once) {
-    // @ts-ignore
-    token = PubSubJs.subscribeOnce(topicName, subscribeWrapper(handler));
-  } else {
-    token = PubSubJs.subscribe(topicName, subscribeWrapper(handler));
-  }
+  const token =
+    options && options.once
+      ? // @ts-ignore
+        PubSubJs.subscribeOnce(topicName, subscribeWrapper(handler))
+      : PubSubJs.subscribe(topicName, subscribeWrapper(handler));
+
   return new EventSubscription(token);
 };
 
@@ -52,8 +51,8 @@ export const cancelTopic = (topicName: string) => {
  * Cancel a specific subscription.
  * @param suscription The suscription object
  */
-export const cancelSubscription = (suscription: EventSubscription) => {
-  suscription.unsubscribe();
+export const cancelSubscription = (subscription: EventSubscription) => {
+  subscription.unsubscribe();
 };
 
 /**

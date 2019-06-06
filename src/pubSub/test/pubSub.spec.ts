@@ -18,19 +18,18 @@ describe("Event Emitter Tests", () => {
     cancelAllSubscriptions();
   });
 
-  const numberData = 5000;
   it(`should publish the message`, async () => {
-    let result;
-    subscribe(TOPIC_NAME, data => {
-      result = data;
+    const doWork = jest.fn();
+    subscribe(TOPIC_NAME, callback => {
+      callback();
     });
-
-    publish(TOPIC_NAME, numberData);
-    await waitForExpect(() => expect(result).toEqual(numberData));
+    publish(TOPIC_NAME, doWork);
+    await waitForExpect(() => expect(doWork).toHaveBeenCalled());
   });
 
   it(`should publish the message with multiple data parameters`, async () => {
     let result;
+    const numberData = 5000;
     subscribe(TOPIC_NAME, (data1, data2, data3, data4) => {
       result = data1 + data2 + data3 + data4;
     });
@@ -41,81 +40,79 @@ describe("Event Emitter Tests", () => {
   });
 
   it(`should NOT listen to the published message`, async () => {
-    let result = null;
-    publish(TOPIC_NAME, numberData);
-    subscribe(TOPIC_NAME, data => {
-      result = data;
+    const doWork = jest.fn();
+    publish(TOPIC_NAME, doWork);
+    subscribe(TOPIC_NAME, callback => {
+      callback();
     });
 
-    await waitForExpect(() => expect(result).toBeNull());
+    await waitForExpect(() => expect(doWork).not.toHaveBeenCalled());
   });
 
   it(`should publish the message multiple times`, async () => {
-    let result = 0,
-      index = 1;
-    subscribe(TOPIC_NAME, data => {
-      result += data;
+    const doWork = jest.fn();
+    subscribe(TOPIC_NAME, callback => {
+      callback();
     });
-
-    for (index = 1; index <= 3; index++) {
-      publish(TOPIC_NAME, numberData);
+    let index = 1;
+    for (index = 1; index <= 10; index++) {
+      publish(TOPIC_NAME, doWork);
     }
-    await waitForExpect(() => expect(result).toEqual(numberData * (index - 1)));
+    await waitForExpect(() => expect(doWork).toHaveBeenCalledTimes(index - 1));
   });
 
   it(`should subscribe only once`, async () => {
-    let result = 0,
-      index = 1;
+    const doWork = jest.fn();
     subscribe(
       TOPIC_NAME,
-      data => {
-        result += data;
+      callback => {
+        callback();
       },
       new PubSubscriptionOptions({ once: true })
     );
 
-    for (index = 1; index <= 5; index++) {
-      publish(TOPIC_NAME, numberData);
+    for (let index = 1; index <= 10; index++) {
+      publish(TOPIC_NAME, doWork);
     }
-    await waitForExpect(() => expect(result).toEqual(numberData));
+    await waitForExpect(() => expect(doWork).toHaveBeenCalledTimes(1));
   });
 
   it(`should cancel all previous subscriptions`, async () => {
-    let result = null;
-    subscribe(TOPIC_NAME, data => {
-      result = data;
+    const doWork = jest.fn();
+    subscribe(TOPIC_NAME, callback => {
+      callback();
     });
-    publish(TOPIC_NAME, numberData);
-    await waitForExpect(() => expect(result).toEqual(numberData));
+
+    publish(TOPIC_NAME, doWork);
+    await waitForExpect(() => expect(doWork).toHaveBeenCalledTimes(1));
     cancelAllSubscriptions();
-    result = null;
-    publish(TOPIC_NAME, numberData);
-    await waitForExpect(() => expect(result).toBeNull());
+    publish(TOPIC_NAME, doWork);
+    await waitForExpect(() => expect(doWork).toHaveBeenCalledTimes(1));
   });
 
   it(`should cancel subscription`, async () => {
-    let result = null;
-    const subscription = subscribe(TOPIC_NAME, data => {
-      result = data;
+    const doWork = jest.fn();
+    const subscription = subscribe(TOPIC_NAME, callback => {
+      callback();
     });
-    publish(TOPIC_NAME, numberData);
-    await waitForExpect(() => expect(result).toEqual(numberData));
+
+    publish(TOPIC_NAME, doWork);
+    await waitForExpect(() => expect(doWork).toHaveBeenCalledTimes(1));
     cancelSubscription(subscription);
-    result = null;
-    publish(TOPIC_NAME, numberData);
-    await waitForExpect(() => expect(result).toBeNull());
+    publish(TOPIC_NAME, doWork);
+    await waitForExpect(() => expect(doWork).toHaveBeenCalledTimes(1));
   });
 
   it(`should cancel a topic`, async () => {
-    let result = null;
-    const subscription = subscribe(TOPIC_NAME, data => {
-      result = data;
+    const doWork = jest.fn();
+    subscribe(TOPIC_NAME, callback => {
+      callback();
     });
-    publish(TOPIC_NAME, numberData);
-    await waitForExpect(() => expect(result).toEqual(numberData));
+
+    publish(TOPIC_NAME, doWork);
+    await waitForExpect(() => expect(doWork).toHaveBeenCalledTimes(1));
     cancelTopic(TOPIC_NAME);
-    result = null;
-    publish(TOPIC_NAME, numberData);
-    await waitForExpect(() => expect(result).toBeNull());
+    publish(TOPIC_NAME, doWork);
+    await waitForExpect(() => expect(doWork).toHaveBeenCalledTimes(1));
   });
 });
