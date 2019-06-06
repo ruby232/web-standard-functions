@@ -24,17 +24,19 @@ export const subscribe = (
   handler: Function,
   options?: PubSubscriptionOptions
 ): EventSubscription => {
-  const subscribeWrapper = handler => {
+  const subscribeWrapper = (handler: Function) => {
     return function(topic: string, data: any) {
       handler.apply(this, data);
     };
   };
 
-  const token =
-    options && options.once
-      ? // @ts-ignore
-        PubSubJs.subscribeOnce(topicName, subscribeWrapper(handler))
-      : PubSubJs.subscribe(topicName, subscribeWrapper(handler));
+  let token;
+  if (options && options.once) {
+    // @ts-ignore
+    token = PubSubJs.subscribeOnce(topicName, subscribeWrapper(handler));
+  } else {
+    token = PubSubJs.subscribe(topicName, subscribeWrapper(handler));
+  }
 
   return new EventSubscription(token);
 };
