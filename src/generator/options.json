@@ -142,6 +142,10 @@
           "path": "./date/today",
           "name": "today"
         },
+        "Now": {
+          "path": "./datetime/now",
+          "name": "now"
+        },
         "Trim": {
           "path": "./text/trim",
           "name": "trim"
@@ -744,6 +748,146 @@
     "GeneXus.Client.ClientInformation": {
       "path": "./gxcore/client/client-information"
     },
+    "DateTime": {
+      "members": {
+        "AddDays": {
+          "path": "./date/addDays",
+          "name": "addDays",
+          "alias": "dtAddDays"
+        },
+        "AddMonths": {
+          "path": "./date/addMonths",
+          "name": "addMonths",
+          "alias": "dtAddMonths"
+        },
+        "AddYears": {
+          "path": "./date/addYears",
+          "name": "addYears",
+          "alias": "dtAddYears"
+        },
+        "Age": {
+          "path": "./date/age",
+          "name": "age",
+          "alias": "dtAge"
+        },
+        "Day": {
+          "path": "./date/day",
+          "name": "day",
+          "alias": "dtDay"
+        },
+        "DayOfWeek": {
+          "path": "./date/dayOfWeek",
+          "name": "dayOfWeek",
+          "alias": "dtDayOfWeek"
+        },
+        "DayOfWeekName": {
+          "path": "./date/dayOfWeekName",
+          "name": "dayOfWeekName",
+          "alias": "dtDayOfWeekName"
+        },
+        "EndOfMonth": {
+          "path": "./date/endOfMonth",
+          "name": "endOfMonth",
+          "alias": "dtEndOfMonth"
+        },
+        "IsEmpty": {
+          "path": "./date/isEmpty",
+          "name": "isEmpty",
+          "alias": "dtIsEmpty"
+        },
+        "Month": {
+          "path": "./date/month",
+          "name": "month",
+          "alias": "dtMonth"
+        },
+        "MonthName": {
+          "path": "./date/monthName",
+          "name": "monthName",
+          "alias": "dtMonthName"
+        },
+        "Year": {
+          "path": "./date/year",
+          "name": "year",
+          "alias": "dtYear"
+        },
+        "Hour": {
+          "path": "./datetime/hour",
+          "name": "hour",
+          "alias": "dtHour"
+        },
+        "Minute": {
+          "path": "./datetime/minute",
+          "name": "minute",
+          "alias": "dtMinute"
+        },
+        "Second": {
+          "path": "./datetime/second",
+          "name": "second",
+          "alias": "dtSecond"
+        },
+        "Millisecond": {
+          "path": "./datetime/millisecond",
+          "name": "millisecond",
+          "alias": "dtMillisecond"
+        },
+        "Difference": {
+          "path": "./datetime/difference",
+          "name": "difference",
+          "alias": "dtDifference"
+        },
+        "Now": {
+          "path": "./datetime/now",
+          "name": "now",
+          "alias": "dtNow"
+        },
+        "Time": {
+          "path": "./datetime/time",
+          "name": "time",
+          "alias": "dttime"
+        },
+        "AddMilliseconds": {
+          "path": "./datetime/addMilliseconds",
+          "name": "addMilliseconds"
+        },
+        "AddSeconds": {
+          "path": "./datetime/addSeconds",
+          "name": "addSeconds"
+        },
+        "AddMinutes": {
+          "path": "./datetime/addMinutes",
+          "name": "addMinutes"
+        },
+        "AddHours": {
+          "path": "./datetime/addHours",
+          "name": "addHours"
+        },
+        "ToDate": {
+          "path": "./datetime/toDate",
+          "name": "toDate",
+          "alias": "dttoDate"
+        },
+        "GetTimeZone": {
+          "path": "./datetime/getTimezone",
+          "name": "getTimezone"
+        },
+        "SetTimeZone": {
+          "path": "./datetime/setTimezone",
+          "name": "setTimezone"
+        },
+        "CurrentOffset": {
+          "path": "./datetime/currentOffset",
+          "name": "currentOffset"
+        },
+        "ToUniversalTime": {
+          "path": "./datetime/toUniversalTime",
+          "name": "toUniversalTime"
+        },
+        "FromTimeZone": {
+          "path": "./datetime/fromTimezone",
+          "name": "fromTimezone"
+        }
+      }
+    },
     "GeneXus.SD.Synchronization.SynchronizationEvents": {
       "path": "./gxcore/sd/synchronization/synchronizationEvents"
     },
@@ -797,21 +941,8 @@
       "FromString": "dtFromString",
       "ToString": "dtToString",
       "ToFormattedString": "dtToFormattedString",
-      "IsEmpty": "dtIsEmpty",
-      "SetEmpty": "dtSetEmpty",
-      "Age": "dtAge",
-      "Day": "dtDay",
-      "Month": "dtMonth",
-      "Year": "dtYear",
-      "Hour": "dtHour",
-      "Minute": "dtMinute",
-      "Seconds": "dtSeconds",
-      "Now": "dtNow",
-      "Second": "dtSecond",
-      "Time": "dtTime",
       "Set": "dtSet",
-      "New": "dtNew",
-      "ToDate": "dtToDate"
+      "New": "dtNew"
     },
     "Boolean": {
       "IsNull": "bIsNull",

@@ -25,7 +25,9 @@ export class GeneXusSDSynchronizationSynchronizationEvents {
    * Current implementation does nothing.
    * @param {GUID} eventGUID
    */
-  markEventAsPending(eventGUID: GUID) {}
+  markEventAsPending(eventGUID: GUID) {
+    // Empty implemetation
+  }
 
   /**
    * Removes some registry of the GXPendingEvents table.
@@ -33,5 +35,7 @@ export class GeneXusSDSynchronizationSynchronizationEvents {
    * Current implementation does nothing.
    * @param {GUID} eventGUID
    */
-  removeEvent(eventGUID: GUID) {}
+  removeEvent(eventGUID: GUID) {
+    // Empty implemetation
+  }
 }
