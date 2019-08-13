@@ -23,12 +23,50 @@ export class WS {
       if (!this.supported()) {
         this.logger.error("WebSocket is not supported in this browser");
         reject();
+        return;
+      }
+      if (!url.startsWith("ws")) {
+        this.logger.error("Not supported websocket URL:", url);
+        reject();
+        return;
       }
       this.options = options || this.options;
       this.url = url;
       this.openImpl(resolve, reject);
     });
   }
+
+  /**
+   * Closes the websocket connection.
+   * @param {number} code Error code for closed connection (optional)
+   * @param {string} reason Reason description for closed connection (optional)
+   */
+  public close(code?: number, reason?: string) {
+    if (this.websocket) {
+      this.websocket.close(code, reason);
+    }
+  }
+
+  /**
+   * Send the data to WebSocket Server currently connected.
+   * @param {any} data Message data.
+   */
+  public send(data: any): boolean {
+    // TODO: Check if websocket state is open. Otherwise try to reconnect.
+    let ok = true;
+    try {
+      this.websocket.send(data);
+    } catch (e) {
+      this.logger.error("Send Error", e);
+      ok = false;
+    }
+    return true;
+  }
+
+  public onClose: ((this: WS, ev: CloseEvent) => any) | null;
+  public onError: ((this: WS, ev: Event) => any) | null;
+  public onMessage: ((this: WS, ev: MessageEvent) => any) | null;
+  public onOpen: ((this: WS, ev: Event) => any) | null;
 
   private openImpl(resolve, reject): void {
     this.websocket = new WebSocket(this.url);
@@ -73,6 +111,10 @@ export class WS {
     };
   }
 
+  private supported(): boolean {
+    return "WebSocket" in window;
+  }
+
   private reconnect(resolve, reject): void {
     if (this.currentReconnectAttempts++ < this.options.maxReconnectAttempts) {
       setTimeout(() => {
@@ -81,42 +123,6 @@ export class WS {
       }, this.options.autoReconnectInterval);
     } else {
       reject();
-    }
-  }
-
-  public onClose: ((this: WS, ev: CloseEvent) => any) | null;
-  public onError: ((this: WS, ev: Event) => any) | null;
-  public onMessage: ((this: WS, ev: MessageEvent) => any) | null;
-  public onOpen: ((this: WS, ev: Event) => any) | null;
-
-  /**
-   * Send the data to WebSocket Server currently connected.
-   * @param {any} data Message data.
-   */
-  public send(data: any): boolean {
-    // TODO: Check if websocket state is open. Otherwise try to reconnect.
-    let ok = true;
-    try {
-      this.websocket.send(data);
-    } catch (e) {
-      this.logger.error("Send Error", e);
-      ok = false;
-    }
-    return true;
-  }
-
-  private supported(): boolean {
-    return true;
-  }
-
-  /**
-   * Closes the websocket connection.
-   * @param {number} code Error code for closed connection (optional)
-   * @param {string} reason Reason description for closed connection (optional)
-   */
-  public close(code?: number, reason?: string) {
-    if (this.websocket) {
-      this.websocket.close(code, reason);
     }
   }
 }
