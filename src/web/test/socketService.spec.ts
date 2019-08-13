@@ -36,6 +36,20 @@ describe("WebSocket Tests", () => {
     socket.close();
   });
 
+  it(`Open single websocket connection`, async () => {
+    const doWork = jest.fn();
+    let socket = new Socket(SOCKET_TEST_SERVER);
+    const sendMessage = "test-socket-service";
+    subscribe(`${socket.url}.socket.connected`, () => {
+      doWork();
+    });
+    for (let i = 0; i < 10; i++) {
+      await socket.open();
+    }
+    await waitForExpect(() => expect(doWork).toHaveBeenCalledTimes(1));
+    socket.close();
+  });
+
   it(`Receive websocket data`, async () => {
     const doWork = jest.fn();
     let socket = new Socket(SOCKET_TEST_SERVER);
