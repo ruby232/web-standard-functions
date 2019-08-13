@@ -85,7 +85,6 @@ export class Socket {
    * Failed connections will be published to '{url}.socket.connectionfailed' event.
    * Closed connections will be published to '{url}.socket.connectionclosed' event.
    */
-
   public async open(): Promise<void> {
     await this.socketService.open(this.url);
     this.status = SocketStatus.Connected;
