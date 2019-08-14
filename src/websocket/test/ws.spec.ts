@@ -1,4 +1,4 @@
-import { WS, Options } from "../ws";
+import { WS } from "../ws";
 import waitForExpect from "wait-for-expect";
 import * as log from "loglevel";
 import { WS as WSServer } from "jest-websocket-mock";
@@ -77,20 +77,4 @@ describe("WebSocket Tests", () => {
     await waitForExpect(() => expect(doWork).toHaveBeenCalledTimes(1));
     ws.close();
   });
-
-  /*
-  it(`Fails to open a websocket connection`, async () => {
-    const doWork = jest.fn();
-    let ws = new WS();
-    ws.onError = ev => {
-      doWork();
-    };
-    const options = new Options();
-    options.maxReconnectAttempts = 1;
-    options.autoReconnectInterval = 50;
-    ws.open("wss://echo123.websocket123.org", options);
-    await waitForExpect(() => expect(doWork).toHaveBeenCalledTimes(1));
-    ws.close();
-  });
-  */
 });

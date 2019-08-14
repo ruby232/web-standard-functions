@@ -26,7 +26,10 @@ export class WS {
         return;
       }
       if (!url.startsWith("ws")) {
-        this.logger.error("Not supported websocket URL:", url);
+        this.logger.error(
+          "Not supported websocket protocol (ws:// or wss:// supported only):",
+          url
+        );
         reject();
         return;
       }
@@ -112,7 +115,7 @@ export class WS {
   }
 
   private supported(): boolean {
-    return "WebSocket" in window;
+    return "WebSocket" in (window || global);
   }
 
   private reconnect(resolve, reject): void {
