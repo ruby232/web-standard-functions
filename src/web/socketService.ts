@@ -44,15 +44,18 @@ export default class SocketService {
   private attachHandlers(id: string, connection: WS) {
     connection.onOpen = (ev: Event) => {
       publish(`${id}.socket.connected`, ev);
+      publish(`GeneXus.Client.Socket.Connected`, ev);
     };
     connection.onClose = (ev: Event) => {
       publish(`${id}.socket.connectionclosed`, ev);
     };
     connection.onError = (ev: Event) => {
       publish(`${id}.socket.connectionfailed`, ev);
+      publish(`GeneXus.Client.Socket.ConnectionFailed`, ev);
     };
     connection.onMessage = (ev: MessageEvent) => {
       publish(`${id}.socket.messagereceived`, ev.data);
+      publish(`GeneXus.Client.Socket.MessageReceived`, ev.data);
     };
   }
 }
