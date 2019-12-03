@@ -55,7 +55,7 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/getMessageText",
           "name": "getMessageText"
         },
-        "Iif": {
+        "iif": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/iif",
           "name": "iif"
         },
