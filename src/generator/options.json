@@ -30,6 +30,14 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/age",
           "name": "age"
         },
+        "BrowserID": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/web/browserId",
+          "name": "browserId"
+        },
+        "BrowserVersion": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/web/browserVersion",
+          "name": "browserVersion"
+        },
         "CDoW": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeekName",
           "name": "dayOfWeekName"
@@ -180,6 +188,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/setLanguage",
           "name": "setLanguage"
         },
+        "Space": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/space",
+          "name": "space"
+        },
         "Str": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/str",
           "name": "str"
@@ -207,6 +219,10 @@
         "TDiff": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/difference",
           "name": "difference"
+        },
+        "Time": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/time",
+          "name": "time"
         },
         "ToBase64": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toBase64",
@@ -246,6 +262,10 @@
         },
         "YMDtoD": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/newInstance",
+          "name": "newInstance"
+        },
+        "YMDHMStoT": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/newInstance",
           "name": "newInstance"
         }
       }
