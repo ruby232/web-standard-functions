@@ -119,6 +119,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
           "name": "integer"
         },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull"
+        },
         "Len": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
           "name": "length"
@@ -155,6 +159,14 @@
         "Now": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/now",
           "name": "now"
+        },
+        "Null": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isEmpty",
+          "name": "isEmpty"
+        },
+        "NullValue": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/emptyValue",
+          "name": "emptyValue"
         },
         "PadL": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
@@ -286,7 +298,8 @@
         },
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
-          "name": "fromString"
+          "name": "fromString",
+          "modifiesInstance": true
         },
         "IndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
@@ -299,6 +312,11 @@
         "IsMatch": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
           "name": "isMatch"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "cIsNull"
         },
         "LastIndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
@@ -334,7 +352,13 @@
         },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
-          "name": "setEmpty"
+          "name": "setEmpty",
+          "modifiesInstance": true
+        },
+        "SetNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "modifiesInstance": true
         },
         "SplitRegEx": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
@@ -402,7 +426,8 @@
         },
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
-          "name": "fromString"
+          "name": "fromString",
+          "modifiesInstance": true
         },
         "IndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
@@ -415,6 +440,11 @@
         "IsMatch": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
           "name": "isMatch"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "vIsNull"
         },
         "LastIndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
@@ -450,7 +480,13 @@
         },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
-          "name": "setEmpty"
+          "name": "setEmpty",
+          "modifiesInstance": true
+        },
+        "SetNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "modifiesInstance": true
         },
         "SplitRegEx": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
@@ -518,7 +554,8 @@
         },
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
-          "name": "fromString"
+          "name": "fromString",
+          "modifiesInstance": true
         },
         "IndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
@@ -531,6 +568,11 @@
         "IsMatch": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
           "name": "isMatch"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "lIsNull"
         },
         "LastIndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
@@ -566,7 +608,13 @@
         },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
-          "name": "setEmpty"
+          "name": "setEmpty",
+          "modifiesInstance": true
+        },
+        "SetNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "modifiesInstance": true
         },
         "SplitRegEx": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
@@ -626,7 +674,23 @@
         },
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/bool/fromString",
-          "name": "fromString"
+          "name": "fromString",
+          "modifiesInstance": true
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "bIsNull"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/bool/setEmpty",
+          "name": "setEmpty",
+          "modifiesInstance": true
+        },
+        "SetNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/bool/setEmpty",
+          "name": "setEmpty",
+          "modifiesInstance": true
         },
         "ToFormattedString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/bool/toString",
@@ -645,7 +709,8 @@
       "members": {
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/fromString",
-          "name": "fromString"
+          "name": "fromString",
+          "modifiesInstance": true
         },
         "Integer": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
@@ -655,6 +720,11 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/isEmpty",
           "name": "isEmpty"
         },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "nIsNull"
+        },
         "Round": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
           "name": "round"
@@ -662,6 +732,16 @@
         "RoundToEven": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
           "name": "roundToEven"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/setEmpty",
+          "name": "setEmpty",
+          "modifiesInstance": true
+        },
+        "SetNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/setEmpty",
+          "name": "setEmpty",
+          "modifiesInstance": true
         },
         "ToFormattedString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
@@ -713,11 +793,17 @@
         },
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/fromString",
-          "name": "fromString"
+          "name": "fromString",
+          "modifiesInstance": true
         },
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/isEmpty",
           "name": "isEmpty"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "dIsNull"
         },
         "Month": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/month",
@@ -734,6 +820,16 @@
         "Set": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/set",
           "name": "set"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/setEmpty",
+          "name": "setEmpty",
+          "modifiesInstance": true
+        },
+        "SetNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/setEmpty",
+          "name": "setEmpty",
+          "modifiesInstance": true
         },
         "ToDate": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/toDate",
@@ -811,6 +907,11 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
           "name": "endOfMonth"
         },
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/fromString",
+          "name": "dtFromString",
+          "modifiesInstance": true
+        },
         "FromTimeZone": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/fromTimezone",
           "name": "fromTimezone"
@@ -826,6 +927,11 @@
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/isEmpty",
           "name": "isEmpty"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "dtIsNull"
         },
         "Millisecond": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/millisecond",
@@ -843,6 +949,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/monthName",
           "name": "monthName"
         },
+        "New": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/newInstance",
+          "name": "newInstance"
+        },
         "Now": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/now",
           "name": "now"
@@ -850,6 +960,16 @@
         "Second": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/second",
           "name": "second"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/setEmpty",
+          "name": "setEmpty",
+          "modifiesInstance": true
+        },
+        "SetNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/setEmpty",
+          "name": "setEmpty",
+          "modifiesInstance": true
         },
         "SetTimeZone": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/setTimezone",
@@ -1020,15 +1140,255 @@
         }
       }
     },
-    "Image": {
+    "Audio": {
       "members": {
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString",
+          "alias": "audioFromString",
+          "modifiesInstance": true
+        },
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
-          "name": "isEmpty"
+          "name": "isEmpty",
+          "alias": "audioIsEmpty"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "audioIsNull"
         },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
-          "name": "setEmpty"
+          "name": "setEmpty",
+          "alias": "audioSetEmpty",
+          "modifiesInstance": true
+        },
+        "SetNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "audioSetNull",
+          "modifiesInstance": true
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "audioToFormattedString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "audioToString"
+        }
+      }
+    },
+    "Binary": {
+      "members": {
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString",
+          "alias": "binaryFromString",
+          "modifiesInstance": true
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty",
+          "alias": "binaryIsEmpty"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "binaryIsNull"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "binarySetEmpty",
+          "modifiesInstance": true
+        },
+        "SetNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "binarySetNull",
+          "modifiesInstance": true
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "binaryToFormattedString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "binaryToString"
+        }
+      }
+    },
+    "BinaryFile": {
+      "members": {
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString",
+          "alias": "binaryFileFromString",
+          "modifiesInstance": true
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty",
+          "alias": "binaryFileIsEmpty"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "binaryFileIsNull"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "binaryFileSetEmpty",
+          "modifiesInstance": true
+        },
+        "SetNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "binaryFileSetNull",
+          "modifiesInstance": true
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "binaryFileToFormattedString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "binaryFileToString"
+        }
+      }
+    },
+    "Blob": {
+      "members": {
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString",
+          "alias": "blobFromString",
+          "modifiesInstance": true
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty",
+          "alias": "blobIsEmpty"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "blobIsNull"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "blobSetEmpty",
+          "modifiesInstance": true
+        },
+        "SetNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "blobSetNull",
+          "modifiesInstance": true
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "blobToFormattedString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "blobToString"
+        }
+      }
+    },
+    "Image": {
+      "members": {
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString",
+          "alias": "imageFromString",
+          "modifiesInstance": true
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty",
+          "alias": "imageIsEmpty"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "imageIsNull"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "imageSetEmpty",
+          "modifiesInstance": true
+        },
+        "SetNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "imageSetNull",
+          "modifiesInstance": true
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "imageToFormattedString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "imageToString"
+        }
+      }
+    },
+    "Video": {
+      "members": {
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString",
+          "alias": "videoFromString",
+          "modifiesInstance": true
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty",
+          "alias": "videoIsEmpty"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "videoIsNull"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "videoSetEmpty",
+          "modifiesInstance": true
+        },
+        "SetNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "videoSetNull",
+          "modifiesInstance": true
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "videoToFormattedString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "videoToString"
         }
       }
     },
@@ -1040,77 +1400,23 @@
     }
   },
   "disambiguated": {
-    "Core": {
-      "Null": "isNullValue"
-    },
     "Character": {
-      "IsNull": "cIsNull",
-      "SetNull": "cSetNull",
       "HTMLClean": "cHtmlClean"
     },
     "Varchar": {
-      "IsNull": "vIsNull",
-      "SetNull": "vSetNull",
       "HTMLClean": "vHtmlClean"
     },
     "LongVarchar": {
-      "IsNull": "lIsNull",
-      "SetNull": "lSetNull",
       "HTMLClean": "lHtmlClean"
     },
-    "Numeric": {
-      "IsNull": "nIsNull",
-      "SetNull": "nSetNull",
-      "SetEmpty": "nSetEmpty"
-    },
-    "Date": {
-      "IsNull": "dIsNull",
-      "SetNull": "dSetNull",
-      "SetEmpty": "dSetEmpty"
-    },
     "DateTime": {
-      "IsNull": "dtIsNull",
-      "SetNull": "dtSetNull",
-      "FromString": "dtFromString",
-      "Set": "dtSet",
-      "New": "dtNew"
-    },
-    "Boolean": {
-      "IsNull": "bIsNull",
-      "SetNull": "bSetNull",
-      "SetEmpty": "bSetEmpty"
-    },
-    "Audio": {
-      "IsNull": "audioIsNull",
-      "SetNull": "audioSetNull",
-      "FromString": "audioFromString",
-      "ToString": "audioToString",
-      "ToFormattedString": "audioToFormattedString",
-      "IsEmpty": "audioIsEmpty",
-      "SetEmpty": "audioSetEmpty"
+      "Set": "dtSet"
     },
     "Binary": {
-      "IsNull": "binaryIsNull",
-      "SetNull": "binarySetNull",
-      "FromString": "binaryFromString",
-      "ToString": "binaryToString",
-      "ToFormattedString": "binaryToFormattedString",
-      "IsEmpty": "binaryIsEmpty",
-      "SetEmpty": "binarySetEmpty",
       "FromBase64String": "binaryFromBase64String"
     },
     "BinaryFile": {
-      "FromURL": "binaryFileFromURL",
-      "IsEmpty": "binaryFileIsEmpty"
-    },
-    "Blob": {
-      "IsNull": "blobIsNull",
-      "SetNull": "blobSetNull",
-      "FromString": "blobFromString",
-      "ToString": "blobToString",
-      "ToFormattedString": "blobToFormattedString",
-      "IsEmpty": "blobIsEmpty",
-      "SetEmpty": "blobSetEmpty"
+      "FromURL": "binaryFileFromURL"
     },
     "BusinessComponent": {
       "Clone": "bcClone",
@@ -1233,13 +1539,6 @@
     "HttpResponse": {
       "SetCookie": "httpResponseSetCookie"
     },
-    "Image": {
-      "IsNull": "imageIsNull",
-      "SetNull": "imageSetNull",
-      "FromString": "imageFromString",
-      "ToString": "imageToString",
-      "ToFormattedString": "imageToFormattedString"
-    },
     "Properties": {
       "Clear": "propClear",
       "FromJson": "propFromJson",
@@ -1269,13 +1568,6 @@
       "Update": "textSearchupdate"
     },
     "Video": {
-      "IsNull": "videoIsNull",
-      "SetNull": "videoSetNull",
-      "FromString": "videoFromString",
-      "ToString": "videoToString",
-      "ToFormattedString": "videoToFormattedString",
-      "IsEmpty": "videoIsEmpty",
-      "SetEmpty": "videoSetEmpty",
       "FromURL": "videoFromURL"
     },
     "WebSession": {
