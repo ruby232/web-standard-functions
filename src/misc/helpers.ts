@@ -1,5 +1,5 @@
-export function notImplemented() {
-  console.log("Not yet implemented");
+export function notImplemented(funName = "Function") {
+  console.log(funName + " not yet implemented");
 }
 
 export function notSupported() {
