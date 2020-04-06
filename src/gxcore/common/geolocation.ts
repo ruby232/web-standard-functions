@@ -26,18 +26,21 @@ export class GeneXusCommonGeolocation {
         (error) => {
           if (ignoreErrors) { 
             let geoPosition = new GeneXusCommonGeolocationInfoData();
-            geoPosition.Location = "";
-            geoPosition.Heading = 0;
-            geoPosition.Precision = 0;
-            geoPosition.Description = "";
-            geoPosition.Speed = 0;
             geoPosition.Time = null;
-              resolve( geoPosition);
+            resolve( geoPosition);
           } else {
             reject( "Could not get location information ("+error.message+")");
           }
         },
-        {timeout: timeout/1000});
+        {timeout: timeout * 1000});
+      } else {
+        if (ignoreErrors) { 
+          let geoPosition = new GeneXusCommonGeolocationInfoData();
+          geoPosition.Time = null;
+          resolve( geoPosition);
+        } else {
+          reject( "Could not get location information (geolocation service not available)");
+        }
       }
     });
   }  
