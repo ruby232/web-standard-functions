@@ -1448,6 +1448,9 @@
     },
     "GeneXus.Common.Log": {
       "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/log"
+    },
+    "GeneXus.Common.Geolocation": {
+      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/geolocation"
     }
   },
   "disambiguated": {
