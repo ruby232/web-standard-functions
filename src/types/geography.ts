@@ -1,3 +1,5 @@
+import { notImplemented } from "../misc/helpers";
+
 export class Geography {
   private static GEOGRAPHY_REGEX_TEST_COORDS = /^(-?\d*(?:\.\d+)?)(?:\s*,\s*| +)(-?\d*(?:\.\d+)?)$/i; // latitude,longitude
   private static GEOGRAPHY_REGEX_TEST_POINT = /POINT\s*\(\s*(-?\d*(?:\.\d+)?) +(-?\d*(?:\.\d+)?)\s*\)/i; // POINT(longitude latitude)
@@ -38,7 +40,7 @@ export class Geography {
    * @returns number
    */
   get srid(): number {
-    // TODO: not implemented
+    notImplemented("Geography.srid");
     return 0;
   }
 
@@ -217,7 +219,7 @@ export class Geography {
    * @returns boolean
    */
   static intersect(a: Geography, b: Geography): boolean {
-    // TODO: not implemented
+    notImplemented("Geography.intersect()");
     return false;
   }
 
