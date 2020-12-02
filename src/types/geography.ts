@@ -1,4 +1,13 @@
 export class Geography {
+  private static GEOGRAPHY_REGEX_TEST_COORDS = /^(-?\d*(?:\.\d+)?)(?:\s*,\s*| +)(-?\d*(?:\.\d+)?)$/i; // latitude,longitude
+  private static GEOGRAPHY_REGEX_TEST_POINT = /POINT\s*\(\s*(-?\d*(?:\.\d+)?) +(-?\d*(?:\.\d+)?)\s*\)/i; // POINT(longitude latitude)
+  private static GEOGRAPHY_REGEX_TEST_LINE = /LINESTRING *\( *(?:-?\d*(?:\.\d+)? +-?\d*(?:\.\d+)?(?: *, *| *\)$))+/i; // LINESTRING(longitude latitude,longitude latitude)
+  private static GEOGRAPHY_REGEX_TEST_POLYGON = /POLYGON *\( *(?:\( *(?:-?\d+(?:\.\d+)? +-?\d*(?:\.\d+)?(?: *, *))+-?\d+(?:\.\d+)? +-?\d*(?:\.\d+)? *\)(?: *, *| *\)$))+/i; // POLYGON((longitude latitude,longitude latitude),(longitude latitude,longitude latitude))
+  private static GEOGRAPHY_REGEX_PARSE_COORDS = /(-?\d*(?:\.\d+)?)(?:\s*,\s*| +)(-?\d*(?:\.\d+)?)/i;
+  private static GEOGRAPHY_REGEX_PARSE_POINT = /POINT\s*\(\s*(-?\d*(?:\.\d+)?) +(-?\d*(?:\.\d+)?)\s*\)/i;
+  private static GEOGRAPHY_REGEX_PARSE_POINT_COORDS = /-?\d+(?:\.\d+)?/g;
+  private static GEOGRAPHY_REGEX_PARSE_LINE = /(-?\d+(?:\.\d+)?) +(-?\d*(?:\.\d+)?)/g;
+  private static GEOGRAPHY_REGEX_PARSE_POLYGON = /\(((?:-?\d+(?:\.\d+)?) +(?:-?\d*(?:\.\d+)?)(?: *, *|\)))+/g;
   private point: GeographyPoint;
   private line: GeographyLineString;
   private polygon: GeographyPolygon;
@@ -213,29 +222,23 @@ export class Geography {
   }
 
   private parse(str: string) {
-    const coordsTestRegex = /^(-?\d*(?:\.\d+)?)(?:\s*,\s*| +)(-?\d*(?:\.\d+)?)$/i; // latitude,longitude
-    const pointTestRegex = /POINT\s*\(\s*(-?\d*(?:\.\d+)?) +(-?\d*(?:\.\d+)?)\s*\)/i; // POINT(longitude latitude)
-    const linestringTestRegex = /LINESTRING *\( *(?:-?\d*(?:\.\d+)? +-?\d*(?:\.\d+)?(?: *, *| *\)$))+/i; // LINESTRING(longitude latitude,longitude latitude)
-    const polygonTestRegex = /POLYGON *\( *(?:\( *(?:-?\d+(?:\.\d+)? +-?\d*(?:\.\d+)?(?: *, *))+-?\d+(?:\.\d+)? +-?\d*(?:\.\d+)? *\)(?: *, *| *\)$))+/i; // POLYGON((longitude latitude,longitude latitude),(longitude latitude,longitude latitude))
     const value = str.trim();
 
     this.setEmpty();
 
-    if (coordsTestRegex.test(value)) {
+    if (Geography.GEOGRAPHY_REGEX_TEST_COORDS.test(value)) {
       this.parseCoords(value);
-    } else if (pointTestRegex.test(value)) {
+    } else if (Geography.GEOGRAPHY_REGEX_TEST_POINT.test(value)) {
       this.parsePoint(value);
-    } else if (linestringTestRegex.test(value)) {
+    } else if (Geography.GEOGRAPHY_REGEX_TEST_LINE.test(value)) {
       this.parseLineString(value);
-    } else if (polygonTestRegex.test(value)) {
+    } else if (Geography.GEOGRAPHY_REGEX_TEST_POLYGON.test(value)) {
       this.parsePolygon(value);
     }
   }
 
   private parseCoords(value: string) {
-    const result = value.match(
-      /(-?\d*(?:\.\d+)?)(?:\s*,\s*| +)(-?\d*(?:\.\d+)?)/i
-    );
+    const result = value.match(Geography.GEOGRAPHY_REGEX_PARSE_COORDS);
 
     this.featureType = "POINT";
     this.point = {
@@ -245,9 +248,7 @@ export class Geography {
   }
 
   private parsePoint(value: string) {
-    const result = value.match(
-      /POINT\s*\(\s*(-?\d*(?:\.\d+)?) +(-?\d*(?:\.\d+)?)\s*\)/i
-    );
+    const result = value.match(Geography.GEOGRAPHY_REGEX_PARSE_POINT);
 
     this.featureType = "POINT";
     this.point = {
@@ -257,11 +258,11 @@ export class Geography {
   }
 
   private parseLineString(value: string) {
-    const points = value.match(/(-?\d+(?:\.\d+)?) +(-?\d*(?:\.\d+)?)/g);
+    const points = value.match(Geography.GEOGRAPHY_REGEX_PARSE_LINE);
 
     this.featureType = "LINE";
     this.line = points.map(point => {
-      const coords = point.match(/-?\d+(?:\.\d+)?/g);
+      const coords = point.match(Geography.GEOGRAPHY_REGEX_PARSE_POINT_COORDS);
 
       return {
         longitude: parseFloat(coords[0]),
@@ -271,16 +272,16 @@ export class Geography {
   }
 
   private parsePolygon(value: string) {
-    const rings = value.match(
-      /\(((?:-?\d+(?:\.\d+)?) +(?:-?\d*(?:\.\d+)?)(?: *, *|\)))+/g
-    );
+    const rings = value.match(Geography.GEOGRAPHY_REGEX_PARSE_POLYGON);
 
     this.featureType = "POLYGON";
     this.polygon = rings.map(ring => {
-      const points = ring.match(/(-?\d+(?:\.\d+)?) +(-?\d*(?:\.\d+)?)/g);
+      const points = ring.match(Geography.GEOGRAPHY_REGEX_PARSE_LINE);
 
       return points.map(point => {
-        const coords = point.match(/-?\d+(?:\.\d+)?/g);
+        const coords = point.match(
+          Geography.GEOGRAPHY_REGEX_PARSE_POINT_COORDS
+        );
 
         return {
           longitude: parseFloat(coords[0]),
