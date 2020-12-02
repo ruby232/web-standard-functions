@@ -34,7 +34,7 @@ export class Geography {
   }
 
   /**
-   * Return Spatial Reference System Identifier (SRID), identifies de reference system for the represented Geographic object
+   * Return Spatial Reference System Identifier (SRID), identifies the reference system for the represented Geographic object
    * @returns number
    */
   get srid(): number {
