@@ -135,7 +135,7 @@ export class Geography {
    * @returns Geography
    */
   toGeoPoint(): Geography {
-    return new Geography(this.toString());
+    return this.clone();
   }
 
   /**
@@ -143,7 +143,7 @@ export class Geography {
    * @returns Geography
    */
   toGeoLine(): Geography {
-    return new Geography(this.toString());
+    return this.clone();
   }
 
   /**
@@ -151,7 +151,7 @@ export class Geography {
    * @returns Geography
    */
   toGeoPolygon(): Geography {
-    return new Geography(this.toString());
+    return this.clone();
   }
 
   /**
@@ -167,6 +167,14 @@ export class Geography {
    */
   distance(geo: Geography): number {
     return Geography.distance(this, geo);
+  }
+
+  /**
+   * Return new instance of this object
+   * @returns Geography
+   */
+  clone(): Geography {
+    return new Geography(this.toString());
   }
 
   /**
