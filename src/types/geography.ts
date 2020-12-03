@@ -109,25 +109,38 @@ export class Geography {
    * @returns string
    */
   toGeoJson(): string {
+    let geoJson;
+
     switch (this.featureType) {
       case "POINT":
-        return `{"type":"Point","coordinates":[${this.longitude},${this.latitude}]}`;
+        geoJson = {
+          type: "Point",
+          coordinates: [this.longitude, this.latitude]
+        };
+        break;
       case "LINE":
-        return `{"type":"LineString","coordinates":[${this.line
-          .map(point => `[${point.longitude},${point.latitude}]`)
-          .join(",")}]}`;
+        geoJson = {
+          type: "LineString",
+          coordinates: this.line.map(point => [point.longitude, point.latitude])
+        };
+        break;
       case "POLYGON":
-        return `{"type":"Polygon","coordinates":[${this.polygon
-          .map(
-            ring =>
-              `[${ring
-                .map(point => `${point.longitude} ${point.latitude}`)
-                .join(",")}]`
+        geoJson = {
+          type: "Polygon",
+          coordinates: this.polygon.map(ring =>
+            ring.map(point => [point.longitude, point.latitude])
           )
-          .join(",")}]}`;
+        };
+        break;
       default:
-        return '{"type":"GeometryCollection","coordinates":[]}';
+        geoJson = {
+          type: "GeometryCollection",
+          coordinates: []
+        };
+        break;
     }
+
+    return JSON.stringify(geoJson);
   }
 
   /**
