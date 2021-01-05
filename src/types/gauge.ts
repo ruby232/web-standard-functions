@@ -37,9 +37,9 @@ export class Gauge {
     this.value = sdt.Value || 0;
     this.minValue = sdt.MinValue || 0;
     this.maxValue = sdt.MaxValue || 0;
-    this.thickness = sdt.Thickness || false;
+    this.thickness = sdt.Thickness || 10;
     this.showValue = sdt.ShowValue || false;
-    this.showMinMax = sdt.ShowValue || false;
+    this.showMinMax = sdt.ShowMinMax || false;
     this.ranges = sdt.Ranges
       ? sdt.Ranges.map(
           range =>
