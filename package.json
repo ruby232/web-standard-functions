@@ -2,7 +2,7 @@
   "name": "@genexus/web-standard-functions",
   "version": "0.14.0",
   "description": "GeneXus JavaScript standard functions library for web generators",
-  "main": "dist/web-standard-functions.js",
+  "main": "dist/lib/web-standard-functions.js",
   "module": "dist/lib-esm/web-standard-functions.js",
   "typings": "dist/types/web-standard-functions.d.ts",
   "scripts": {
