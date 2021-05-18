@@ -3,3 +3,4 @@ export * from "./types/gauge";
 export * from "./types/geography";
 export * from "./misc/setLanguage";
 export * from "./misc/msg";
+export * from "./types/guid";

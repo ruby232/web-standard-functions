@@ -28,4 +28,5 @@ __exportStar(require("./types/gauge"), exports);
 __exportStar(require("./types/geography"), exports);
 __exportStar(require("./misc/setLanguage"), exports);
 __exportStar(require("./misc/msg"), exports);
+__exportStar(require("./types/guid"), exports);
 //# sourceMappingURL=web-standard-functions.js.map
