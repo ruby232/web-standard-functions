@@ -1,4 +1,4 @@
-import { uuid as uuid_v4 } from "uuidv4";
+import { v4 as uuid_v4 } from "@lukeed/uuid";
 
 export class GUID {
   private value: string;

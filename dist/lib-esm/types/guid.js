@@ -1,4 +1,4 @@
-import { uuid as uuid_v4 } from "uuidv4";
+import { v4 as uuid_v4 } from "@lukeed/uuid";
 var GUID = /** @class */ (function() {
   function GUID(val) {
     this.value = this.normalizeValue(val);
