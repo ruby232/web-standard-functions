@@ -26,5 +26,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./gxcore/client/client-information"), exports);
 __exportStar(require("./types/gauge"), exports);
 __exportStar(require("./types/geography"), exports);
-__exportStar(require("./types/guid"), exports);
+__exportStar(require("./misc/setLanguage"), exports);
+__exportStar(require("./misc/msg"), exports);
 //# sourceMappingURL=web-standard-functions.js.map
