@@ -1,0 +1,1 @@
+{"version":3,"file":"toString.js","sourceRoot":"","sources":["../../../src/date/toString.ts"],"names":[],"mappings":";;;AAAA;;;GAGG;AACH,qCAAkC;AAErB,QAAA,QAAQ,GAAG,UAAC,UAAgB;IACvC,OAAO,iBAAO,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAI,UAAU,CAAC,OAAO,EAAE,UAAI,UAAU,CAAC,QAAQ,EAAE,GAAG,CAAC,UAAI,UAAU,CAAC,WAAW,EAAI,CAAC;AACvH,CAAC,CAAC"}

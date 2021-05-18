@@ -1,0 +1,1 @@
+{"version":3,"file":"splitRegExp.js","sourceRoot":"","sources":["../../../src/text/splitRegExp.ts"],"names":[],"mappings":";AAAA;;;;GAIG;;;AAEU,QAAA,WAAW,GAAG,UACzB,MAAc,EACd,OAAwB;IAExB,IAAI,UAAU,GAAG,OAAO,OAAO,KAAK,QAAQ,CAAC,CAAC,CAAC,IAAI,MAAM,CAAC,OAAO,CAAC,CAAC,CAAC,CAAC,OAAO,CAAC;IAC7E,OAAO,MAAM,CAAC,KAAK,CAAC,UAAU,CAAC,CAAC;AAClC,CAAC,CAAC"}

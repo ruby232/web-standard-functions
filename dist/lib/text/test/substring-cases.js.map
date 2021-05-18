@@ -1,0 +1,1 @@
+{"version":3,"file":"substring-cases.js","sourceRoot":"","sources":["../../../../src/text/test/substring-cases.ts"],"names":[],"mappings":";;;AAAa,QAAA,SAAS,GAA4C;IAChE,CAAC,YAAY,EAAE,CAAC,EAAE,CAAC,EAAE,GAAG,CAAC;IACzB,CAAC,aAAa,EAAE,CAAC,EAAE,CAAC,EAAE,KAAK,CAAC;IAC5B,CAAC,YAAY,EAAE,CAAC,EAAE,SAAS,EAAE,WAAW,CAAC;IACzC,CAAC,YAAY,EAAE,EAAE,EAAE,SAAS,EAAE,EAAE,CAAC;CAClC,CAAC"}

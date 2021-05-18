@@ -1,0 +1,1 @@
+{"version":3,"file":"addMonths.js","sourceRoot":"","sources":["../../../src/date/addMonths.ts"],"names":[],"mappings":";AAAA;;;;;GAKG;;;AAEH,+BAAiC;AAEpB,QAAA,SAAS,GAAG,UAAC,IAAU,EAAE,MAAc;IAClD,OAAO,gBAAQ,CAAC,UAAU,CAAC,IAAI,CAAC;SAC7B,IAAI,CAAC,EAAE,MAAM,EAAE,IAAI,CAAC,KAAK,CAAC,MAAM,CAAC,EAAE,CAAC;SACpC,QAAQ,EAAE,CAAC;AAChB,CAAC,CAAC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"dayOfWeekName.js","sourceRoot":"","sources":["../../../src/date/dayOfWeekName.ts"],"names":[],"mappings":";AAAA;;;;;GAKG;;;AAEH,+BAAiC;AACjC,+BAA4C;AAE/B,QAAA,aAAa,GAAG,UAAC,QAAc,EAAE,QAAiB;IAC7D,OAAO,gBAAQ,CAAC,UAAU,CAAC,QAAQ,CAAC;SACjC,SAAS,CAAC,yBAAkB,CAAC,QAAQ,CAAC,CAAC;SACvC,QAAQ,CAAC,MAAM,CAAC,CAAC;AACtB,CAAC,CAAC"}

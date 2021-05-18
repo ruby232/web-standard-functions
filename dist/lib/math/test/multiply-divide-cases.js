@@ -1,0 +1,18 @@
+"use strict";
+// test[0] * test[1] = test[2]
+// test[2] / test[0] = test[1]
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.testCases = void 0;
+// Multiply and divide test cases
+exports.testCases = [
+  ["1", "2", "2"],
+  ["1.1", "2.2", "2.42"],
+  ["0.0001", "0.0002", "0.00000002"],
+  ["0.00000001", "0.00000002", "0.0000000000000002"],
+  ["0.00000000001", "0.00000000002", "0.0000000000000000000002"],
+  ["1000", "2000", "2000000"],
+  ["10000000000000000000", "1", "10000000000000000000"],
+  ["1", "-1", "-1"],
+  ["0.1", "-0.1", "-0.01"]
+];
+//# sourceMappingURL=multiply-divide-cases.js.map

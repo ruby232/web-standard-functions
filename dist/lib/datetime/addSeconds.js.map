@@ -1,0 +1,1 @@
+{"version":3,"file":"addSeconds.js","sourceRoot":"","sources":["../../../src/datetime/addSeconds.ts"],"names":[],"mappings":";AAAA;;;;;GAKG;;;AAEH,+BAA+C;AAElC,QAAA,UAAU,GAAG,UAAC,QAAc,EAAE,OAAe;IACxD,OAAO,IAAI,IAAI,CAAC,QAAQ,CAAC,OAAO,EAAE,GAAG,4BAAqB,CAAC,OAAO,CAAC,CAAC,CAAC;AACvE,CAAC,CAAC"}

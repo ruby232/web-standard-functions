@@ -1,0 +1,1 @@
+{"version":3,"file":"setLanguage.js","sourceRoot":"","sources":["../../../src/misc/setLanguage.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,kBAAkB,EAAE,MAAM,8BAA8B,CAAC;AAElE;;;;GAIG;AACH,MAAM,CAAC,IAAM,WAAW,GAAG,UAAC,IAAY;IACtC,OAAO,kBAAkB,CAAC,WAAW,EAAE,CAAC,WAAW,CAAC,IAAI,CAAC,CAAC;AAC5D,CAAC,CAAC"}

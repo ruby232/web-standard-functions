@@ -1,0 +1,1 @@
+{"version":3,"file":"round.js","sourceRoot":"","sources":["../../../src/numeric/round.ts"],"names":[],"mappings":";;;AAAA;;;;;GAKG;AACU,QAAA,KAAK,GAAG,UAAC,KAAa,EAAE,MAAc;IACjD,IAAM,UAAU,GAAG,IAAI,CAAC,GAAG,CAAC,EAAE,EAAE,MAAM,IAAI,CAAC,CAAC,CAAC;IAC7C,OAAO,IAAI,CAAC,KAAK,CAAC,KAAK,GAAG,UAAU,CAAC,GAAG,UAAU,CAAC;AACrD,CAAC,CAAC"}

@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.testCases = void 0;
+exports.testCases = [
+  ["Textoáéíóú", "Textoáéíóú"],
+  ["😀áéí😀óú😀", "😀áéí😀óú😀"],
+  ["Peñarol Campeón del Siglo XX", "Peñarol Campeón del Siglo XX"],
+  ["peñarol campeón del siglo xx", "peñarol campeón del siglo xx"]
+];
+//# sourceMappingURL=tostring-cases.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"remove.js","sourceRoot":"","sources":["../../../../../src/gxcore/client/client-storage/remove.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,OAAO,EAAE,MAAM,UAAU,CAAC;AAE9C;;;GAGG;AACH,MAAM,UAAU,MAAM,CAAC,GAAQ;IAC7B,IAAI,CAAC,OAAO,EAAE;QACZ,OAAO;KACR;IACD,IAAM,IAAI,GAAG,SAAS,CAAC,GAAG,CAAC,CAAC;IAC5B,OAAO,CAAC,UAAU,CAAC,IAAI,CAAC,CAAC;AAC3B,CAAC"}

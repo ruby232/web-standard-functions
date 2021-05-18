@@ -1,0 +1,1 @@
+{"version":3,"file":"getTimezone.js","sourceRoot":"","sources":["../../../src/datetime/getTimezone.ts"],"names":[],"mappings":"AAAA;;;GAGG;AAGH,OAAO,EAAE,kBAAkB,EAAE,MAAM,8BAA8B,CAAC;AAClE,OAAO,EAAE,UAAU,EAAc,MAAM,sBAAsB,CAAC;AAE9D,MAAM,CAAC,IAAM,WAAW,GAAG;IACzB,OAAO,kBAAkB,CAAC,WAAW,EAAE,CAAC,iBAAiB,CAAC,UAAU,CAAC,CAAC;AACxE,CAAC,CAAC"}

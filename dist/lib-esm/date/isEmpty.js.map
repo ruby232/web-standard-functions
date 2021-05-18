@@ -1,0 +1,1 @@
+{"version":3,"file":"isEmpty.js","sourceRoot":"","sources":["../../../src/date/isEmpty.ts"],"names":[],"mappings":"AAAA;;;;GAIG;AAEF,OAAO,EAAC,gBAAgB,EAAC,MAAM,QAAQ,CAAC;AAEzC,MAAM,CAAC,IAAM,OAAO,GAAG,UAAC,MAAY;IAClC,OAAO,MAAM,CAAC,OAAO,EAAE,KAAK,gBAAgB,CAAC,OAAO,EAAE,CAAC;AACzD,CAAC,CAAC"}

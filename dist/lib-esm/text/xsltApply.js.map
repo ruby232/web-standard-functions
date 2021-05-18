@@ -1,0 +1,1 @@
+{"version":3,"file":"xsltApply.js","sourceRoot":"","sources":["../../../src/text/xsltApply.ts"],"names":[],"mappings":"AAAA;;;;;GAKG;AAEH,OAAO,EAAE,WAAW,EAAE,QAAQ,EAAE,MAAM,gBAAgB,CAAC;AAEvD,MAAM,CAAC,IAAM,SAAS,GAAG,UAAC,SAAiB,EAAE,UAAkB;IAC7D,OAAO,WAAW,CAAC,QAAQ,CAAC,SAAS,CAAC,EAAE,QAAQ,CAAC,UAAU,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC"}
