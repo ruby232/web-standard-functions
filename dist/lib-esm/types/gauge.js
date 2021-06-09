@@ -1,11 +1,11 @@
-var Gauge = /** @class */ (function() {
+var Gauge = /** @class */ (function () {
   function Gauge(json) {
     this.fromJson(json);
   }
   /**
    * Load Gauge object represented by the GaugeSDT.ToJson()
    */
-  Gauge.prototype.fromJson = function(json) {
+  Gauge.prototype.fromJson = function (json) {
     var _a;
     var sdt;
     try {
@@ -32,11 +32,11 @@ var Gauge = /** @class */ (function() {
     this.showValue = sdt.ShowValue || false;
     this.showMinMax = sdt.ShowMinMax || false;
     this.ranges = sdt.Ranges
-      ? sdt.Ranges.map(function(range) {
+      ? sdt.Ranges.map(function (range) {
           return {
             name: range.Name,
             amount: range.Length,
-            color: range.Color
+            color: range.Color,
           };
         })
       : [];
@@ -44,7 +44,7 @@ var Gauge = /** @class */ (function() {
   return Gauge;
 })();
 export { Gauge };
-var GaugeRange = /** @class */ (function() {
+var GaugeRange = /** @class */ (function () {
   function GaugeRange() {}
   return GaugeRange;
 })();

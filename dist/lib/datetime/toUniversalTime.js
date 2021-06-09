@@ -9,7 +9,7 @@ exports.toUniversalTime = void 0;
 var luxon_1 = require("luxon");
 var getTimezone_1 = require("./getTimezone");
 var core_1 = require("./core");
-exports.toUniversalTime = function(fromDate) {
+var toUniversalTime = function (fromDate) {
   var offset = luxon_1.DateTime.fromJSDate(fromDate).setZone(
     getTimezone_1.getTimezone()
   ).offset;
@@ -17,4 +17,5 @@ exports.toUniversalTime = function(fromDate) {
   ret.setTime(fromDate.getTime() - core_1.minutesToMilliseconds(offset));
   return ret;
 };
+exports.toUniversalTime = toUniversalTime;
 //# sourceMappingURL=toUniversalTime.js.map

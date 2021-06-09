@@ -1,4 +1,4 @@
-export var gxToLibLangMapping = function(gxlang) {
+export var gxToLibLangMapping = function (gxlang) {
   var gxtoluxonLang = new Map([
     ["spa", "es"] /*Spanish*/,
     ["eng", "en"] /*English*/,
@@ -6,7 +6,7 @@ export var gxToLibLangMapping = function(gxlang) {
     ["ita", "it"] /*Italian*/,
     ["chs", "zh-Hans"] /*Simplified Chinese*/,
     ["cht", "zh-Hant"] /*Traditional Chinese*/,
-    ["jap", "jpn"] /*Japanese*/
+    ["jap", "jpn"] /*Japanese*/,
   ]);
   var luxonLang = gxtoluxonLang.get(gxlang);
   return luxonLang || "en";

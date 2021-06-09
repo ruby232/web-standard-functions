@@ -6,10 +6,11 @@ var canOpen_1 = require("./canOpen");
  * Opens an URL in the web browser
  * @param url
  */
-exports.openInBrowser = function(url) {
+var openInBrowser = function (url) {
   if (canOpen_1.canOpen(url)) {
     var win = window.open(url, "_blank");
     win.focus();
   }
 };
+exports.openInBrowser = openInBrowser;
 //# sourceMappingURL=openInBrowser.js.map

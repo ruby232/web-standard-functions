@@ -1,5 +1,5 @@
 export var XMLErrorCodes;
-(function(XMLErrorCodes) {
+(function (XMLErrorCodes) {
   XMLErrorCodes[(XMLErrorCodes["no_error"] = 0)] = "no_error";
   XMLErrorCodes[(XMLErrorCodes["open_file"] = 1)] = "open_file";
   XMLErrorCodes[(XMLErrorCodes["no_open_document"] = 2)] = "no_open_document";
@@ -7,21 +7,21 @@ export var XMLErrorCodes;
     "missing_start_element";
   XMLErrorCodes[(XMLErrorCodes["unknown_error"] = 99)] = "unknown_error";
 })(XMLErrorCodes || (XMLErrorCodes = {}));
-var XMLBase = /** @class */ (function() {
+var XMLBase = /** @class */ (function () {
   function XMLBase() {}
   Object.defineProperty(XMLBase.prototype, "errCode", {
-    get: function() {
+    get: function () {
       return this.mErrCode;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLBase.prototype, "errDescription", {
-    get: function() {
+    get: function () {
       return this.mErrDescription;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   return XMLBase;
 })();

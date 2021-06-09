@@ -7,9 +7,10 @@ var configurationState_1 = require("../config/configurationState");
  * @param lang The language to set
  * @returns 0 if the language can be set, a value greater than 0 if it cannot be set
  */
-exports.setLanguage = function(lang) {
+var setLanguage = function (lang) {
   return configurationState_1.ConfigurationState.getInstance().setLanguage(
     lang
   );
 };
+exports.setLanguage = setLanguage;
 //# sourceMappingURL=setLanguage.js.map

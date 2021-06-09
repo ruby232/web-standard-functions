@@ -1,14 +1,14 @@
 var __awaiter =
   (this && this.__awaiter) ||
-  function(thisArg, _arguments, P, generator) {
+  function (thisArg, _arguments, P, generator) {
     function adopt(value) {
       return value instanceof P
         ? value
-        : new P(function(resolve) {
+        : new P(function (resolve) {
             resolve(value);
           });
     }
-    return new (P || (P = Promise))(function(resolve, reject) {
+    return new (P || (P = Promise))(function (resolve, reject) {
       function fulfilled(value) {
         try {
           step(generator.next(value));
@@ -33,15 +33,15 @@ var __awaiter =
   };
 var __generator =
   (this && this.__generator) ||
-  function(thisArg, body) {
+  function (thisArg, body) {
     var _ = {
         label: 0,
-        sent: function() {
+        sent: function () {
           if (t[0] & 1) throw t[1];
           return t[1];
         },
         trys: [],
-        ops: []
+        ops: [],
       },
       f,
       y,
@@ -50,13 +50,13 @@ var __generator =
     return (
       (g = { next: verb(0), throw: verb(1), return: verb(2) }),
       typeof Symbol === "function" &&
-        (g[Symbol.iterator] = function() {
+        (g[Symbol.iterator] = function () {
           return this;
         }),
       g
     );
     function verb(n) {
-      return function(v) {
+      return function (v) {
         return step([n, v]);
       };
     }
@@ -133,26 +133,26 @@ var __generator =
   };
 import { ConfigurationState } from "./configurationState";
 import { getLanguage } from "../misc/getLanguage";
-var TranslationService = /** @class */ (function() {
+var TranslationService = /** @class */ (function () {
   function TranslationService() {
     this.translations = {};
     this.images = {};
     this.loadedTranslations = {};
     this.loadedImages = {};
   }
-  TranslationService.getInstance = function() {
+  TranslationService.getInstance = function () {
     if (!TranslationService.instance) {
       TranslationService.instance = new TranslationService();
     }
     return TranslationService.instance;
   };
-  TranslationService.prototype.loadTranslations = function(language, data) {
-    return __awaiter(this, void 0, void 0, function() {
+  TranslationService.prototype.loadTranslations = function (language, data) {
+    return __awaiter(this, void 0, void 0, function () {
       var msgTranslations_1;
-      return __generator(this, function(_a) {
+      return __generator(this, function (_a) {
         if (!this.loadedTranslations[language]) {
           msgTranslations_1 = {};
-          data.Translations.forEach(function(t) {
+          data.Translations.forEach(function (t) {
             return (msgTranslations_1[t.M] = t.T);
           });
           this.translations[language] = msgTranslations_1;
@@ -162,14 +162,14 @@ var TranslationService = /** @class */ (function() {
       });
     });
   };
-  TranslationService.prototype.loadImages = function(language, theme, data) {
-    return __awaiter(this, void 0, void 0, function() {
+  TranslationService.prototype.loadImages = function (language, theme, data) {
+    return __awaiter(this, void 0, void 0, function () {
       var imgTranslations_1;
       var _this = this;
-      return __generator(this, function(_a) {
+      return __generator(this, function (_a) {
         if (!this.loadedImages[language + theme]) {
           imgTranslations_1 = {};
-          data.images.forEach(function(t) {
+          data.images.forEach(function (t) {
             return (imgTranslations_1[_this.resolveImageKey(t.name, theme)] =
               "resources/" + t.location);
           });
@@ -180,7 +180,7 @@ var TranslationService = /** @class */ (function() {
       });
     });
   };
-  TranslationService.prototype.translate = function(name, language) {
+  TranslationService.prototype.translate = function (name, language) {
     if (language === void 0) {
       language = undefined;
     }
@@ -194,7 +194,7 @@ var TranslationService = /** @class */ (function() {
     }
     return translation;
   };
-  TranslationService.prototype.getImageSource = function(
+  TranslationService.prototype.getImageSource = function (
     name,
     language,
     theme
@@ -210,38 +210,37 @@ var TranslationService = /** @class */ (function() {
     }
     return this.getHostName() + imageUrl;
   };
-  TranslationService.prototype.getHostName = function() {
-    var hostName = ConfigurationState.getInstance().getDynStoredValue(
-      "SERVICE_HOSTNAME"
-    );
+  TranslationService.prototype.getHostName = function () {
+    var hostName =
+      ConfigurationState.getInstance().getDynStoredValue("SERVICE_HOSTNAME");
     if (hostName) {
       return hostName;
     } else {
       return "";
     }
   };
-  TranslationService.prototype.resolveImageKey = function(name, theme) {
+  TranslationService.prototype.resolveImageKey = function (name, theme) {
     return name + "_" + theme;
   };
   return TranslationService;
 })();
 export { TranslationService };
-var TranslationsData = /** @class */ (function() {
+var TranslationsData = /** @class */ (function () {
   function TranslationsData() {}
   return TranslationsData;
 })();
 export { TranslationsData };
-var TranslationsItemData = /** @class */ (function() {
+var TranslationsItemData = /** @class */ (function () {
   function TranslationsItemData() {}
   return TranslationsItemData;
 })();
 export { TranslationsItemData };
-var ImagesData = /** @class */ (function() {
+var ImagesData = /** @class */ (function () {
   function ImagesData() {}
   return ImagesData;
 })();
 export { ImagesData };
-var ImageData = /** @class */ (function() {
+var ImageData = /** @class */ (function () {
   function ImageData() {}
   return ImageData;
 })();

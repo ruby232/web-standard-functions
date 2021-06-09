@@ -2,7 +2,7 @@ import {
   cancelSubscription as cancel,
   publish as publishTopic,
   subscribe as subscribeTopic,
-  cancelAllSubscriptions
+  cancelAllSubscriptions,
 } from "../pubSub/pubSub";
 /**
  * Subscribe to topic name. Automatically gets notified when someone publish to the topic name.

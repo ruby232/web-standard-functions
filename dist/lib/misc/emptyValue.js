@@ -9,7 +9,7 @@ var setEmpty_4 = require("../bool/setEmpty");
  * @param value
  * @return any
  */
-exports.emptyValue = function(value) {
+var emptyValue = function (value) {
   if (value instanceof Date) {
     return setEmpty_1.setEmpty(value);
   } else if (typeof value === "string") {
@@ -21,4 +21,5 @@ exports.emptyValue = function(value) {
   }
   return null;
 };
+exports.emptyValue = emptyValue;
 //# sourceMappingURL=emptyValue.js.map

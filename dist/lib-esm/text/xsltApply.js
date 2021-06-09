@@ -5,7 +5,7 @@
  * @return string
  */
 import { xsltProcess, xmlParse } from "xslt-processor";
-export var xsltApply = function(xmlString, xsltString) {
+export var xsltApply = function (xmlString, xsltString) {
   return xsltProcess(xmlParse(xmlString), xmlParse(xsltString));
 };
 //# sourceMappingURL=xsltApply.js.map

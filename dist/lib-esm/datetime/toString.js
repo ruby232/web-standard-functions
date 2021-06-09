@@ -5,7 +5,7 @@ import { toString as str } from "../numeric/toString";
  * Returns a string represantation of a date-time. dd[/]mm[/]yyyy HH:mm:ss
  * @return Date
  */
-export var toString = function(targetDate) {
+export var toString = function (targetDate) {
   if (isEmpty(targetDate)) {
     return "";
   } else {

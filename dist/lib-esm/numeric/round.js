@@ -4,7 +4,7 @@
  * @param {number} digits
  * @returns number
  */
-export var round = function(value, digits) {
+export var round = function (value, digits) {
   var multiplier = Math.pow(10, digits || 0);
   return Math.round(value * multiplier) / multiplier;
 };

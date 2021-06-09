@@ -1,15 +1,15 @@
 "use strict";
 var __awaiter =
   (this && this.__awaiter) ||
-  function(thisArg, _arguments, P, generator) {
+  function (thisArg, _arguments, P, generator) {
     function adopt(value) {
       return value instanceof P
         ? value
-        : new P(function(resolve) {
+        : new P(function (resolve) {
             resolve(value);
           });
     }
-    return new (P || (P = Promise))(function(resolve, reject) {
+    return new (P || (P = Promise))(function (resolve, reject) {
       function fulfilled(value) {
         try {
           step(generator.next(value));
@@ -34,15 +34,15 @@ var __awaiter =
   };
 var __generator =
   (this && this.__generator) ||
-  function(thisArg, body) {
+  function (thisArg, body) {
     var _ = {
         label: 0,
-        sent: function() {
+        sent: function () {
           if (t[0] & 1) throw t[1];
           return t[1];
         },
         trys: [],
-        ops: []
+        ops: [],
       },
       f,
       y,
@@ -51,13 +51,13 @@ var __generator =
     return (
       (g = { next: verb(0), throw: verb(1), return: verb(2) }),
       typeof Symbol === "function" &&
-        (g[Symbol.iterator] = function() {
+        (g[Symbol.iterator] = function () {
           return this;
         }),
       g
     );
     function verb(n) {
-      return function(v) {
+      return function (v) {
         return step([n, v]);
       };
     }
@@ -132,15 +132,12 @@ var __generator =
       return { value: op[0] ? op[1] : void 0, done: true };
     }
   };
-var __spreadArrays =
-  (this && this.__spreadArrays) ||
-  function() {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++)
-      s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-      for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-        r[k] = a[j];
-    return r;
+var __spreadArray =
+  (this && this.__spreadArray) ||
+  function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+      to[j] = from[i];
+    return to;
   };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.publishCall = void 0;
@@ -152,13 +149,13 @@ function publishCall(fnName, options, resolver) {
   for (var _i = 3; _i < arguments.length; _i++) {
     params[_i - 3] = arguments[_i];
   }
-  return __awaiter(this, void 0, void 0, function() {
-    return __generator(this, function(_a) {
+  return __awaiter(this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
       return [
         2 /*return*/,
-        new Promise(function(resolve) {
+        new Promise(function (resolve) {
           var guid = guid_1.GUID.newGuid().toString();
-          var suscriptions = options.map(function(opt) {
+          var suscriptions = options.map(function (opt) {
             var s = pubSub_1.subscribe(
               helpers_1.stdToGeneratorPublishedMessage +
                 "_" +
@@ -167,24 +164,24 @@ function publishCall(fnName, options, resolver) {
                 guid +
                 "_" +
                 opt,
-              function(result) {
+              function (result) {
                 unsubscribe();
                 resolver(opt, result, resolve);
               }
             );
             return s;
           });
-          var unsubscribe = function() {
+          var unsubscribe = function () {
             suscriptions.map(pubSub_1.cancelSubscription);
           };
           pubSub_1.publish.apply(
             void 0,
-            __spreadArrays(
+            __spreadArray(
               [helpers_1.stdToGeneratorPublishedMessage + "_" + fnName, guid],
               params
             )
           );
-        })
+        }),
       ];
     });
   });

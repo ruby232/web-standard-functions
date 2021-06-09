@@ -4,7 +4,7 @@ var regExp = /^ +/g;
  * @param {string} value
  * @return string
  */
-export var ltrim = function(s) {
+export var ltrim = function (s) {
   return s.replace(regExp, "");
 };
 //# sourceMappingURL=lTrim.js.map

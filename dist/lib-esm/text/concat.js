@@ -6,7 +6,7 @@ import { rTrim } from "./rTrim";
  * @param {string} separator Optional separator
  * @return string
  */
-export var concat = function(value1, value2, separator) {
+export var concat = function (value1, value2, separator) {
   if (separator === void 0) {
     separator = undefined;
   }

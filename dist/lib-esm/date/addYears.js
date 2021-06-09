@@ -5,7 +5,7 @@
  * @return Date
  */
 import { DateTime } from "luxon";
-export var addYears = function(date, years) {
+export var addYears = function (date, years) {
   return DateTime.fromJSDate(date)
     .plus({ years: Math.trunc(years) })
     .toJSDate();

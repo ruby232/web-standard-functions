@@ -6,7 +6,7 @@ import { length } from "../text/length";
  * @param {number} from
  * @return number
  */
-export var lastIndexOf = function(target, pattern, from) {
+export var lastIndexOf = function (target, pattern, from) {
   if (from < 1 || from > length(target)) return 0;
   return target.lastIndexOf(pattern, from - 1) + 1;
 };

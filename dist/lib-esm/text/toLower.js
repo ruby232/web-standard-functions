@@ -3,7 +3,7 @@
  * @param {string} value
  * @return string
  */
-export var toLower = function(target) {
+export var toLower = function (target) {
   return target.toLowerCase();
 };
 //# sourceMappingURL=toLower.js.map

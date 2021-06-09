@@ -5,7 +5,7 @@ import { rTrim } from "./rTrim";
  * @param {any[]} args The replacement strings
  * @return string
  */
-export var format = function(str) {
+export var format = function (str) {
   var args = [];
   for (var _i = 1; _i < arguments.length; _i++) {
     args[_i - 1] = arguments[_i];

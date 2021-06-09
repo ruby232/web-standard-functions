@@ -4,7 +4,7 @@ import BigNumber from "bignumber.js";
  * @param operationName Name of the BigNumber mathematical binary operation
  */
 export function defineBinaryOperation(operationName) {
-  return function(operand1, operand2) {
+  return function (operand1, operand2) {
     return binaryOperation(operationName, operand1, operand2);
   };
 }
@@ -13,7 +13,7 @@ export function defineBinaryOperation(operationName) {
  * @param operationName Name of the BigNumber mathematical unary operation
  */
 export function defineUnaryOperation(operationName) {
-  return function(operand) {
+  return function (operand) {
     return unaryOperation(operationName, operand);
   };
 }
@@ -43,8 +43,8 @@ function intiBigNumberConfig() {
   BigNumber.config({
     FORMAT: {
       decimalSeparator: ".",
-      groupSeparator: ","
-    }
+      groupSeparator: ",",
+    },
   });
 }
 //# sourceMappingURL=operation.js.map

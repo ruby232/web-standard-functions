@@ -1,4 +1,4 @@
-var PubSubscriptionOptions = /** @class */ (function() {
+var PubSubscriptionOptions = /** @class */ (function () {
   function PubSubscriptionOptions(init) {
     this.once = false;
     Object.assign(this, init);

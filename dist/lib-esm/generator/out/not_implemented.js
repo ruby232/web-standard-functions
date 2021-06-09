@@ -3752,7 +3752,7 @@ export function calculateDirections() {
   return null;
 }
 // end Type
-var GeneXusClientClientInformation = /** @class */ (function() {
+var GeneXusClientClientInformation = /** @class */ (function () {
   function GeneXusClientClientInformation() {}
   return GeneXusClientClientInformation;
 })();
@@ -4829,13 +4829,13 @@ export function scanInLoop() {
   return null;
 }
 // end Type
-var GeneXusSDNetwork = /** @class */ (function() {
+var GeneXusSDNetwork = /** @class */ (function () {
   function GeneXusSDNetwork() {}
   /**
    * @param url
    * @return boolean
    */
-  GeneXusSDNetwork.isServerAvailable = function() {
+  GeneXusSDNetwork.isServerAvailable = function () {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
       args[_i] = arguments[_i];
@@ -4847,7 +4847,7 @@ var GeneXusSDNetwork = /** @class */ (function() {
    * @param url
    * @return any
    */
-  GeneXusSDNetwork.type = function() {
+  GeneXusSDNetwork.type = function () {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
       args[_i] = arguments[_i];
@@ -4859,7 +4859,7 @@ var GeneXusSDNetwork = /** @class */ (function() {
    * @param url
    * @return boolean
    */
-  GeneXusSDNetwork.trafficBasedCost = function() {
+  GeneXusSDNetwork.trafficBasedCost = function () {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
       args[_i] = arguments[_i];
@@ -4872,7 +4872,7 @@ var GeneXusSDNetwork = /** @class */ (function() {
    * @param url
    * @return any
    */
-  GeneXusSDNetwork.setApplicationServerURL = function() {
+  GeneXusSDNetwork.setApplicationServerURL = function () {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
       args[_i] = arguments[_i];

@@ -7,7 +7,7 @@ exports.like = void 0;
  * @param {string} str2 Search string
  * @result true if the search string is found, false otherwise
  */
-exports.like = function(str1, str2) {
+var like = function (str1, str2) {
   if (str2 === null) {
     return false;
   }
@@ -27,4 +27,5 @@ exports.like = function(str1, str2) {
   var rexp = new RegExp(str2.replace(/%/g, ".*").replace(/_/g, "."));
   return rexp.test(str1);
 };
+exports.like = like;
 //# sourceMappingURL=like.js.map

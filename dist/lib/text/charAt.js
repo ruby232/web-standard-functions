@@ -7,8 +7,9 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.charAt = void 0;
-exports.charAt = function(target, from) {
+var charAt = function (target, from) {
   var chars = Array.from(target);
   return from < 1 || from > chars.length ? "" : chars[from - 1];
 };
+exports.charAt = charAt;
 //# sourceMappingURL=charAt.js.map

@@ -6,7 +6,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.replace = void 0;
-exports.replace = function(target, substr, repstr) {
+var replace = function (target, substr, repstr) {
   return target.replace(substr, repstr);
 };
+exports.replace = replace;
 //# sourceMappingURL=replace.js.map

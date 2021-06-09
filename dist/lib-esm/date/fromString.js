@@ -4,7 +4,7 @@
  * @return Date
  */
 import { EMPTY_DATE_VALUE } from "./core";
-export var fromString = function(target, dateFrom) {
+export var fromString = function (target, dateFrom) {
   var dateParts = dateFrom.match(
     /([0-9]?[0-9])\/?([0-9]?[0-9])\/?([0-9][0-9][0-9][0-9])/
   );

@@ -7,7 +7,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.padRight = void 0;
-exports.padRight = function(target, length, fillChar) {
+var padRight = function (target, length, fillChar) {
   return target.padEnd(length, fillChar);
 };
+exports.padRight = padRight;
 //# sourceMappingURL=padRight.js.map

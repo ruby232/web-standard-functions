@@ -6,7 +6,7 @@ exports.toString = void 0;
  * @return Date
  */
 var isEmpty_1 = require("./isEmpty");
-exports.toString = function(targetDate) {
+var toString = function (targetDate) {
   return isEmpty_1.isEmpty(targetDate)
     ? ""
     : targetDate.getDate() +
@@ -15,4 +15,5 @@ exports.toString = function(targetDate) {
         "/" +
         targetDate.getFullYear();
 };
+exports.toString = toString;
 //# sourceMappingURL=toString.js.map

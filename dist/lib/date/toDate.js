@@ -6,7 +6,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.toDate = void 0;
-exports.toDate = function(dateFrom) {
+var toDate = function (dateFrom) {
   return dateFrom;
 };
+exports.toDate = toDate;
 //# sourceMappingURL=toDate.js.map

@@ -4,7 +4,7 @@
  * @param {number} millisecconds
  * @return Date
  */
-export var addMilliseconds = function(dateFrom, milliseconds) {
+export var addMilliseconds = function (dateFrom, milliseconds) {
   var ret = new Date();
   ret.setTime(dateFrom.getTime() + milliseconds);
   return ret;

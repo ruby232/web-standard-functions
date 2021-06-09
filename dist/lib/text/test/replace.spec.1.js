@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var replace_1 = require("../replace");
 var replace_cases_1 = require("./replace-cases");
-describe("replace operation", function() {
-  var _loop_1 = function(t) {
+describe("replace operation", function () {
+  var _loop_1 = function (t) {
     it(
       'replace in "' +
         t[0] +
@@ -14,7 +14,7 @@ describe("replace operation", function() {
         '" to equal "' +
         t[3] +
         '"',
-      function() {
+      function () {
         expect(replace_1.replace(t[0], t[1], t[2])).toBe(t[3]);
       }
     );

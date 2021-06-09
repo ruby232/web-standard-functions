@@ -6,7 +6,7 @@
  * @return Date
  */
 import { EMPTY_DATE_VALUE } from "./core";
-export var newInstance = function(year, month, day) {
+export var newInstance = function (year, month, day) {
   var ret = new Date(year, month - 1, day, 0, 0, 0, 0);
   return ret.getFullYear() === year &&
     ret.getMonth() === month - 1 &&

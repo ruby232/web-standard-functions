@@ -6,7 +6,7 @@ exports.getCookie = void 0;
  * @param {string } name The name of the cookie
  * @return {string} The cookie's valie
  */
-exports.getCookie = function(name) {
+var getCookie = function (name) {
   var searchName = name + "=";
   var cookies = document.cookie.split(";");
   for (var i = 0; i < cookies.length; i++) {
@@ -17,4 +17,5 @@ exports.getCookie = function(name) {
   }
   return null;
 };
+exports.getCookie = getCookie;
 //# sourceMappingURL=getCookie.js.map

@@ -3,7 +3,7 @@
  * @param {string} value
  * @returns number
  */
-export var fromString = function(target, value) {
+export var fromString = function (target, value) {
   return Number.parseFloat(value);
 };
 //# sourceMappingURL=fromString.js.map

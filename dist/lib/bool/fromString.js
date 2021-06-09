@@ -5,7 +5,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.fromString = void 0;
-exports.fromString = function(target, str) {
+var fromString = function (target, str) {
   return str.toLowerCase() === "true";
 };
+exports.fromString = fromString;
 //# sourceMappingURL=fromString.js.map

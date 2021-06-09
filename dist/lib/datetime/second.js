@@ -6,7 +6,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.second = void 0;
-exports.second = function(dateFrom) {
+var second = function (dateFrom) {
   return dateFrom.getSeconds();
 };
+exports.second = second;
 //# sourceMappingURL=second.js.map

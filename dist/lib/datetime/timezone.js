@@ -1,14 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.fromString = exports.timezones = exports.detect = exports.storageKey = void 0;
+exports.fromString =
+  exports.timezones =
+  exports.detect =
+  exports.storageKey =
+    void 0;
 var jstz = require("jstz");
 exports.storageKey = "currentTimezone";
-exports.detect = function() {
+var detect = function () {
   var timezone = jstz.determine().name();
   return timezone;
 };
+exports.detect = detect;
 var timezones;
-(function(timezones) {
+(function (timezones) {
   timezones["Cairo"] = "Africa/Cairo";
   timezones["Johannesburg"] = "Africa/Johannesburg";
   timezones["Lagos"] = "Africa/Lagos";
@@ -65,12 +70,13 @@ var timezones;
   timezones["Noumea"] = "Pacific/Noumea";
   timezones["Tongatapu"] = "Pacific/Tongatapu";
 })((timezones = exports.timezones || (exports.timezones = {})));
-exports.fromString = function(stz) {
+var fromString = function (stz) {
   var arrTimezones = Object.keys(timezones);
   return (
-    arrTimezones.find(function(e) {
+    arrTimezones.find(function (e) {
       return timezones[e] === stz;
     }) || timezones[timezones.UTC]
   );
 };
+exports.fromString = fromString;
 //# sourceMappingURL=timezone.js.map

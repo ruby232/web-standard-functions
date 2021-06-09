@@ -10,9 +10,9 @@ exports.fromTimezone = void 0;
 var luxon_1 = require("luxon");
 var getTimezone_1 = require("./getTimezone");
 var core_1 = require("./core");
-exports.fromTimezone = function(fromDate, timezoneFrom) {
-  var offsetFrom = luxon_1.DateTime.fromJSDate(fromDate).setZone(timezoneFrom)
-    .offset;
+var fromTimezone = function (fromDate, timezoneFrom) {
+  var offsetFrom =
+    luxon_1.DateTime.fromJSDate(fromDate).setZone(timezoneFrom).offset;
   var offsetTo = luxon_1.DateTime.fromJSDate(fromDate).setZone(
     getTimezone_1.getTimezone()
   ).offset;
@@ -20,4 +20,5 @@ exports.fromTimezone = function(fromDate, timezoneFrom) {
     fromDate.getTime() + core_1.minutesToMilliseconds(offsetTo - offsetFrom)
   );
 };
+exports.fromTimezone = fromTimezone;
 //# sourceMappingURL=fromTimezone.js.map

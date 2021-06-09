@@ -55,6 +55,6 @@ export declare enum timezones {
   Auckland = "Pacific/Auckland",
   Honolulu = "Pacific/Honolulu",
   Noumea = "Pacific/Noumea",
-  Tongatapu = "Pacific/Tongatapu"
+  Tongatapu = "Pacific/Tongatapu",
 }
 export declare const fromString: (stz: string) => timezones;

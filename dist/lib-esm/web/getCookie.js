@@ -3,7 +3,7 @@
  * @param {string } name The name of the cookie
  * @return {string} The cookie's valie
  */
-export var getCookie = function(name) {
+export var getCookie = function (name) {
   var searchName = name + "=";
   var cookies = document.cookie.split(";");
   for (var i = 0; i < cookies.length; i++) {

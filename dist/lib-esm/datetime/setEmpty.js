@@ -4,7 +4,7 @@
  * @return void
  */
 import { EMPTY_DATE_VALUE } from "../date/core";
-export var setEmpty = function(date) {
+export var setEmpty = function (date) {
   date.setTime(EMPTY_DATE_VALUE.getTime());
   return date;
 };

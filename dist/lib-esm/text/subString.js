@@ -5,7 +5,7 @@
  * @return string
  */
 import * as unicodeSubstring from "unicode-substring";
-export var subString = function(target, startPosition, length) {
+export var subString = function (target, startPosition, length) {
   if (length === undefined) {
     length = -1;
   }

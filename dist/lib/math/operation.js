@@ -7,7 +7,7 @@ var bignumber_js_1 = require("bignumber.js");
  * @param operationName Name of the BigNumber mathematical binary operation
  */
 function defineBinaryOperation(operationName) {
-  return function(operand1, operand2) {
+  return function (operand1, operand2) {
     return binaryOperation(operationName, operand1, operand2);
   };
 }
@@ -17,7 +17,7 @@ exports.defineBinaryOperation = defineBinaryOperation;
  * @param operationName Name of the BigNumber mathematical unary operation
  */
 function defineUnaryOperation(operationName) {
-  return function(operand) {
+  return function (operand) {
     return unaryOperation(operationName, operand);
   };
 }
@@ -48,8 +48,8 @@ function intiBigNumberConfig() {
   bignumber_js_1.default.config({
     FORMAT: {
       decimalSeparator: ".",
-      groupSeparator: ","
-    }
+      groupSeparator: ",",
+    },
   });
 }
 //# sourceMappingURL=operation.js.map

@@ -1,6 +1,6 @@
 export declare enum SocketStatus {
   Disconnected = 0,
-  Connected = 1
+  Connected = 1,
 }
 export declare class GeneXusClientSocket {
   static url: string;

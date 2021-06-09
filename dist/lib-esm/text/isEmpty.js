@@ -4,7 +4,7 @@ import { trim } from "./trim";
  * @param {string} target
  * @return boolean
  */
-export var isEmpty = function(target) {
+export var isEmpty = function (target) {
   return trim(target) === "";
 };
 //# sourceMappingURL=isEmpty.js.map

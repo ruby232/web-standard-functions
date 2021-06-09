@@ -5,7 +5,8 @@ exports.isNull = void 0;
  * @param value
  * @return boolean
  */
-exports.isNull = function(value) {
+var isNull = function (value) {
   return false;
 };
+exports.isNull = isNull;
 //# sourceMappingURL=isNull.js.map

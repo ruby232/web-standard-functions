@@ -4,7 +4,7 @@
  * @param {number} digits
  * @returns number
  */
-export var truncate = function(value, digits) {
+export var truncate = function (value, digits) {
   var multiplier = Math.pow(10, digits || 0);
   return Math.trunc(value * multiplier) / multiplier;
 };

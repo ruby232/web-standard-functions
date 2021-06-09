@@ -7,7 +7,7 @@
 import { DateTime } from "luxon";
 import { getTimezone } from "./getTimezone";
 import { minutesToMilliseconds } from "./core";
-export var fromTimezone = function(fromDate, timezoneFrom) {
+export var fromTimezone = function (fromDate, timezoneFrom) {
   var offsetFrom = DateTime.fromJSDate(fromDate).setZone(timezoneFrom).offset;
   var offsetTo = DateTime.fromJSDate(fromDate).setZone(getTimezone()).offset;
   return new Date(

@@ -1,33 +1,39 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.collapseTarget = exports.expandTarget = exports.hideTarget = exports.showTarget = void 0;
+exports.collapseTarget =
+  exports.expandTarget =
+  exports.hideTarget =
+  exports.showTarget =
+    void 0;
 var publishCall_1 = require("../../../misc/publishCall");
 /**
  * Makes a target visible. For example, ShowTarget(&quot;Left&quot;) opens the Drawer in an app with Slide Navigation.
  * @param {string} targetName
  */
-exports.showTarget = function(targetName) {
-  var resolver = function(opt, val, resolve) {
+var showTarget = function (targetName) {
+  var resolver = function (opt, val, resolve) {
     return resolve();
   };
   return publishCall_1.publishCall("showTarget", ["ok"], resolver, targetName);
 };
+exports.showTarget = showTarget;
 /**
  * Hides a target.
  * @param {string} targetName
  */
-exports.hideTarget = function(targetName) {
-  var resolver = function(opt, val, resolve) {
+var hideTarget = function (targetName) {
+  var resolver = function (opt, val, resolve) {
     return resolve();
   };
   return publishCall_1.publishCall("hideTarget", ["ok"], resolver, targetName);
 };
+exports.hideTarget = hideTarget;
 /**
  * Expands a target.
  * @param {string} targetName
  */
-exports.expandTarget = function(targetName) {
-  var resolver = function(opt, val, resolve) {
+var expandTarget = function (targetName) {
+  var resolver = function (opt, val, resolve) {
     return resolve();
   };
   return publishCall_1.publishCall(
@@ -37,12 +43,13 @@ exports.expandTarget = function(targetName) {
     targetName
   );
 };
+exports.expandTarget = expandTarget;
 /**
  * Collapses a target.
  * @param {string} targetName
  */
-exports.collapseTarget = function(targetName) {
-  var resolver = function(opt, val, resolve) {
+var collapseTarget = function (targetName) {
+  var resolver = function (opt, val, resolve) {
     return resolve();
   };
   return publishCall_1.publishCall(
@@ -52,4 +59,5 @@ exports.collapseTarget = function(targetName) {
     targetName
   );
 };
+exports.collapseTarget = collapseTarget;
 //# sourceMappingURL=navigation.js.map

@@ -1,15 +1,15 @@
 "use strict";
 var __awaiter =
   (this && this.__awaiter) ||
-  function(thisArg, _arguments, P, generator) {
+  function (thisArg, _arguments, P, generator) {
     function adopt(value) {
       return value instanceof P
         ? value
-        : new P(function(resolve) {
+        : new P(function (resolve) {
             resolve(value);
           });
     }
-    return new (P || (P = Promise))(function(resolve, reject) {
+    return new (P || (P = Promise))(function (resolve, reject) {
       function fulfilled(value) {
         try {
           step(generator.next(value));
@@ -34,15 +34,15 @@ var __awaiter =
   };
 var __generator =
   (this && this.__generator) ||
-  function(thisArg, body) {
+  function (thisArg, body) {
     var _ = {
         label: 0,
-        sent: function() {
+        sent: function () {
           if (t[0] & 1) throw t[1];
           return t[1];
         },
         trys: [],
-        ops: []
+        ops: [],
       },
       f,
       y,
@@ -51,13 +51,13 @@ var __generator =
     return (
       (g = { next: verb(0), throw: verb(1), return: verb(2) }),
       typeof Symbol === "function" &&
-        (g[Symbol.iterator] = function() {
+        (g[Symbol.iterator] = function () {
           return this;
         }),
       g
     );
     function verb(n) {
-      return function(v) {
+      return function (v) {
         return step([n, v]);
       };
     }
@@ -141,11 +141,11 @@ var publishCall_1 = require("../../../misc/publishCall");
  * @param {number} tabIndex
  * @return any
  */
-exports.setBadgeText = function(text, tabIndex) {
-  return __awaiter(void 0, void 0, void 0, function() {
+var setBadgeText = function (text, tabIndex) {
+  return __awaiter(void 0, void 0, void 0, function () {
     var resolver;
-    return __generator(this, function(_a) {
-      resolver = function(opt, value, resolve) {
+    return __generator(this, function (_a) {
+      resolver = function (opt, value, resolve) {
         return resolve();
       };
       return [
@@ -156,9 +156,10 @@ exports.setBadgeText = function(text, tabIndex) {
           resolver,
           text,
           tabIndex
-        )
+        ),
       ];
     });
   });
 };
+exports.setBadgeText = setBadgeText;
 //# sourceMappingURL=setBadgeText.js.map

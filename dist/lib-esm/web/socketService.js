@@ -1,14 +1,14 @@
 var __awaiter =
   (this && this.__awaiter) ||
-  function(thisArg, _arguments, P, generator) {
+  function (thisArg, _arguments, P, generator) {
     function adopt(value) {
       return value instanceof P
         ? value
-        : new P(function(resolve) {
+        : new P(function (resolve) {
             resolve(value);
           });
     }
-    return new (P || (P = Promise))(function(resolve, reject) {
+    return new (P || (P = Promise))(function (resolve, reject) {
       function fulfilled(value) {
         try {
           step(generator.next(value));
@@ -33,15 +33,15 @@ var __awaiter =
   };
 var __generator =
   (this && this.__generator) ||
-  function(thisArg, body) {
+  function (thisArg, body) {
     var _ = {
         label: 0,
-        sent: function() {
+        sent: function () {
           if (t[0] & 1) throw t[1];
           return t[1];
         },
         trys: [],
-        ops: []
+        ops: [],
       },
       f,
       y,
@@ -50,13 +50,13 @@ var __generator =
     return (
       (g = { next: verb(0), throw: verb(1), return: verb(2) }),
       typeof Symbol === "function" &&
-        (g[Symbol.iterator] = function() {
+        (g[Symbol.iterator] = function () {
           return this;
         }),
       g
     );
     function verb(n) {
-      return function(v) {
+      return function (v) {
         return step([n, v]);
       };
     }
@@ -134,21 +134,21 @@ var __generator =
 import { WS } from "../websocket/ws";
 import { publish } from "../pubSub/pubSub";
 import * as log from "loglevel";
-var SocketService = /** @class */ (function() {
+var SocketService = /** @class */ (function () {
   function SocketService() {
     this.logger = log.getLogger("SocketManagerService");
     this.connections = {};
   }
-  SocketService.getInstance = function() {
+  SocketService.getInstance = function () {
     if (!SocketService.instance) {
       SocketService.instance = new SocketService();
     }
     return SocketService.instance;
   };
-  SocketService.prototype.open = function(url, id) {
-    return __awaiter(this, void 0, void 0, function() {
+  SocketService.prototype.open = function (url, id) {
+    return __awaiter(this, void 0, void 0, function () {
       var connection;
-      return __generator(this, function(_a) {
+      return __generator(this, function (_a) {
         if (!this.connections[url]) {
           connection = new WS();
           this.connections[url] = connection;
@@ -159,16 +159,16 @@ var SocketService = /** @class */ (function() {
       });
     });
   };
-  SocketService.prototype.close = function(url) {
+  SocketService.prototype.close = function (url) {
     var connection = this.connections[url];
     if (connection) {
       delete this.connections[url];
       connection.close();
     }
   };
-  SocketService.prototype.send = function(url, msg) {
-    return __awaiter(this, void 0, void 0, function() {
-      return __generator(this, function(_a) {
+  SocketService.prototype.send = function (url, msg) {
+    return __awaiter(this, void 0, void 0, function () {
+      return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
             return [4 /*yield*/, this.open(url)];
@@ -180,19 +180,19 @@ var SocketService = /** @class */ (function() {
       });
     });
   };
-  SocketService.prototype.attachHandlers = function(id, connection) {
-    connection.onOpen = function(ev) {
+  SocketService.prototype.attachHandlers = function (id, connection) {
+    connection.onOpen = function (ev) {
       publish(id + ".socket.connected", ev);
       publish("GeneXus.Client.Socket.Connected", ev);
     };
-    connection.onClose = function(ev) {
+    connection.onClose = function (ev) {
       publish(id + ".socket.connectionclosed", ev);
     };
-    connection.onError = function(ev) {
+    connection.onError = function (ev) {
       publish(id + ".socket.connectionfailed", ev);
       publish("GeneXus.Client.Socket.ConnectionFailed", ev);
     };
-    connection.onMessage = function(ev) {
+    connection.onMessage = function (ev) {
       publish(id + ".socket.messagereceived", ev.data);
       publish("GeneXus.Client.Socket.MessageReceived", ev.data);
     };

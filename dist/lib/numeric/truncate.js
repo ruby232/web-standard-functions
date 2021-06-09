@@ -7,8 +7,9 @@ exports.truncate = void 0;
  * @param {number} digits
  * @returns number
  */
-exports.truncate = function(value, digits) {
+var truncate = function (value, digits) {
   var multiplier = Math.pow(10, digits || 0);
   return Math.trunc(value * multiplier) / multiplier;
 };
+exports.truncate = truncate;
 //# sourceMappingURL=truncate.js.map

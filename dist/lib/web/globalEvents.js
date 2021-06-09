@@ -1,6 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.publish = exports.unSubscribeAll = exports.unSubscribe = exports.subscribe = void 0;
+exports.publish =
+  exports.unSubscribeAll =
+  exports.unSubscribe =
+  exports.subscribe =
+    void 0;
 var pubSub_1 = require("../pubSub/pubSub");
 /**
  * Subscribe to topic name. Automatically gets notified when someone publish to the topic name.

@@ -1,11 +1,11 @@
 import * as jstz from "jstz";
 export var storageKey = "currentTimezone";
-export var detect = function() {
+export var detect = function () {
   var timezone = jstz.determine().name();
   return timezone;
 };
 export var timezones;
-(function(timezones) {
+(function (timezones) {
   timezones["Cairo"] = "Africa/Cairo";
   timezones["Johannesburg"] = "Africa/Johannesburg";
   timezones["Lagos"] = "Africa/Lagos";
@@ -62,10 +62,10 @@ export var timezones;
   timezones["Noumea"] = "Pacific/Noumea";
   timezones["Tongatapu"] = "Pacific/Tongatapu";
 })(timezones || (timezones = {}));
-export var fromString = function(stz) {
+export var fromString = function (stz) {
   var arrTimezones = Object.keys(timezones);
   return (
-    arrTimezones.find(function(e) {
+    arrTimezones.find(function (e) {
       return timezones[e] === stz;
     }) || timezones[timezones.UTC]
   );

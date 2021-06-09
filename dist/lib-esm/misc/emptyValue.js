@@ -6,7 +6,7 @@ import { setEmpty as bSetEmpty } from "../bool/setEmpty";
  * @param value
  * @return any
  */
-export var emptyValue = function(value) {
+export var emptyValue = function (value) {
   if (value instanceof Date) {
     return dSetEmpty(value);
   } else if (typeof value === "string") {

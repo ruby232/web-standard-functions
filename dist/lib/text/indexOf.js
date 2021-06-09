@@ -9,11 +9,12 @@ var length_1 = require("./length");
  * @param {number} from
  * @return number
  */
-exports.indexOf = function(target, pattern, from) {
+var indexOf = function (target, pattern, from) {
   if (from === void 0) {
     from = 1;
   }
   if (from < 1 || from > length_1.length(target)) return 0;
   return target.indexOf(pattern, from - 1) + 1;
 };
+exports.indexOf = indexOf;
 //# sourceMappingURL=indexOf.js.map

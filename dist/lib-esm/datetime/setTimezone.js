@@ -4,7 +4,7 @@
  */
 import { storageKey } from "./timezone";
 import { ConfigurationState } from "../config/configurationState";
-export var setTimezone = function(timezone) {
+export var setTimezone = function (timezone) {
   ConfigurationState.getInstance().setDynStoredValue(storageKey, timezone);
 };
 //# sourceMappingURL=setTimezone.js.map

@@ -9,7 +9,7 @@ var isEmpty_4 = require("../bool/isEmpty");
  * @param value
  * @return boolean
  */
-exports.isEmpty = function(value) {
+var isEmpty = function (value) {
   if (value === null || value === undefined) {
     return true;
   }
@@ -24,4 +24,5 @@ exports.isEmpty = function(value) {
   }
   return false;
 };
+exports.isEmpty = isEmpty;
 //# sourceMappingURL=isEmpty.js.map

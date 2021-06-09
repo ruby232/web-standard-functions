@@ -6,7 +6,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.length = void 0;
-exports.length = function(s) {
+var length = function (s) {
   return Array.from(s).length;
 };
+exports.length = length;
 //# sourceMappingURL=length.js.map

@@ -6,11 +6,12 @@ exports.chr = void 0;
  * @param {number} val The ASCII value to convert to string
  * @returns The string with the character defined by the given ASCII value
  */
-exports.chr = function(val) {
+var chr = function (val) {
   if (val >= 0) {
     return String.fromCharCode(val);
   } else {
     return "";
   }
 };
+exports.chr = chr;
 //# sourceMappingURL=chr.js.map

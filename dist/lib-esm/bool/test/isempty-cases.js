@@ -1,6 +1,6 @@
 // Boolean::IsEmpty test cases
 export var testCases = [
   [false, true],
-  [true, false]
+  [true, false],
 ];
 //# sourceMappingURL=isempty-cases.js.map

@@ -3,7 +3,7 @@
  * @param {Date} dateFrom
  * @return Date
  */
-export var toDate = function(dateFrom) {
+export var toDate = function (dateFrom) {
   return new Date(
     dateFrom.getFullYear(),
     dateFrom.getMonth(),

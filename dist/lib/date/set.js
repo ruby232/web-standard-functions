@@ -10,7 +10,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.set = void 0;
 var core_1 = require("./core");
-exports.set = function(targetDate, year, month, day) {
+var set = function (targetDate, year, month, day) {
   targetDate.setFullYear(year);
   targetDate.setMonth(month - 1);
   targetDate.setDate(day);
@@ -22,4 +22,5 @@ exports.set = function(targetDate, year, month, day) {
   }
   return targetDate;
 };
+exports.set = set;
 //# sourceMappingURL=set.js.map

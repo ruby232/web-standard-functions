@@ -6,8 +6,9 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.splitRegExp = void 0;
-exports.splitRegExp = function(target, pattern) {
+var splitRegExp = function (target, pattern) {
   var regularExp = typeof pattern === "string" ? new RegExp(pattern) : pattern;
   return target.split(regularExp);
 };
+exports.splitRegExp = splitRegExp;
 //# sourceMappingURL=splitRegExp.js.map

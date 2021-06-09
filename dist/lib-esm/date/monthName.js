@@ -6,7 +6,7 @@
  */
 import { DateTime } from "luxon";
 import { gxToLibLangMapping } from "./core";
-export var monthName = function(dateFrom, language) {
+export var monthName = function (dateFrom, language) {
   return DateTime.fromJSDate(dateFrom)
     .setLocale(gxToLibLangMapping(language))
     .toFormat("LLLL");

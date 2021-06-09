@@ -15,5 +15,5 @@ export declare enum BrowserIdValues {
   MozillaFirefox = 6,
   Chrome = 7,
   Safari = 8,
-  Edge = 9
+  Edge = 9,
 }

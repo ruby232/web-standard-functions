@@ -8,7 +8,7 @@ var rTrim_1 = require("./rTrim");
  * @param {any[]} args The replacement strings
  * @return string
  */
-exports.format = function(str) {
+var format = function (str) {
   var args = [];
   for (var _i = 1; _i < arguments.length; _i++) {
     args[_i - 1] = arguments[_i];
@@ -19,4 +19,5 @@ exports.format = function(str) {
   }
   return result;
 };
+exports.format = format;
 //# sourceMappingURL=format.js.map

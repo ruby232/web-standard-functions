@@ -5,7 +5,7 @@ import { TranslationService } from "../config/translationService";
  * @param {string} languageName The language name, may be omitted
  * @return {string} The translation of the given message in the specified language or the current language
  */
-export var getMessageText = function(str, languageName) {
+export var getMessageText = function (str, languageName) {
   var translator = TranslationService.getInstance();
   if (!languageName) {
     return translator.translate(str);

@@ -8,9 +8,9 @@ var keyDynPtyPrefix = "gx.config.configurationstate.dynpty";
 var languageKey = "language";
 var validLanguagesKey = "languages";
 var defaultLanguageKey = "DEFAULT_LANGUAGE";
-var ConfigurationState = /** @class */ (function() {
+var ConfigurationState = /** @class */ (function () {
   function ConfigurationState() {}
-  ConfigurationState.getInstance = function() {
+  ConfigurationState.getInstance = function () {
     if (!ConfigurationState.instance) {
       ConfigurationState.instance = new ConfigurationState();
       ConfigurationState.instance.setDynStoredValue(
@@ -25,7 +25,7 @@ var ConfigurationState = /** @class */ (function() {
    * Loads settings from a JSON object
    * @param appSettings The JSON object containing the settings to load
    */
-  ConfigurationState.loadApplicationSettings = function(appSettings) {
+  ConfigurationState.loadApplicationSettings = function (appSettings) {
     var instance = ConfigurationState.getInstance();
     for (var key in appSettings) {
       instance.setDynStoredValue(key, appSettings[key]);
@@ -41,7 +41,7 @@ var ConfigurationState = /** @class */ (function() {
   /**
    * Loads properties from the environment
    */
-  ConfigurationState.prototype.loadProperties = function(props) {
+  ConfigurationState.prototype.loadProperties = function (props) {
     this.setStoredValue(validLanguagesKey, props[validLanguagesKey]);
     this.setLanguage(props[languageKey]);
   };
@@ -49,7 +49,7 @@ var ConfigurationState = /** @class */ (function() {
   /**
    * Returns the name of the currently active Language object
    */
-  ConfigurationState.prototype.getLanguage = function() {
+  ConfigurationState.prototype.getLanguage = function () {
     return this.getStoredValue(languageKey);
   };
   /**
@@ -57,7 +57,7 @@ var ConfigurationState = /** @class */ (function() {
    * @param lang The language to set
    * @returns 0 if the language can be set, a value greater than 0 if it cannot be set
    */
-  ConfigurationState.prototype.setLanguage = function(lang) {
+  ConfigurationState.prototype.setLanguage = function (lang) {
     if (this.supportedLanguages().includes(lang)) {
       this.setStoredValue(languageKey, lang);
       return 0;
@@ -65,7 +65,7 @@ var ConfigurationState = /** @class */ (function() {
       return 1;
     }
   };
-  ConfigurationState.prototype.supportedLanguages = function() {
+  ConfigurationState.prototype.supportedLanguages = function () {
     var languages = this.getStoredValue(validLanguagesKey);
     return languages ? languages.split(",") : [];
   };
@@ -73,7 +73,7 @@ var ConfigurationState = /** @class */ (function() {
   /**
    * Returns generic property value as String
    */
-  ConfigurationState.prototype.getProperty = function(pty) {
+  ConfigurationState.prototype.getProperty = function (pty) {
     return this.getDynStoredValue(pty) || "";
   };
   /**
@@ -81,16 +81,16 @@ var ConfigurationState = /** @class */ (function() {
    * @param ptyName
    * @param ptyValue
    */
-  ConfigurationState.prototype.setProperty = function(ptyName, ptyValue) {
+  ConfigurationState.prototype.setProperty = function (ptyName, ptyValue) {
     this.setDynStoredValue(ptyName, ptyValue);
   };
   // Local storage
-  ConfigurationState.prototype.getStoredValueWithKey = function(storagekey) {
+  ConfigurationState.prototype.getStoredValueWithKey = function (storagekey) {
     return storage_1.storage === null || storage_1.storage === void 0
       ? void 0
       : storage_1.storage.getItem(storagekey);
   };
-  ConfigurationState.prototype.setStoredValueWithKey = function(
+  ConfigurationState.prototype.setStoredValueWithKey = function (
     storagekey,
     value
   ) {
@@ -99,23 +99,23 @@ var ConfigurationState = /** @class */ (function() {
       : storage_1.storage.setItem(storagekey, value);
   };
   // Static storage
-  ConfigurationState.prototype.storageKey = function(key) {
+  ConfigurationState.prototype.storageKey = function (key) {
     return keyPrefix + "." + key;
   };
-  ConfigurationState.prototype.getStoredValue = function(key) {
+  ConfigurationState.prototype.getStoredValue = function (key) {
     return this.getStoredValueWithKey(this.storageKey(key));
   };
-  ConfigurationState.prototype.setStoredValue = function(key, value) {
+  ConfigurationState.prototype.setStoredValue = function (key, value) {
     this.setStoredValueWithKey(this.storageKey(key), value);
   };
   // Dynamic storage
-  ConfigurationState.prototype.storageDynamicKey = function(key) {
+  ConfigurationState.prototype.storageDynamicKey = function (key) {
     return keyDynPtyPrefix + "." + key;
   };
-  ConfigurationState.prototype.getDynStoredValue = function(key) {
+  ConfigurationState.prototype.getDynStoredValue = function (key) {
     return this.getStoredValueWithKey(this.storageDynamicKey(key));
   };
-  ConfigurationState.prototype.setDynStoredValue = function(key, value) {
+  ConfigurationState.prototype.setDynStoredValue = function (key, value) {
     this.setStoredValueWithKey(this.storageDynamicKey(key), value);
   };
   return ConfigurationState;

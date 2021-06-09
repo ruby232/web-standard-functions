@@ -1,1 +1,1 @@
-{"version":3,"file":"setEmpty.js","sourceRoot":"","sources":["../../../src/numeric/setEmpty.ts"],"names":[],"mappings":";AAAA;;;;GAIG;;;AAEU,QAAA,QAAQ,GAAG,UAAC,MAAc;IACrC,OAAO,CAAC,CAAC;AACX,CAAC,CAAC"}
+{"version":3,"file":"setEmpty.js","sourceRoot":"","sources":["../../../src/numeric/setEmpty.ts"],"names":[],"mappings":";AAAA;;;;GAIG;;;AAEI,IAAM,QAAQ,GAAG,UAAC,MAAc;IACrC,OAAO,CAAC,CAAC;AACX,CAAC,CAAC;AAFW,QAAA,QAAQ,YAEnB"}

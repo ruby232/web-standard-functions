@@ -3,7 +3,7 @@
  * @param {number} target
  * @returns number
  */
-export var integer = function(target) {
+export var integer = function (target) {
   return Math.trunc(target);
 };
 //# sourceMappingURL=integer.js.map

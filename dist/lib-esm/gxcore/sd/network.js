@@ -1,10 +1,10 @@
 import { ConfigurationState } from "../../config/configurationState";
-var GeneXusSDNetwork = /** @class */ (function() {
+var GeneXusSDNetwork = /** @class */ (function () {
   function GeneXusSDNetwork() {}
   /**
    * Returns the application's services URL
    */
-  GeneXusSDNetwork.applicationServerURL = function() {
+  GeneXusSDNetwork.applicationServerURL = function () {
     var config = ConfigurationState.getInstance();
     var hostName = config.getDynStoredValue("SERVICE_HOSTNAME");
     var basePath = config.getDynStoredValue("SERVICE_BASE_PATH");
@@ -21,7 +21,7 @@ var GeneXusSDNetwork = /** @class */ (function() {
    * @param url The URL to check access to, or `undefined` to check
    * connection to the application's server URL
    */
-  GeneXusSDNetwork.isServerAvailable = function(url) {
+  GeneXusSDNetwork.isServerAvailable = function (url) {
     return navigator.onLine;
   };
   /**
@@ -30,7 +30,7 @@ var GeneXusSDNetwork = /** @class */ (function() {
    * @param url The URL to check the connection type, or `undefined` to check
    * connection to the application's server URL
    */
-  GeneXusSDNetwork.type = function(url) {
+  GeneXusSDNetwork.type = function (url) {
     return 1;
   };
   /**
@@ -40,7 +40,7 @@ var GeneXusSDNetwork = /** @class */ (function() {
    * @param url The URL to check the connection to, or `undefined` to check
    * connection to the application's server URL
    */
-  GeneXusSDNetwork.trafficBasedCost = function(url) {
+  GeneXusSDNetwork.trafficBasedCost = function (url) {
     return false;
   };
   /**
@@ -48,7 +48,7 @@ var GeneXusSDNetwork = /** @class */ (function() {
    * Current implementation does nothing, prints an error to the console.
    * @param url
    */
-  GeneXusSDNetwork.setApplicationServerURL = function(url) {
+  GeneXusSDNetwork.setApplicationServerURL = function (url) {
     console.log(
       "GeneXus.SD.Network's setApplicationServerURL is not available"
     );

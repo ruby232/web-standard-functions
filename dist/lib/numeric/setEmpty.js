@@ -6,7 +6,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.setEmpty = void 0;
-exports.setEmpty = function(target) {
+var setEmpty = function (target) {
   return 0;
 };
+exports.setEmpty = setEmpty;
 //# sourceMappingURL=setEmpty.js.map

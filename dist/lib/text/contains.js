@@ -7,7 +7,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.contains = void 0;
-exports.contains = function(target, pattern) {
+var contains = function (target, pattern) {
   return target.indexOf(pattern) !== -1;
 };
+exports.contains = contains;
 //# sourceMappingURL=contains.js.map

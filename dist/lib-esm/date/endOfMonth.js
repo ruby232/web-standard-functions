@@ -4,7 +4,7 @@
  * @return Date
  */
 import { DateTime } from "luxon";
-export var endOfMonth = function(dateFrom) {
+export var endOfMonth = function (dateFrom) {
   return new Date(
     dateFrom.getFullYear(),
     dateFrom.getMonth(),

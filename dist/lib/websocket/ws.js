@@ -1,15 +1,15 @@
 "use strict";
 var __awaiter =
   (this && this.__awaiter) ||
-  function(thisArg, _arguments, P, generator) {
+  function (thisArg, _arguments, P, generator) {
     function adopt(value) {
       return value instanceof P
         ? value
-        : new P(function(resolve) {
+        : new P(function (resolve) {
             resolve(value);
           });
     }
-    return new (P || (P = Promise))(function(resolve, reject) {
+    return new (P || (P = Promise))(function (resolve, reject) {
       function fulfilled(value) {
         try {
           step(generator.next(value));
@@ -34,15 +34,15 @@ var __awaiter =
   };
 var __generator =
   (this && this.__generator) ||
-  function(thisArg, body) {
+  function (thisArg, body) {
     var _ = {
         label: 0,
-        sent: function() {
+        sent: function () {
           if (t[0] & 1) throw t[1];
           return t[1];
         },
         trys: [],
-        ops: []
+        ops: [],
       },
       f,
       y,
@@ -51,13 +51,13 @@ var __generator =
     return (
       (g = { next: verb(0), throw: verb(1), return: verb(2) }),
       typeof Symbol === "function" &&
-        (g[Symbol.iterator] = function() {
+        (g[Symbol.iterator] = function () {
           return this;
         }),
       g
     );
     function verb(n) {
-      return function(v) {
+      return function (v) {
         return step([n, v]);
       };
     }
@@ -135,7 +135,7 @@ var __generator =
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WS = exports.Options = void 0;
 var log = require("loglevel");
-var Options = /** @class */ (function() {
+var Options = /** @class */ (function () {
   function Options() {
     this.autoReconnect = true;
     this.autoReconnectInterval = 5 * 1000;
@@ -144,7 +144,7 @@ var Options = /** @class */ (function() {
   return Options;
 })();
 exports.Options = Options;
-var WS = /** @class */ (function() {
+var WS = /** @class */ (function () {
   function WS() {
     this.logger = log.getLogger("websocket");
     this.options = new Options();
@@ -155,13 +155,13 @@ var WS = /** @class */ (function() {
    * @param {string} url WebSocket server URL.
    * @param {Options} options Connection options (optional).
    */
-  WS.prototype.open = function(url, options) {
-    return __awaiter(this, void 0, void 0, function() {
+  WS.prototype.open = function (url, options) {
+    return __awaiter(this, void 0, void 0, function () {
       var _this = this;
-      return __generator(this, function(_a) {
+      return __generator(this, function (_a) {
         return [
           2 /*return*/,
-          new Promise(function(resolve, reject) {
+          new Promise(function (resolve, reject) {
             if (!_this.supported()) {
               _this.logger.error("WebSocket is not supported in this browser");
               reject();
@@ -178,7 +178,7 @@ var WS = /** @class */ (function() {
             _this.options = options || _this.options;
             _this.url = url;
             _this.openImpl(resolve, reject);
-          })
+          }),
         ];
       });
     });
@@ -188,7 +188,7 @@ var WS = /** @class */ (function() {
    * @param {number} code Error code for closed connection (optional)
    * @param {string} reason Reason description for closed connection (optional)
    */
-  WS.prototype.close = function(code, reason) {
+  WS.prototype.close = function (code, reason) {
     if (this.websocket) {
       this.websocket.close(code, reason);
     }
@@ -197,7 +197,7 @@ var WS = /** @class */ (function() {
    * Send the data to WebSocket Server currently connected.
    * @param {any} data Message data.
    */
-  WS.prototype.send = function(data) {
+  WS.prototype.send = function (data) {
     // TODO: Check if websocket state is open. Otherwise try to reconnect.
     var ok = true;
     try {
@@ -208,10 +208,10 @@ var WS = /** @class */ (function() {
     }
     return true;
   };
-  WS.prototype.openImpl = function(resolve, reject) {
+  WS.prototype.openImpl = function (resolve, reject) {
     var _this = this;
     this.websocket = new WebSocket(this.url);
-    this.websocket.onopen = function(e) {
+    this.websocket.onopen = function (e) {
       _this.currentReconnectAttempts = 0;
       log.debug("Connection established", _this.url);
       resolve();
@@ -219,13 +219,13 @@ var WS = /** @class */ (function() {
         _this.onOpen(e);
       }
     };
-    this.websocket.onmessage = function(e) {
+    this.websocket.onmessage = function (e) {
       _this.logger.debug("Message received", e.data);
       if (_this.onMessage) {
         _this.onMessage(e);
       }
     };
-    this.websocket.onclose = function(e) {
+    this.websocket.onclose = function (e) {
       switch (e.code) {
         case 1000:
           _this.logger.debug("Connection closed");
@@ -239,7 +239,7 @@ var WS = /** @class */ (function() {
           break;
       }
     };
-    this.websocket.onerror = function(e) {
+    this.websocket.onerror = function (e) {
       _this.logger.error("Connection error", JSON.stringify(e));
       if (_this.onError) {
         _this.onError(e);
@@ -247,13 +247,13 @@ var WS = /** @class */ (function() {
       _this.reconnect(resolve, reject);
     };
   };
-  WS.prototype.supported = function() {
+  WS.prototype.supported = function () {
     return "WebSocket" in (window || global);
   };
-  WS.prototype.reconnect = function(resolve, reject) {
+  WS.prototype.reconnect = function (resolve, reject) {
     var _this = this;
     if (this.currentReconnectAttempts++ < this.options.maxReconnectAttempts) {
-      setTimeout(function() {
+      setTimeout(function () {
         _this.logger.debug("Reconnecting...");
         _this.openImpl(resolve, reject);
       }, this.options.autoReconnectInterval);

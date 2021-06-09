@@ -1,6 +1,6 @@
-var GeneXusCommonLog = /** @class */ (function() {
+var GeneXusCommonLog = /** @class */ (function () {
   function GeneXusCommonLog() {}
-  GeneXusCommonLog.write = function(message, topic, logLevel) {
+  GeneXusCommonLog.write = function (message, topic, logLevel) {
     if (topic === void 0) {
       topic = "";
     }
@@ -24,31 +24,31 @@ var GeneXusCommonLog = /** @class */ (function() {
       this.fatal(message, topic);
     }
   };
-  GeneXusCommonLog.logError = function(message, topic) {
+  GeneXusCommonLog.logError = function (message, topic) {
     if (topic === void 0) {
       topic = "";
     }
     console.error(message);
   };
-  GeneXusCommonLog.warning = function(message, topic) {
+  GeneXusCommonLog.warning = function (message, topic) {
     if (topic === void 0) {
       topic = "";
     }
     console.warn(message);
   };
-  GeneXusCommonLog.info = function(message, topic) {
+  GeneXusCommonLog.info = function (message, topic) {
     if (topic === void 0) {
       topic = "";
     }
     console.info(message);
   };
-  GeneXusCommonLog.debug = function(message, topic) {
+  GeneXusCommonLog.debug = function (message, topic) {
     if (topic === void 0) {
       topic = "";
     }
     console.debug(message);
   };
-  GeneXusCommonLog.fatal = function(message, topic) {
+  GeneXusCommonLog.fatal = function (message, topic) {
     if (topic === void 0) {
       topic = "";
     }

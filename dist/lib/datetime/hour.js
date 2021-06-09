@@ -6,7 +6,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.hour = void 0;
-exports.hour = function(dateFrom) {
+var hour = function (dateFrom) {
   return dateFrom.getHours();
 };
+exports.hour = hour;
 //# sourceMappingURL=hour.js.map

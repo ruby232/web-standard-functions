@@ -6,7 +6,8 @@ exports.toString = void 0;
  * @param {number} value
  * @returns string
  */
-exports.toString = function(value) {
+var toString = function (value) {
   return value.toString();
 };
+exports.toString = toString;
 //# sourceMappingURL=toString.js.map

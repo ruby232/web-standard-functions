@@ -3,7 +3,7 @@
  * @param {string} value
  * @return string
  */
-export var toUpper = function(target) {
+export var toUpper = function (target) {
   return target.toUpperCase();
 };
 //# sourceMappingURL=toUpper.js.map

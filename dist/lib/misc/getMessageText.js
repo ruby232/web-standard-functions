@@ -8,7 +8,7 @@ var translationService_1 = require("../config/translationService");
  * @param {string} languageName The language name, may be omitted
  * @return {string} The translation of the given message in the specified language or the current language
  */
-exports.getMessageText = function(str, languageName) {
+var getMessageText = function (str, languageName) {
   var translator = translationService_1.TranslationService.getInstance();
   if (!languageName) {
     return translator.translate(str);
@@ -16,4 +16,5 @@ exports.getMessageText = function(str, languageName) {
     return translator.translate(str, languageName);
   }
 };
+exports.getMessageText = getMessageText;
 //# sourceMappingURL=getMessageText.js.map

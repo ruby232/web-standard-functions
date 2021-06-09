@@ -3,7 +3,7 @@
  * @param target
  * @return boolean
  */
-export var setEmpty = function(target) {
+export var setEmpty = function (target) {
   return false;
 };
 //# sourceMappingURL=setEmpty.js.map

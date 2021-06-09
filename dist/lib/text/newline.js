@@ -5,7 +5,8 @@ exports.newLine = void 0;
  * Returns the "new line" string
  * @return {string}
  */
-exports.newLine = function() {
+var newLine = function () {
   return "\n";
 };
+exports.newLine = newLine;
 //# sourceMappingURL=newline.js.map

@@ -5,7 +5,7 @@
  * @return Date
  */
 import { DateTime } from "luxon";
-export var addMonths = function(date, months) {
+export var addMonths = function (date, months) {
   return DateTime.fromJSDate(date)
     .plus({ months: Math.trunc(months) })
     .toJSDate();

@@ -6,10 +6,11 @@ exports.asc = void 0;
  * @param {string} str The string to convert to ASCII
  * @returns The ASCII value of the first character in the string
  */
-exports.asc = function(str) {
+var asc = function (str) {
   if (Array.from(str).length === 0) {
     return 0;
   }
   return str.charCodeAt(0);
 };
+exports.asc = asc;
 //# sourceMappingURL=asc.js.map

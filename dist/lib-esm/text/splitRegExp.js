@@ -3,7 +3,7 @@
  * @param replaceString
  * @return string
  */
-export var splitRegExp = function(target, pattern) {
+export var splitRegExp = function (target, pattern) {
   var regularExp = typeof pattern === "string" ? new RegExp(pattern) : pattern;
   return target.split(regularExp);
 };

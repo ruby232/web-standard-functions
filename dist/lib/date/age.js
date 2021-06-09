@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.age = void 0;
 var luxon_1 = require("luxon");
 var today_1 = require("../date/today");
-exports.age = function(dateFrom, dateTo) {
+var age = function (dateFrom, dateTo) {
   if (dateTo === undefined) {
     dateTo = today_1.today();
   }
@@ -21,4 +21,5 @@ exports.age = function(dateFrom, dateTo) {
     ).years
   );
 };
+exports.age = age;
 //# sourceMappingURL=age.js.map

@@ -11,6 +11,6 @@ export var testCases = [
   ["1891Peñarol", ",", 1891],
   ["Peñarol1891", "", 0],
   ["Peñarol1891", ".", 0],
-  ["Peñarol1891", ",", 0]
+  ["Peñarol1891", ",", 0],
 ];
 //# sourceMappingURL=tonumeric-cases.js.map

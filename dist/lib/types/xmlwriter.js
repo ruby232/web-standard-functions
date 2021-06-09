@@ -1,20 +1,25 @@
 "use strict";
 var __extends =
   (this && this.__extends) ||
-  (function() {
-    var extendStatics = function(d, b) {
+  (function () {
+    var extendStatics = function (d, b) {
       extendStatics =
         Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array &&
-          function(d, b) {
+          function (d, b) {
             d.__proto__ = b;
           }) ||
-        function(d, b) {
-          for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+        function (d, b) {
+          for (var p in b)
+            if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
         };
       return extendStatics(d, b);
     };
-    return function(d, b) {
+    return function (d, b) {
+      if (typeof b !== "function" && b !== null)
+        throw new TypeError(
+          "Class extends value " + String(b) + " is not a constructor or null"
+        );
       extendStatics(d, b);
       function __() {
         this.constructor = d;
@@ -29,7 +34,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.XMLWriter = void 0;
 var helpers_1 = require("../misc/helpers");
 var xmlcommon_1 = require("./xmlcommon");
-var XMLWriter = /** @class */ (function(_super) {
+var XMLWriter = /** @class */ (function (_super) {
   __extends(XMLWriter, _super);
   function XMLWriter() {
     var _this = (_super !== null && _super.apply(this, arguments)) || this;
@@ -46,7 +51,7 @@ var XMLWriter = /** @class */ (function(_super) {
      * Allows to inquire the value of the XML document that is in the internal buffer
      * when the document was created with the OpenToString() method
      */
-    get: function() {
+    get: function () {
       var content = this.document.firstElementChild.outerHTML;
       if (this.encoding) {
         var standalone = this.standalone ? ' standalone="yes"' : "";
@@ -61,14 +66,14 @@ var XMLWriter = /** @class */ (function(_super) {
       return content;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   // Opening documents
   /**
    * Allows the creation of an XML document by an internal buffer instead of a file
    * @return {number}
    */
-  XMLWriter.prototype.openToString = function() {
+  XMLWriter.prototype.openToString = function () {
     this.document = document.implementation.createDocument("", "", null);
     this.elemStack = new XMLWriter.XMLWriterElementStack();
     this.resetErrors();
@@ -78,7 +83,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * Closes the current writing session
    * @return {number}
    */
-  XMLWriter.prototype.close = function() {
+  XMLWriter.prototype.close = function () {
     this.document = null;
     this.elemStack = null;
     return 0;
@@ -90,7 +95,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param {number} standalone
    * @return {number}
    */
-  XMLWriter.prototype.writeStartDocument = function(encoding, standalone) {
+  XMLWriter.prototype.writeStartDocument = function (encoding, standalone) {
     if (encoding === void 0) {
       encoding = "ISO-8859-1";
     }
@@ -107,7 +112,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param {string} value Element's value
    * @return {number}
    */
-  XMLWriter.prototype.writeElement = function(name, value) {
+  XMLWriter.prototype.writeElement = function (name, value) {
     if (this.errCode === 0) {
       this.writeStartElement(name);
     }
@@ -122,7 +127,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param {string} name Element's name
    * @return {number}
    */
-  XMLWriter.prototype.writeStartElement = function(name) {
+  XMLWriter.prototype.writeStartElement = function (name) {
     if (this.errCode === 0) {
       if (this.document) {
         var elem = this.document.createElement(name);
@@ -138,7 +143,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * Closes the last element that was opened using the WriteStartElement method
    * @return {number}
    */
-  XMLWriter.prototype.writeEndElement = function() {
+  XMLWriter.prototype.writeEndElement = function () {
     if (this.errCode === 0) {
       var elem = this.elemStack.pop();
       if (elem) {
@@ -156,9 +161,9 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param {string} text
    * @return {number}
    */
-  XMLWriter.prototype.writeText = function(text) {
+  XMLWriter.prototype.writeText = function (text) {
     var _this = this;
-    return this.appendNodeToCurrentElement(false, function() {
+    return this.appendNodeToCurrentElement(false, function () {
       return _this.document.createTextNode(text);
     });
   };
@@ -168,7 +173,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param {string} value Attribute's value
    * @return {number}
    */
-  XMLWriter.prototype.writeAttribute = function(name, value) {
+  XMLWriter.prototype.writeAttribute = function (name, value) {
     if (this.errCode === 0) {
       var elem = this.elemStack.top();
       if (elem) {
@@ -185,9 +190,9 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param {string} text Text to append
    * @return {number}
    */
-  XMLWriter.prototype.writeRawText = function(text) {
+  XMLWriter.prototype.writeRawText = function (text) {
     var _this = this;
-    return this.appendNodeToCurrentElement(true, function() {
+    return this.appendNodeToCurrentElement(true, function () {
       var xml = new DOMParser().parseFromString(text, "application/xml");
       if (xml.documentElement.nodeName === "parsererror") {
         _this.mErrCode = xmlcommon_1.XMLErrorCodes.unknown_error;
@@ -203,9 +208,9 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param {string} comment
    * @return {number}
    */
-  XMLWriter.prototype.writeComment = function(comment) {
+  XMLWriter.prototype.writeComment = function (comment) {
     var _this = this;
-    return this.appendNodeToCurrentElement(true, function() {
+    return this.appendNodeToCurrentElement(true, function () {
       return _this.document.createComment(comment);
     });
   };
@@ -214,14 +219,14 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param {string} cData Value to write as a CData section
    * @return any
    */
-  XMLWriter.prototype.writeCData = function(cData) {
+  XMLWriter.prototype.writeCData = function (cData) {
     var _this = this;
-    return this.appendNodeToCurrentElement(false, function() {
+    return this.appendNodeToCurrentElement(false, function () {
       return _this.document.createCDATASection(cData);
     });
   };
   // Private methods
-  XMLWriter.prototype.appendNodeToCurrentElement = function(
+  XMLWriter.prototype.appendNodeToCurrentElement = function (
     allowAppendToDocument,
     nodeCreation
   ) {
@@ -240,7 +245,7 @@ var XMLWriter = /** @class */ (function(_super) {
     }
     return this.errCode;
   };
-  XMLWriter.prototype.resetErrors = function() {
+  XMLWriter.prototype.resetErrors = function () {
     this.mErrCode = xmlcommon_1.XMLErrorCodes.no_error;
     this.mErrDescription = "";
   };
@@ -249,7 +254,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param {string} file
    * @return number
    */
-  XMLWriter.prototype.open = function(file) {
+  XMLWriter.prototype.open = function (file) {
     helpers_1.notSupported();
     return null;
   };
@@ -260,7 +265,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param client
    * @return any
    */
-  XMLWriter.prototype.openRequest = function(client) {
+  XMLWriter.prototype.openRequest = function (client) {
     helpers_1.notImplemented();
     return null;
   };
@@ -268,7 +273,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param response
    * @return any
    */
-  XMLWriter.prototype.openResponse = function(response) {
+  XMLWriter.prototype.openResponse = function (response) {
     helpers_1.notImplemented();
     return null;
   };
@@ -276,7 +281,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param entity
    * @return any
    */
-  XMLWriter.prototype.writeEntityReference = function(entity) {
+  XMLWriter.prototype.writeEntityReference = function (entity) {
     helpers_1.notImplemented();
     return null;
   };
@@ -285,7 +290,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param value
    * @return any
    */
-  XMLWriter.prototype.writeProcessingInstruction = function(target, value) {
+  XMLWriter.prototype.writeProcessingInstruction = function (target, value) {
     helpers_1.notImplemented();
     return null;
   };
@@ -294,7 +299,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param subset
    * @return any
    */
-  XMLWriter.prototype.writeDocType = function(name, subset) {
+  XMLWriter.prototype.writeDocType = function (name, subset) {
     helpers_1.notImplemented();
     return null;
   };
@@ -304,7 +309,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param subset
    * @return any
    */
-  XMLWriter.prototype.writeDocTypeSystem = function(name, uri, subset) {
+  XMLWriter.prototype.writeDocTypeSystem = function (name, uri, subset) {
     helpers_1.notImplemented();
     return null;
   };
@@ -315,7 +320,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param subset
    * @return any
    */
-  XMLWriter.prototype.writeDocTypePublic = function(name, pubId, uri, subset) {
+  XMLWriter.prototype.writeDocTypePublic = function (name, pubId, uri, subset) {
     helpers_1.notImplemented();
     return null;
   };
@@ -325,7 +330,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param nameSpaceURI
    * @return any
    */
-  XMLWriter.prototype.writeNSStartElement = function(
+  XMLWriter.prototype.writeNSStartElement = function (
     localName,
     prefix,
     nameSpaceURI
@@ -339,7 +344,7 @@ var XMLWriter = /** @class */ (function(_super) {
    * @param value
    * @return any
    */
-  XMLWriter.prototype.writeNSElement = function(
+  XMLWriter.prototype.writeNSElement = function (
     localName,
     nameSpaceURI,
     value
@@ -348,36 +353,36 @@ var XMLWriter = /** @class */ (function(_super) {
     return null;
   };
   Object.defineProperty(XMLWriter.prototype, "indentation", {
-    get: function() {
+    get: function () {
       return this.mindentation;
     },
-    set: function(value) {
+    set: function (value) {
       this.mindentation = value;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLWriter.prototype, "indentChar", {
-    get: function() {
+    get: function () {
       return this.mindentChar;
     },
-    set: function(value) {
+    set: function (value) {
       this.mindentChar = value;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
-  XMLWriter.XMLWriterElementStack = /** @class */ (function() {
+  XMLWriter.XMLWriterElementStack = /** @class */ (function () {
     function class_1() {
       this.elements = new Array();
     }
-    class_1.prototype.push = function(elem) {
+    class_1.prototype.push = function (elem) {
       this.elements.push(elem);
     };
-    class_1.prototype.pop = function() {
+    class_1.prototype.pop = function () {
       return this.elements.length > 0 ? this.elements.pop() : undefined;
     };
-    class_1.prototype.top = function() {
+    class_1.prototype.top = function () {
       return this.elements.length > 0
         ? this.elements[this.elements.length - 1]
         : undefined;

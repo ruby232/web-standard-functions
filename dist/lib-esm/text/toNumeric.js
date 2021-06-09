@@ -3,7 +3,7 @@
  * @param decimalSeparator
  * @return number
  */
-export var toNumeric = function(strNumber, decimalSep) {
+export var toNumeric = function (strNumber, decimalSep) {
   if (decimalSep === undefined) {
     decimalSep = ".";
   }

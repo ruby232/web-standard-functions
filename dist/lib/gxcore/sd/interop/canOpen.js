@@ -7,10 +7,11 @@ var knownProtocols = ["http:", "https:", "mailto:", "tel:"];
  * Checks if an URL can be opened
  * @param {string} urlStr
  */
-exports.canOpen = function(urlStr) {
-  var baseURL = configurationState_1.ConfigurationState.getInstance().getDynStoredValue(
-    "SERVICE_HOSTNAME"
-  );
+var canOpen = function (urlStr) {
+  var baseURL =
+    configurationState_1.ConfigurationState.getInstance().getDynStoredValue(
+      "SERVICE_HOSTNAME"
+    );
   try {
     var url = baseURL ? new URL(urlStr, baseURL) : new URL(urlStr);
     return knownProtocols.includes(url.protocol);
@@ -19,4 +20,5 @@ exports.canOpen = function(urlStr) {
     return false;
   }
 };
+exports.canOpen = canOpen;
 //# sourceMappingURL=canOpen.js.map

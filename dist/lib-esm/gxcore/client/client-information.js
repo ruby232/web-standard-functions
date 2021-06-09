@@ -7,12 +7,12 @@ function notImplemented() {
 }
 function findOSInUserAgent(clientStrings) {
   var nAgt = navigator.userAgent;
-  var os = clientStrings.find(function(cs) {
+  var os = clientStrings.find(function (cs) {
     return cs.r.test(nAgt);
   });
   return os ? os.s : "Unknown";
 }
-var GeneXusClientClientInformation = /** @class */ (function() {
+var GeneXusClientClientInformation = /** @class */ (function () {
   function GeneXusClientClientInformation() {}
   /**
    * This property returns a device identifier
@@ -20,7 +20,7 @@ var GeneXusClientClientInformation = /** @class */ (function() {
    *  - Universally unique
    *  - Stable
    */
-  GeneXusClientClientInformation.id = function() {
+  GeneXusClientClientInformation.id = function () {
     var id = getCookie("GX_CLIENT_ID");
     if (!id) {
       id = GUID.newGuid().toString();
@@ -32,7 +32,7 @@ var GeneXusClientClientInformation = /** @class */ (function() {
   /**
    * Returns the operating system name
    */
-  GeneXusClientClientInformation.oSName = function() {
+  GeneXusClientClientInformation.oSName = function () {
     return findOSInUserAgent([
       { s: "Windows", r: /(Windows|win32|win64)/ },
       { s: "Android", r: /Android/ },
@@ -48,14 +48,14 @@ var GeneXusClientClientInformation = /** @class */ (function() {
       { s: "OS/2", r: /OS\/2/ },
       {
         s: "Search Bot",
-        r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/
-      }
+        r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/,
+      },
     ]);
   };
   /**
    * Returns the version of the operating system
    */
-  GeneXusClientClientInformation.oSVersion = function() {
+  GeneXusClientClientInformation.oSVersion = function () {
     var os = findOSInUserAgent([
       { s: "Windows 10", r: /(Windows 10.0|Windows NT 10.0)/ },
       { s: "Windows 8.1", r: /(Windows 8.1|Windows NT 6.3)/ },
@@ -85,8 +85,8 @@ var GeneXusClientClientInformation = /** @class */ (function() {
       { s: "OS/2", r: /OS\/2/ },
       {
         s: "Search Bot",
-        r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/
-      }
+        r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/,
+      },
     ]);
     var osVersion = "Unknown";
     if (/Windows/.test(os)) {
@@ -121,7 +121,7 @@ var GeneXusClientClientInformation = /** @class */ (function() {
   /**
    * A character string is returned with the device language
    */
-  GeneXusClientClientInformation.language = function() {
+  GeneXusClientClientInformation.language = function () {
     var lang = navigator.languages
       ? navigator.languages[0]
       : navigator.language;
@@ -130,13 +130,13 @@ var GeneXusClientClientInformation = /** @class */ (function() {
   /**
    * Returns an enumerated value representing the device type
    */
-  GeneXusClientClientInformation.deviceType = function() {
+  GeneXusClientClientInformation.deviceType = function () {
     return 4; // SmartDeviceType.Web
   };
   /**
    * Returns the platform name of the device as much specific as possible
    */
-  GeneXusClientClientInformation.platformName = function() {
+  GeneXusClientClientInformation.platformName = function () {
     var nVer = navigator.appVersion;
     var mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
     return "Web" + mobile ? " Mobile" : "";
@@ -144,21 +144,21 @@ var GeneXusClientClientInformation = /** @class */ (function() {
   /**
    * Returns the version number of the application which it was set by the developer
    */
-  GeneXusClientClientInformation.appVersionCode = function() {
+  GeneXusClientClientInformation.appVersionCode = function () {
     notImplemented();
     return null;
   };
   /**
    * Returns the version name of the application which it was set by the developer
    */
-  GeneXusClientClientInformation.appVersionName = function() {
+  GeneXusClientClientInformation.appVersionName = function () {
     notImplemented();
     return null;
   };
   /**
    * Returns the application identifier
    */
-  GeneXusClientClientInformation.applicationId = function() {
+  GeneXusClientClientInformation.applicationId = function () {
     notImplemented();
     return null;
   };

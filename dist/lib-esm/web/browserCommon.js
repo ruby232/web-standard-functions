@@ -20,7 +20,7 @@ export function browserIdFromAgent(userAgent) {
   return { id: BrowserIdValues.UnknownAgent, version: "" };
 }
 export var BrowserIdValues;
-(function(BrowserIdValues) {
+(function (BrowserIdValues) {
   BrowserIdValues[(BrowserIdValues["UnknownAgent"] = 0)] = "UnknownAgent";
   BrowserIdValues[(BrowserIdValues["InternetExplorer"] = 1)] =
     "InternetExplorer";
@@ -45,6 +45,6 @@ var browserMatchers = [
   { regExp: safariRegEx, browserId: BrowserIdValues.Safari },
   { regExp: operaRegEx, browserId: BrowserIdValues.Opera },
   { regExp: firefoxRegEx, browserId: BrowserIdValues.MozillaFirefox },
-  { regExp: netscapeRegEx, browserId: BrowserIdValues.Netscape }
+  { regExp: netscapeRegEx, browserId: BrowserIdValues.Netscape },
 ];
 //# sourceMappingURL=browserCommon.js.map

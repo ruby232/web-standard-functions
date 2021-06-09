@@ -6,7 +6,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.fromString = void 0;
-exports.fromString = function(target, source) {
+var fromString = function (target, source) {
   return source;
 };
+exports.fromString = fromString;
 //# sourceMappingURL=fromString.js.map

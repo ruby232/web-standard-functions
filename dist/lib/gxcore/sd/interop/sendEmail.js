@@ -7,7 +7,7 @@ var openInBrowser_1 = require("./openInBrowser");
  * @param subject
  * @param message
  */
-exports.sendEmail = function(to, subject, message) {
+var sendEmail = function (to, subject, message) {
   var uri = "mailTo:" + to;
   var paramSeparator = "?";
   if (subject) {
@@ -20,4 +20,5 @@ exports.sendEmail = function(to, subject, message) {
   }
   openInBrowser_1.openInBrowser(uri);
 };
+exports.sendEmail = sendEmail;
 //# sourceMappingURL=sendEmail.js.map

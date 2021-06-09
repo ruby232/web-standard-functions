@@ -3,7 +3,7 @@
  * @return Date
  */
 import { isEmpty } from "./isEmpty";
-export var toString = function(targetDate) {
+export var toString = function (targetDate) {
   return isEmpty(targetDate)
     ? ""
     : targetDate.getDate() +

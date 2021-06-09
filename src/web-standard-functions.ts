@@ -4,6 +4,7 @@ export * from "./types/geography";
 export * from "./misc/setLanguage";
 export * from "./misc/msg";
 export * from "./types/guid";
+
 export * as Boolean_isEmpty from "./bool/isEmpty";
 export * as Boolean_toString from "./bool/toString";
 
@@ -18,6 +19,7 @@ export * as Numeric_toString from "./numeric/toString";
 
 export * as Text_isEmpty from "./text/isEmpty";
 export * as Text_toString from "./text/toString";
+
 export * from "./text/trim";
 export * from "./text/toUpper";
 export * from "./text/toLower";

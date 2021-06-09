@@ -9,7 +9,7 @@ var padLeft_1 = require("../text/padLeft");
  * @param {number} decimals
  * @returns string
  */
-exports.str = function(value, length, decimals) {
+var str = function (value, length, decimals) {
   if (length === void 0) {
     length = 10;
   }
@@ -27,4 +27,5 @@ exports.str = function(value, length, decimals) {
     return padLeft_1.padLeft(result, length, " ");
   }
 };
+exports.str = str;
 //# sourceMappingURL=str.js.map

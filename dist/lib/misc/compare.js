@@ -9,7 +9,7 @@ var like_1 = require("../text/like");
  * @param {any} right Second operand
  * @return true if the comparition succeds, false otherwise
  */
-exports.compare = function(left, op, right) {
+var compare = function (left, op, right) {
   switch (op) {
     case "<":
       return left < right;
@@ -33,4 +33,5 @@ exports.compare = function(left, op, right) {
       return false;
   }
 };
+exports.compare = compare;
 //# sourceMappingURL=compare.js.map

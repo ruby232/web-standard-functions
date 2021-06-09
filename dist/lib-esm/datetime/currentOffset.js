@@ -4,7 +4,7 @@
  */
 import { DateTime } from "luxon";
 import { getTimezone } from "./getTimezone";
-export var currentOffset = function() {
+export var currentOffset = function () {
   return DateTime.local().setZone(getTimezone()).offset;
 };
 //# sourceMappingURL=currentOffset.js.map

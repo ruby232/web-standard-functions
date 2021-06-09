@@ -4,7 +4,7 @@
  * @return number
  */
 import { DateTime } from "luxon";
-export var month = function(dateFrom) {
+export var month = function (dateFrom) {
   return DateTime.fromJSDate(dateFrom).month;
 };
 //# sourceMappingURL=month.js.map

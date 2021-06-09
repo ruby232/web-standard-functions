@@ -6,7 +6,7 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.toNumeric = void 0;
-exports.toNumeric = function(strNumber, decimalSep) {
+var toNumeric = function (strNumber, decimalSep) {
   if (decimalSep === undefined) {
     decimalSep = ".";
   }
@@ -19,4 +19,5 @@ exports.toNumeric = function(strNumber, decimalSep) {
   var num = parseFloat(strNumber);
   return isNaN(num) ? 0 : num;
 };
+exports.toNumeric = toNumeric;
 //# sourceMappingURL=toNumeric.js.map

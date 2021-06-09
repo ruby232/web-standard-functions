@@ -8,7 +8,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.htmlClean = void 0;
 var htmltidy = require("tidy-html5");
-exports.htmlClean = function(s) {
+var htmlClean = function (s) {
   return htmltidy.tidy_html5(s, { quiet: true, "tidy-mark": false });
 };
+exports.htmlClean = htmlClean;
 //# sourceMappingURL=htmlClean.js.map

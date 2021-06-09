@@ -7,7 +7,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.fromString = void 0;
 var core_1 = require("./core");
-exports.fromString = function(target, dateFrom) {
+var fromString = function (target, dateFrom) {
   var dateParts = dateFrom.match(
     /([0-9]?[0-9])\/?([0-9]?[0-9])\/?([0-9][0-9][0-9][0-9])/
   );
@@ -23,4 +23,5 @@ exports.fromString = function(target, dateFrom) {
       )
     : core_1.EMPTY_DATE_VALUE;
 };
+exports.fromString = fromString;
 //# sourceMappingURL=fromString.js.map

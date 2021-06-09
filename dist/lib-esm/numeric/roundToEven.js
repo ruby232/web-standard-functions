@@ -5,7 +5,7 @@ import { integer } from "./integer";
  * @param {number} digits
  * @returns number
  */
-export var roundToEven = function(value, digits) {
+export var roundToEven = function (value, digits) {
   var multiplier = Math.pow(10, digits || 0);
   var valToRound = value * multiplier;
   var decimalPart = valToRound - integer(valToRound);

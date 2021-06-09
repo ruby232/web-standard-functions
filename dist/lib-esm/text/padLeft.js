@@ -4,7 +4,7 @@
  * @param fillChar
  * @return string
  */
-export var padLeft = function(target, length, fillChar) {
+export var padLeft = function (target, length, fillChar) {
   return target.padStart(length, fillChar);
 };
 //# sourceMappingURL=padLeft.js.map

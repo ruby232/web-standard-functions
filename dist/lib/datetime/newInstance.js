@@ -12,7 +12,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.newInstance = void 0;
 var core_1 = require("../date/core");
-exports.newInstance = function(year, month, day, hour, minutes, seconds) {
+var newInstance = function (year, month, day, hour, minutes, seconds) {
   var ret = new Date(year, month - 1, day, hour, minutes, seconds, 0);
   return ret.getFullYear() === year &&
     ret.getMonth() === month - 1 &&
@@ -23,4 +23,5 @@ exports.newInstance = function(year, month, day, hour, minutes, seconds) {
     ? ret
     : core_1.EMPTY_DATE_VALUE;
 };
+exports.newInstance = newInstance;
 //# sourceMappingURL=newInstance.js.map

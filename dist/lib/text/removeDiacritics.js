@@ -7,7 +7,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.removeDiacritics = void 0;
 var jdu = require("jdu");
-exports.removeDiacritics = function(s) {
+var removeDiacritics = function (s) {
   return jdu.replace(s);
 };
+exports.removeDiacritics = removeDiacritics;
 //# sourceMappingURL=removeDiacritics.js.map

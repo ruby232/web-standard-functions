@@ -6,7 +6,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.toUpper = void 0;
-exports.toUpper = function(target) {
+var toUpper = function (target) {
   return target.toUpperCase();
 };
+exports.toUpper = toUpper;
 //# sourceMappingURL=toUpper.js.map

@@ -6,7 +6,7 @@ import * as PubSubJs from "pubsub-js";
  * @param data  The data to pass to subscribers
  * @return Returns true if there are subscribers to the topic
  */
-export var publish = function(topicName) {
+export var publish = function (topicName) {
   var data = [];
   for (var _i = 1; _i < arguments.length; _i++) {
     data[_i - 1] = arguments[_i];
@@ -20,9 +20,9 @@ export var publish = function(topicName) {
  * @param options Subscribe advanced options: such as subscribe only once to the topic.
  * @return Returns Subscription object
  */
-export var subscribe = function(topicName, handler, options) {
-  var subscribeWrapper = function(handler) {
-    return function(topic, data) {
+export var subscribe = function (topicName, handler, options) {
+  var subscribeWrapper = function (handler) {
+    return function (topic, data) {
       handler.apply(this, data);
     };
   };
@@ -40,23 +40,23 @@ export var subscribe = function(topicName, handler, options) {
  * Cancel a specific subscription.
  * @param suscription The suscription object
  */
-export var cancelTopic = function(topicName) {
+export var cancelTopic = function (topicName) {
   PubSubJs.unsubscribe(normalizeTopicName(topicName));
 };
 /**
  * Cancel a specific subscription.
  * @param suscription The suscription object
  */
-export var cancelSubscription = function(subscription) {
+export var cancelSubscription = function (subscription) {
   subscription.unsubscribe();
 };
 /**
  * Clears all subscribed events.
  */
-export var cancelAllSubscriptions = function() {
+export var cancelAllSubscriptions = function () {
   PubSubJs.clearAllSubscriptions();
 };
-var normalizeTopicName = function(name) {
+var normalizeTopicName = function (name) {
   return name.toLocaleLowerCase();
 };
 //# sourceMappingURL=pubSub.js.map

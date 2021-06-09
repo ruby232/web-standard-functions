@@ -9,7 +9,7 @@ import { GUID } from "../../../types/guid";
  * @param {Date} endTime
  * @param {string} place
  */
-export var schedule = function(
+export var schedule = function (
   title,
   startDate,
   endDate,
@@ -50,7 +50,7 @@ function getDateTime(datePart, timePart, defaultValue) {
   }
   return result;
 }
-export var createCalendarEvent = function(start, end, title, place) {
+export var createCalendarEvent = function (start, end, title, place) {
   return (
     "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nUID:" +
     getGUIDString() +

@@ -3,7 +3,7 @@
  * @param target
  * @return string
  */
-export var toString = function(target) {
+export var toString = function (target) {
   return target;
 };
 //# sourceMappingURL=toString.js.map

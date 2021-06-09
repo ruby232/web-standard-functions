@@ -5,7 +5,7 @@
  * @param {any} valueIfFalse Return value if the condition evaluates to false
  * @return any Either valueIfTrue or valueIfFalse depending on the condition
  */
-export var iif = function(condition, valueIfTrue, valueIfFalse) {
+export var iif = function (condition, valueIfTrue, valueIfFalse) {
   return condition ? valueIfTrue : valueIfFalse;
 };
 //# sourceMappingURL=iif.js.map

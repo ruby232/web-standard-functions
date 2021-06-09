@@ -4,6 +4,6 @@ exports.testCases = void 0;
 // Boolean::ToString test cases
 exports.testCases = [
   [false, "false"],
-  [true, "true"]
+  [true, "true"],
 ];
 //# sourceMappingURL=tostring-cases.js.map

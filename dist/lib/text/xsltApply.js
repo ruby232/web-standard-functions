@@ -8,10 +8,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.xsltApply = void 0;
 var xslt_processor_1 = require("xslt-processor");
-exports.xsltApply = function(xmlString, xsltString) {
+var xsltApply = function (xmlString, xsltString) {
   return xslt_processor_1.xsltProcess(
     xslt_processor_1.xmlParse(xmlString),
     xslt_processor_1.xmlParse(xsltString)
   );
 };
+exports.xsltApply = xsltApply;
 //# sourceMappingURL=xsltApply.js.map

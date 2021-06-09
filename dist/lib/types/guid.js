@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GUID = void 0;
 var uuid_1 = require("@lukeed/uuid");
-var GUID = /** @class */ (function() {
+var GUID = /** @class */ (function () {
   function GUID(val) {
     this.value = this.normalizeValue(val);
   }
-  GUID.prototype.normalizeValue = function(str) {
+  GUID.prototype.normalizeValue = function (str) {
     var lStr = str.toLowerCase();
     var regExp1 = /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/;
     var regExp2 = /[0-9a-f]{32}/;
@@ -32,14 +32,14 @@ var GUID = /** @class */ (function() {
    * Returns true if the GUID is the emtpy GUID
    * @returns boolean
    */
-  GUID.prototype.isEmpty = function() {
+  GUID.prototype.isEmpty = function () {
     return this.value === GUID.emptyValue;
   };
   /**
    * Sets the given string as the GUID's value
    * @param {string} str The new GUID's value
    */
-  GUID.prototype.fromString = function(str) {
+  GUID.prototype.fromString = function (str) {
     this.value = this.normalizeValue(str);
   };
   /**
@@ -47,7 +47,7 @@ var GUID = /** @class */ (function() {
    * @param {string} format The desired format of the output string
    * @returns {string} The string representation of the GUID
    */
-  GUID.prototype.toString = function(format) {
+  GUID.prototype.toString = function (format) {
     if (format === void 0) {
       format = undefined;
     }
@@ -58,7 +58,7 @@ var GUID = /** @class */ (function() {
    * Returns the empty GUID
    * @returns {GUID} The empty GUID
    */
-  GUID.empty = function() {
+  GUID.empty = function () {
     return GUID.emptyGUID;
   };
   /**
@@ -66,14 +66,14 @@ var GUID = /** @class */ (function() {
    * @param {string} str The string representing the GUID object to be created
    * @returns {GUID} The GUID object with representing the given string
    */
-  GUID.fromString = function(str) {
+  GUID.fromString = function (str) {
     return new GUID(str);
   };
   /**
    * Creates a new GUID object with a randomly-generated value
    * @returns {GUID} The newly created GUID object
    */
-  GUID.newGuid = function() {
+  GUID.newGuid = function () {
     return new GUID(uuid_1.v4());
   };
   GUID.emptyValue = "00000000-0000-0000-0000-000000000000";

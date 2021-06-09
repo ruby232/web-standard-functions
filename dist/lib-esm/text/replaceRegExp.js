@@ -3,7 +3,7 @@
  * @param replaceString
  * @return string
  */
-export var replaceRegExp = function(target, pattern, repstr) {
+export var replaceRegExp = function (target, pattern, repstr) {
   var regularExp =
     typeof pattern === "string" ? new RegExp(pattern, "g") : pattern;
   return target.replace(regularExp, repstr);

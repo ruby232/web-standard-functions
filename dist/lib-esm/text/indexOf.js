@@ -6,7 +6,7 @@ import { length } from "./length";
  * @param {number} from
  * @return number
  */
-export var indexOf = function(target, pattern, from) {
+export var indexOf = function (target, pattern, from) {
   if (from === void 0) {
     from = 1;
   }

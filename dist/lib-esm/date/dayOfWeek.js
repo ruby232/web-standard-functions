@@ -4,7 +4,7 @@
  * @return number
  */
 import { DateTime } from "luxon";
-export var dayOfWeek = function(dateFrom) {
+export var dayOfWeek = function (dateFrom) {
   return (parseInt(DateTime.fromJSDate(dateFrom).toFormat("c"), 10) % 7) + 1;
 };
 //# sourceMappingURL=dayOfWeek.js.map

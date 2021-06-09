@@ -7,7 +7,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.startsWith = void 0;
-exports.startsWith = function(target, pattern) {
+var startsWith = function (target, pattern) {
   return target.startsWith(pattern);
 };
+exports.startsWith = startsWith;
 //# sourceMappingURL=startsWith.js.map

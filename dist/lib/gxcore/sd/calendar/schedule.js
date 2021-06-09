@@ -12,14 +12,7 @@ var guid_1 = require("../../../types/guid");
  * @param {Date} endTime
  * @param {string} place
  */
-exports.schedule = function(
-  title,
-  startDate,
-  endDate,
-  startTime,
-  endTime,
-  place
-) {
+var schedule = function (title, startDate, endDate, startTime, endTime, place) {
   var sDateTime = getDateTime(startDate, startTime);
   var eDateTime = getDateTime(
     endDate,
@@ -29,6 +22,7 @@ exports.schedule = function(
   var calStr = exports.createCalendarEvent(sDateTime, eDateTime, title, place);
   downloadCalendar(calStr);
 };
+exports.schedule = schedule;
 function convertDateTimeToString(dt) {
   // 20190814T160000Z
   return (
@@ -57,7 +51,7 @@ function getDateTime(datePart, timePart, defaultValue) {
   }
   return result;
 }
-exports.createCalendarEvent = function(start, end, title, place) {
+var createCalendarEvent = function (start, end, title, place) {
   return (
     "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nUID:" +
     getGUIDString() +
@@ -74,6 +68,7 @@ exports.createCalendarEvent = function(start, end, title, place) {
     "\nEND:VEVENT\nEND:VCALENDAR"
   );
 };
+exports.createCalendarEvent = createCalendarEvent;
 function getGUIDString() {
   return guid_1.GUID.newGuid().toString();
 }

@@ -4,7 +4,7 @@
  * @return number
  */
 import { DateTime } from "luxon";
-export var year = function(dateFrom) {
+export var year = function (dateFrom) {
   return DateTime.fromJSDate(dateFrom).year;
 };
 //# sourceMappingURL=year.js.map

@@ -6,7 +6,7 @@ import { padLeft } from "../text/padLeft";
  * @param {number} decimals
  * @returns string
  */
-export var str = function(value, length, decimals) {
+export var str = function (value, length, decimals) {
   if (length === void 0) {
     length = 10;
   }

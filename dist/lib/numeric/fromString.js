@@ -6,7 +6,8 @@ exports.fromString = void 0;
  * @param {string} value
  * @returns number
  */
-exports.fromString = function(target, value) {
+var fromString = function (target, value) {
   return Number.parseFloat(value);
 };
+exports.fromString = fromString;
 //# sourceMappingURL=fromString.js.map

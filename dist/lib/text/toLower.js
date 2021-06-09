@@ -6,7 +6,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.toLower = void 0;
-exports.toLower = function(target) {
+var toLower = function (target) {
   return target.toLowerCase();
 };
+exports.toLower = toLower;
 //# sourceMappingURL=toLower.js.map

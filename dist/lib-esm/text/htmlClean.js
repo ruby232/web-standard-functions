@@ -5,7 +5,7 @@
  * @return string
  */
 import * as htmltidy from "tidy-html5";
-export var htmlClean = function(s) {
+export var htmlClean = function (s) {
   return htmltidy.tidy_html5(s, { quiet: true, "tidy-mark": false });
 };
 //# sourceMappingURL=htmlClean.js.map

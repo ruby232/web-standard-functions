@@ -4,7 +4,7 @@
  * @param {string} str2 Search string
  * @result true if the search string is found, false otherwise
  */
-export var like = function(str1, str2) {
+export var like = function (str1, str2) {
   if (str2 === null) {
     return false;
   }

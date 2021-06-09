@@ -8,7 +8,7 @@ var toString_1 = require("../numeric/toString");
  * Returns a string represantation of a date-time. dd[/]mm[/]yyyy HH:mm:ss
  * @return Date
  */
-exports.toString = function(targetDate) {
+var toString = function (targetDate) {
   if (isEmpty_1.isEmpty(targetDate)) {
     return "";
   } else {
@@ -27,4 +27,5 @@ exports.toString = function(targetDate) {
     return datePart + " " + timePart;
   }
 };
+exports.toString = toString;
 //# sourceMappingURL=toString.js.map

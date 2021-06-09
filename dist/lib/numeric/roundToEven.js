@@ -8,7 +8,7 @@ var integer_1 = require("./integer");
  * @param {number} digits
  * @returns number
  */
-exports.roundToEven = function(value, digits) {
+var roundToEven = function (value, digits) {
   var multiplier = Math.pow(10, digits || 0);
   var valToRound = value * multiplier;
   var decimalPart = valToRound - integer_1.integer(valToRound);
@@ -18,4 +18,5 @@ exports.roundToEven = function(value, digits) {
   }
   return rounded / multiplier;
 };
+exports.roundToEven = roundToEven;
 //# sourceMappingURL=roundToEven.js.map

@@ -1,19 +1,24 @@
 var __extends =
   (this && this.__extends) ||
-  (function() {
-    var extendStatics = function(d, b) {
+  (function () {
+    var extendStatics = function (d, b) {
       extendStatics =
         Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array &&
-          function(d, b) {
+          function (d, b) {
             d.__proto__ = b;
           }) ||
-        function(d, b) {
-          for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+        function (d, b) {
+          for (var p in b)
+            if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
         };
       return extendStatics(d, b);
     };
-    return function(d, b) {
+    return function (d, b) {
+      if (typeof b !== "function" && b !== null)
+        throw new TypeError(
+          "Class extends value " + String(b) + " is not a constructor or null"
+        );
       extendStatics(d, b);
       function __() {
         this.constructor = d;
@@ -27,7 +32,7 @@ var __extends =
 import { notImplemented, notSupported } from "../misc/helpers";
 import { XMLBase, XMLErrorCodes as ErrorCodes } from "./xmlcommon";
 var GXNodeType;
-(function(GXNodeType) {
+(function (GXNodeType) {
   GXNodeType[(GXNodeType["element"] = 1)] = "element";
   GXNodeType[(GXNodeType["endTag"] = 2)] = "endTag";
   GXNodeType[(GXNodeType["text"] = 4)] = "text";
@@ -38,7 +43,7 @@ var GXNodeType;
     "processingInstruction";
   GXNodeType[(GXNodeType["documentType"] = 128)] = "documentType";
 })(GXNodeType || (GXNodeType = {}));
-var XMLReader = /** @class */ (function(_super) {
+var XMLReader = /** @class */ (function (_super) {
   __extends(XMLReader, _super);
   function XMLReader() {
     // Internal variables
@@ -46,7 +51,7 @@ var XMLReader = /** @class */ (function(_super) {
     _this.document = null;
     _this.currentNodeInfo = {
       node: null,
-      gxType: null
+      gxType: null,
     };
     /**
      *
@@ -59,58 +64,58 @@ var XMLReader = /** @class */ (function(_super) {
     /**
      * Returns the name of the current element
      */
-    get: function() {
+    get: function () {
       return this.currentNodeInfo.node
         ? this.currentNodeInfo.node.nodeName
         : "";
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "value", {
     /**
      * Returns the value of the current element
      */
-    get: function() {
+    get: function () {
       return this.isSingleElementNode(this.currentNodeInfo.node)
         ? this.currentNodeInfo.node.textContent
         : "";
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "nodeType", {
     /**
      * Returns the current node type obtained through the method Read or ReadType
      */
-    get: function() {
+    get: function () {
       return this.currentNodeInfo.gxType;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "eOF", {
-    get: function() {
+    get: function () {
       return this.mEOF ? 1 : 0;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "isSimple", {
     /**
      * Indicates whether the current node obtained through the Read or ReadType method is simple
      */
-    get: function() {
+    get: function () {
       return this.isSingleElementNode(this.currentNodeInfo.node) ? 1 : 0;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "prefix", {
     /**
      * Returns the element's the namespace if it exists
      */
-    get: function() {
+    get: function () {
       var prefix = "";
       var components = this.name.split(":");
       if (components.length === 2) {
@@ -119,13 +124,13 @@ var XMLReader = /** @class */ (function(_super) {
       return prefix;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "localName", {
     /**
      * Returns the name that represents the namespace, without indicating the prefix
      */
-    get: function() {
+    get: function () {
       var localName = "";
       var components = this.name.split(":");
       if (components.length === 2) {
@@ -136,98 +141,98 @@ var XMLReader = /** @class */ (function(_super) {
       return localName;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "simpleElements", {
-    get: function() {
+    get: function () {
       return this.mSimpleElements;
     },
-    set: function(value) {
+    set: function (value) {
       this.mSimpleElements = value;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "elementType", {
     // Properties for node type constants
     /**
      *
      */
-    get: function() {
+    get: function () {
       return GXNodeType.element;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "endTagType", {
     /**
      *
      */
-    get: function() {
+    get: function () {
       return GXNodeType.endTag;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "textType", {
     /**
      *
      */
-    get: function() {
+    get: function () {
       return GXNodeType.text;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "commentType", {
     /**
      *
      */
-    get: function() {
+    get: function () {
       return GXNodeType.comment;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "whiteSpaceType", {
     /**
      *
      */
-    get: function() {
+    get: function () {
       return GXNodeType.whiteSpace;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "cDataType", {
     /**
      *
      */
-    get: function() {
+    get: function () {
       return GXNodeType.cdata;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "processingInstructionType", {
     /**
      *
      */
-    get: function() {
+    get: function () {
       return GXNodeType.processingInstruction;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "doctypeType", {
     /**
      *
      */
-    get: function() {
+    get: function () {
       return GXNodeType.documentType;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   // Opening documents
   /**
@@ -235,7 +240,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param {string} source
    * @return number
    */
-  XMLReader.prototype.openFromString = function(source) {
+  XMLReader.prototype.openFromString = function (source) {
     this.resetDocument();
     this.resetErrors();
     var parser = new DOMParser();
@@ -253,7 +258,7 @@ var XMLReader = /** @class */ (function(_super) {
    * Closes the current reading session
    * @return {number}
    */
-  XMLReader.prototype.close = function() {
+  XMLReader.prototype.close = function () {
     this.resetDocument();
     return 0;
   };
@@ -262,7 +267,7 @@ var XMLReader = /** @class */ (function(_super) {
    * Used to obtain the different nodes of the open file, in a sequential manner.
    * @return {number} If a node is read, the value returned is greater than zero. Otherwise it returns zero.
    */
-  XMLReader.prototype.read = function() {
+  XMLReader.prototype.read = function () {
     if (!this.document) {
       this.mErrCode = ErrorCodes.no_open_document;
       this.mErrDescription = "No open document";
@@ -298,7 +303,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param {string} name (Optional) Specifies the value for the name of the node to be read, as long as the node is Element or EndTag type
    * @return {number} If a node is read, the value returned is greater than zero. Otherwise it returns zero.
    */
-  XMLReader.prototype.readType = function(nodeType, name) {
+  XMLReader.prototype.readType = function (nodeType, name) {
     if (name === void 0) {
       name = undefined;
     }
@@ -316,7 +321,7 @@ var XMLReader = /** @class */ (function(_super) {
    * Allows obtaining flat XML text from the start of an element.
    * @return {string} The XML corresponding to the current node
    */
-  XMLReader.prototype.readRawXML = function() {
+  XMLReader.prototype.readRawXML = function () {
     var xml = "";
     if (this.currentNodeInfo.gxType === GXNodeType.element) {
       xml = this.currentNodeInfo.node.outerHTML;
@@ -329,7 +334,7 @@ var XMLReader = /** @class */ (function(_super) {
    * It is valid only for nodes of the Element type.
    * @return {number}
    */
-  XMLReader.prototype.skip = function() {
+  XMLReader.prototype.skip = function () {
     if (this.currentNodeInfo.gxType === GXNodeType.element) {
       var node = this.currentNodeInfo.node;
       if (node.nextSibling) {
@@ -350,19 +355,19 @@ var XMLReader = /** @class */ (function(_super) {
     /**
      * Returns the number of attributes in the current node, obtained through the Read or ReadType methods
      */
-    get: function() {
+    get: function () {
       var atts = this.getCurrentNodeAttributesList();
       return atts.length;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   /**
    * Returns the value of an attribute of the current node indicated by its name
    * @param {string} name The attribute's name
    * @return {string} The attribute's value in the current node
    */
-  XMLReader.prototype.getAttributeByName = function(name) {
+  XMLReader.prototype.getAttributeByName = function (name) {
     var atts = this.getCurrentNodeAttributesList();
     for (var _i = 0, atts_1 = atts; _i < atts_1.length; _i++) {
       var att = atts_1[_i];
@@ -377,7 +382,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param {number} index The search index
    * @return {string} The attribute's value in the current node
    */
-  XMLReader.prototype.getAttributeByIndex = function(index) {
+  XMLReader.prototype.getAttributeByIndex = function (index) {
     var atts = this.getCurrentNodeAttributesList();
     if (index >= 0 && index < atts.length) {
       return atts[index].nodeValue;
@@ -389,7 +394,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param {string} name The name of the attribute
    * @return {number} 1 if the attribute exists, 0 otherwise
    */
-  XMLReader.prototype.existsAttribute = function(name) {
+  XMLReader.prototype.existsAttribute = function (name) {
     var atts = this.getCurrentNodeAttributesList();
     for (var _i = 0, atts_2 = atts; _i < atts_2.length; _i++) {
       var att = atts_2[_i];
@@ -404,7 +409,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param {number} index
    * @return string
    */
-  XMLReader.prototype.getAttributeName = function(index) {
+  XMLReader.prototype.getAttributeName = function (index) {
     var atts = this.getCurrentNodeAttributesList();
     if (index >= 0 && index < atts.length) {
       return atts[index].nodeName;
@@ -416,7 +421,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param {number} index
    * @return string
    */
-  XMLReader.prototype.getAttributePrefix = function(index) {
+  XMLReader.prototype.getAttributePrefix = function (index) {
     var attName = this.getAttributeName(index);
     var prefix = "";
     if (attName !== "") {
@@ -432,7 +437,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param {number} index
    * @return string
    */
-  XMLReader.prototype.getAttributeLocalName = function(index) {
+  XMLReader.prototype.getAttributeLocalName = function (index) {
     var attName = this.getAttributeName(index);
     var localName = "";
     if (attName !== "") {
@@ -442,17 +447,17 @@ var XMLReader = /** @class */ (function(_super) {
     return localName;
   };
   // Private methods
-  XMLReader.prototype.resetErrors = function() {
+  XMLReader.prototype.resetErrors = function () {
     this.mErrCode = ErrorCodes.no_error;
     this.mErrDescription = "";
   };
-  XMLReader.prototype.resetDocument = function() {
+  XMLReader.prototype.resetDocument = function () {
     this.document = null;
     this.currentNodeInfo.node = null;
     this.currentNodeInfo.gxType = null;
     this.mEOF = true;
   };
-  XMLReader.prototype.isSingleElementNode = function(node) {
+  XMLReader.prototype.isSingleElementNode = function (node) {
     return (
       node &&
       node.nodeType === 1 &&
@@ -460,7 +465,7 @@ var XMLReader = /** @class */ (function(_super) {
       node.firstChild.childNodes.length === 0
     );
   };
-  XMLReader.prototype.nodeTypeToGXNodeType = function(type) {
+  XMLReader.prototype.nodeTypeToGXNodeType = function (type) {
     switch (type) {
       case 1: // Element
         return GXNodeType.element;
@@ -484,7 +489,7 @@ var XMLReader = /** @class */ (function(_super) {
         return undefined;
     }
   };
-  XMLReader.prototype.setCurrentNode = function(node, gxNodeType) {
+  XMLReader.prototype.setCurrentNode = function (node, gxNodeType) {
     if (gxNodeType === void 0) {
       gxNodeType = undefined;
     }
@@ -498,14 +503,14 @@ var XMLReader = /** @class */ (function(_super) {
     }
     this.setEOFForCurrentNode();
   };
-  XMLReader.prototype.getCurrentNodeAttributesList = function() {
+  XMLReader.prototype.getCurrentNodeAttributesList = function () {
     var element = this.currentNodeInfo.node;
     if (!element) {
       return null;
     }
     return Array.from(element.attributes);
   };
-  XMLReader.prototype.setEOFForCurrentNode = function() {
+  XMLReader.prototype.setEOFForCurrentNode = function () {
     var node = this.currentNodeInfo.node;
     if (node === null) {
       this.mEOF = true;
@@ -527,7 +532,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param {string} file
    * @return number
    */
-  XMLReader.prototype.open = function(file) {
+  XMLReader.prototype.open = function (file) {
     notSupported();
     return null;
   };
@@ -538,7 +543,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param request
    * @return any
    */
-  XMLReader.prototype.openRequest = function(request) {
+  XMLReader.prototype.openRequest = function (request) {
     notImplemented();
     return null;
   };
@@ -546,7 +551,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param client
    * @return any
    */
-  XMLReader.prototype.openResponse = function(client) {
+  XMLReader.prototype.openResponse = function (client) {
     notImplemented();
     return null;
   };
@@ -555,7 +560,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param {number} index
    * @return string
    */
-  XMLReader.prototype.getAttributeURI = function(index) {
+  XMLReader.prototype.getAttributeURI = function (index) {
     notImplemented();
     return null;
   };
@@ -563,7 +568,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param index
    * @return any
    */
-  XMLReader.prototype.getAttEntityValueByIndex = function(index) {
+  XMLReader.prototype.getAttEntityValueByIndex = function (index) {
     notImplemented();
     return null;
   };
@@ -571,7 +576,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param name
    * @return any
    */
-  XMLReader.prototype.getAttEntityValueByName = function(name) {
+  XMLReader.prototype.getAttEntityValueByName = function (name) {
     notImplemented();
     return null;
   };
@@ -579,7 +584,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param index
    * @return any
    */
-  XMLReader.prototype.getAttEntityNotationByIndex = function(index) {
+  XMLReader.prototype.getAttEntityNotationByIndex = function (index) {
     notImplemented();
     return null;
   };
@@ -587,7 +592,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param name
    * @return any
    */
-  XMLReader.prototype.getAttEntityNotationByName = function(name) {
+  XMLReader.prototype.getAttEntityNotationByName = function (name) {
     notImplemented();
     return null;
   };
@@ -595,7 +600,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param encoding
    * @return any
    */
-  XMLReader.prototype.setDocEncoding = function(encoding) {
+  XMLReader.prototype.setDocEncoding = function (encoding) {
     notImplemented();
     return null;
   };
@@ -603,7 +608,7 @@ var XMLReader = /** @class */ (function(_super) {
    * @param encoding
    * @return any
    */
-  XMLReader.prototype.setNodeEncoding = function(encoding) {
+  XMLReader.prototype.setNodeEncoding = function (encoding) {
     notImplemented();
     return null;
   };
@@ -612,90 +617,90 @@ var XMLReader = /** @class */ (function(_super) {
    * @param namespace
    * @return any
    */
-  XMLReader.prototype.addSchema = function(uri, namespace) {
+  XMLReader.prototype.addSchema = function (uri, namespace) {
     notImplemented();
     return null;
   };
   Object.defineProperty(XMLReader.prototype, "errLineNumber", {
-    get: function() {
+    get: function () {
       return this.merrLineNumber;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "errLinePos", {
-    get: function() {
+    get: function () {
       return this.merrLinePos;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "nameSpaceURI", {
-    get: function() {
+    get: function () {
       return this.mnameSpaceURI;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "readExternalEntities", {
-    get: function() {
+    get: function () {
       return this.mreadExternalEntities;
     },
-    set: function(value) {
+    set: function (value) {
       this.mreadExternalEntities = value;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "removeWhiteSpaces", {
-    get: function() {
+    get: function () {
       return this.mremoveWhiteSpaces;
     },
-    set: function(value) {
+    set: function (value) {
       this.mremoveWhiteSpaces = value;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "removeWhiteNodes", {
-    get: function() {
+    get: function () {
       return this.mremoveWhiteNodes;
     },
-    set: function(value) {
+    set: function (value) {
       this.mremoveWhiteNodes = value;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "linesNormalization", {
-    get: function() {
+    get: function () {
       return this.mlinesNormalization;
     },
-    set: function(value) {
+    set: function (value) {
       this.mlinesNormalization = value;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "stopOnInvalid", {
-    get: function() {
+    get: function () {
       return this.mstopOnInvalid;
     },
-    set: function(value) {
+    set: function (value) {
       this.mstopOnInvalid = value;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(XMLReader.prototype, "validationType", {
-    get: function() {
+    get: function () {
       return this.mvalidationType;
     },
-    set: function(value) {
+    set: function (value) {
       this.mvalidationType = value;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   return XMLReader;
 })(XMLBase);

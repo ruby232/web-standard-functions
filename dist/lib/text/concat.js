@@ -9,10 +9,11 @@ var rTrim_1 = require("./rTrim");
  * @param {string} separator Optional separator
  * @return string
  */
-exports.concat = function(value1, value2, separator) {
+var concat = function (value1, value2, separator) {
   if (separator === void 0) {
     separator = undefined;
   }
   return rTrim_1.rTrim(value1) + (separator ? separator : "") + value2;
 };
+exports.concat = concat;
 //# sourceMappingURL=concat.js.map

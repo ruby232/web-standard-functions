@@ -1,12 +1,12 @@
 /* tslint:disable:no-empty */
-var GeneXusSDSynchronizationSynchronizationEvents = /** @class */ (function() {
+var GeneXusSDSynchronizationSynchronizationEvents = /** @class */ (function () {
   function GeneXusSDSynchronizationSynchronizationEvents() {}
   /**
    * Checks if there are any pending changes to submit to the server.
    * @param {number} eventStatus
    * @return {boolean} Current implementation returns always `false`.
    */
-  GeneXusSDSynchronizationSynchronizationEvents.hasEvents = function(
+  GeneXusSDSynchronizationSynchronizationEvents.hasEvents = function (
     eventStatus
   ) {
     return false;
@@ -16,7 +16,7 @@ var GeneXusSDSynchronizationSynchronizationEvents = /** @class */ (function() {
    * @param {number} eventStatus
    * @return {any[]} Current implementation returns an empty array.
    */
-  GeneXusSDSynchronizationSynchronizationEvents.getEvents = function(
+  GeneXusSDSynchronizationSynchronizationEvents.getEvents = function (
     eventStatus
   ) {
     return [];
@@ -27,7 +27,7 @@ var GeneXusSDSynchronizationSynchronizationEvents = /** @class */ (function() {
    * Current implementation does nothing.
    * @param {GUID} eventGUID
    */
-  GeneXusSDSynchronizationSynchronizationEvents.markEventAsPending = function(
+  GeneXusSDSynchronizationSynchronizationEvents.markEventAsPending = function (
     eventGUID
   ) {
     // Empty implemetation
@@ -38,7 +38,7 @@ var GeneXusSDSynchronizationSynchronizationEvents = /** @class */ (function() {
    * Current implementation does nothing.
    * @param {GUID} eventGUID
    */
-  GeneXusSDSynchronizationSynchronizationEvents.removeEvent = function(
+  GeneXusSDSynchronizationSynchronizationEvents.removeEvent = function (
     eventGUID
   ) {
     // Empty implemetation

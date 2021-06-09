@@ -7,9 +7,10 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addMilliseconds = void 0;
-exports.addMilliseconds = function(dateFrom, milliseconds) {
+var addMilliseconds = function (dateFrom, milliseconds) {
   var ret = new Date();
   ret.setTime(dateFrom.getTime() + milliseconds);
   return ret;
 };
+exports.addMilliseconds = addMilliseconds;
 //# sourceMappingURL=addMilliseconds.js.map

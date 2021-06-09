@@ -7,7 +7,7 @@
  */
 import { DateTime } from "luxon";
 import { today } from "../date/today";
-export var age = function(dateFrom, dateTo) {
+export var age = function (dateFrom, dateTo) {
   if (dateTo === undefined) {
     dateTo = today();
   }

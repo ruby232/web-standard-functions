@@ -7,7 +7,7 @@
  * @return Date
  */
 import { EMPTY_DATE_VALUE } from "./core";
-export var set = function(targetDate, year, month, day) {
+export var set = function (targetDate, year, month, day) {
   targetDate.setFullYear(year);
   targetDate.setMonth(month - 1);
   targetDate.setDate(day);

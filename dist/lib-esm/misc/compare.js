@@ -6,7 +6,7 @@ import { like } from "../text/like";
  * @param {any} right Second operand
  * @return true if the comparition succeds, false otherwise
  */
-export var compare = function(left, op, right) {
+export var compare = function (left, op, right) {
   switch (op) {
     case "<":
       return left < right;

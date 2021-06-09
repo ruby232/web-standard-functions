@@ -4,7 +4,7 @@ import { openInBrowser } from "./openInBrowser";
  * @param subject
  * @param message
  */
-export var sendEmail = function(to, subject, message) {
+export var sendEmail = function (to, subject, message) {
   var uri = "mailTo:" + to;
   var paramSeparator = "?";
   if (subject) {

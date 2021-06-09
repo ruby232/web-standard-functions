@@ -6,7 +6,7 @@ import { isEmpty as bIsEmpty } from "../bool/isEmpty";
  * @param value
  * @return boolean
  */
-export var isEmpty = function(value) {
+export var isEmpty = function (value) {
   if (value === null || value === undefined) {
     return true;
   }

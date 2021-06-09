@@ -4,7 +4,7 @@ import { msg } from "../../../misc/msg";
  * @param url
  * @param title
  */
-export var shareText = function(text, url, title) {
+export var shareText = function (text, url, title) {
   var nav = window.navigator;
   if (nav && nav.share) {
     return nav.share({ title: title, url: url, text: text });
