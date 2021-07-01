@@ -4,7 +4,7 @@ export const testCases: Array<[Date, Date]> = [
   [new Date(1891, 8, 28), new Date(1891, 8, 30)],
   [new Date(2018, 0, 1), new Date(2018, 0, 31)],
   [new Date(2018, 0, 30), new Date(2018, 0, 31)],
-  [new Date(2018, 0, 31), new Date(2018, 0, 31)]
+  [new Date(2018, 0, 31), new Date(2018, 0, 31)],
 ];
 
 describe("endOfMonth operation", () => {

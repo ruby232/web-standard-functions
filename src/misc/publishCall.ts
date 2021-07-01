@@ -10,9 +10,9 @@ export async function publishCall<T>(
   resolver: (option: string, value: T, res: ResolverFunc<T>) => void,
   ...params: any[]
 ): Promise<T> {
-  return new Promise<T>(resolve => {
+  return new Promise<T>((resolve) => {
     let guid = GUID.newGuid().toString();
-    let suscriptions = options.map(opt => {
+    let suscriptions = options.map((opt) => {
       let s = subscribe(`${prefix}_${fnName}_${guid}_${opt}`, (result: T) => {
         unsubscribe();
         resolver(opt, result, resolve);

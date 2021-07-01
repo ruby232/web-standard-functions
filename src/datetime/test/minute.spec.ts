@@ -5,7 +5,7 @@ export const testCases: Array<[Date, number]> = [
   [new Date(1891, 8, 28, 1, 1), 1],
   [new Date(1891, 8, 28, 1, 15), 15],
   [new Date(1891, 8, 28, 1, 60), 0],
-  [new Date(1891, 8, 28, 1, 61), 1]
+  [new Date(1891, 8, 28, 1, 61), 1],
 ];
 
 describe("minute operation", () => {

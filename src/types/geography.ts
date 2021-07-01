@@ -1,15 +1,23 @@
 import { notImplemented } from "../misc/helpers";
 
 export class Geography {
-  private static GEOGRAPHY_REGEX_TEST_COORDS = /^(-?\d*(?:\.\d+)?)(?:\s*,\s*| +)(-?\d*(?:\.\d+)?)$/i; // latitude,longitude
-  private static GEOGRAPHY_REGEX_TEST_POINT = /POINT\s*\(\s*(-?\d*(?:\.\d+)?) +(-?\d*(?:\.\d+)?)\s*\)/i; // POINT(longitude latitude)
-  private static GEOGRAPHY_REGEX_TEST_LINE = /LINESTRING *\( *(?:-?\d*(?:\.\d+)? +-?\d*(?:\.\d+)?(?: *, *| *\)$))+/i; // LINESTRING(longitude latitude,longitude latitude)
-  private static GEOGRAPHY_REGEX_TEST_POLYGON = /POLYGON *\( *(?:\( *(?:-?\d+(?:\.\d+)? +-?\d*(?:\.\d+)?(?: *, *))+-?\d+(?:\.\d+)? +-?\d*(?:\.\d+)? *\)(?: *, *| *\)$))+/i; // POLYGON((longitude latitude,longitude latitude),(longitude latitude,longitude latitude))
-  private static GEOGRAPHY_REGEX_PARSE_COORDS = /(-?\d*(?:\.\d+)?)(?:\s*,\s*| +)(-?\d*(?:\.\d+)?)/i;
-  private static GEOGRAPHY_REGEX_PARSE_POINT = /POINT\s*\(\s*(-?\d*(?:\.\d+)?) +(-?\d*(?:\.\d+)?)\s*\)/i;
+  private static GEOGRAPHY_REGEX_TEST_COORDS =
+    /^(-?\d*(?:\.\d+)?)(?:\s*,\s*| +)(-?\d*(?:\.\d+)?)$/i; // latitude,longitude
+  private static GEOGRAPHY_REGEX_TEST_POINT =
+    /POINT\s*\(\s*(-?\d*(?:\.\d+)?) +(-?\d*(?:\.\d+)?)\s*\)/i; // POINT(longitude latitude)
+  private static GEOGRAPHY_REGEX_TEST_LINE =
+    /LINESTRING *\( *(?:-?\d*(?:\.\d+)? +-?\d*(?:\.\d+)?(?: *, *| *\)$))+/i; // LINESTRING(longitude latitude,longitude latitude)
+  private static GEOGRAPHY_REGEX_TEST_POLYGON =
+    /POLYGON *\( *(?:\( *(?:-?\d+(?:\.\d+)? +-?\d*(?:\.\d+)?(?: *, *))+-?\d+(?:\.\d+)? +-?\d*(?:\.\d+)? *\)(?: *, *| *\)$))+/i; // POLYGON((longitude latitude,longitude latitude),(longitude latitude,longitude latitude))
+  private static GEOGRAPHY_REGEX_PARSE_COORDS =
+    /(-?\d*(?:\.\d+)?)(?:\s*,\s*| +)(-?\d*(?:\.\d+)?)/i;
+  private static GEOGRAPHY_REGEX_PARSE_POINT =
+    /POINT\s*\(\s*(-?\d*(?:\.\d+)?) +(-?\d*(?:\.\d+)?)\s*\)/i;
   private static GEOGRAPHY_REGEX_PARSE_POINT_COORDS = /-?\d+(?:\.\d+)?/g;
-  private static GEOGRAPHY_REGEX_PARSE_LINE = /(-?\d+(?:\.\d+)?) +(-?\d*(?:\.\d+)?)/g;
-  private static GEOGRAPHY_REGEX_PARSE_POLYGON = /\(((?:-?\d+(?:\.\d+)?) +(?:-?\d*(?:\.\d+)?)(?: *, *|\)))+/g;
+  private static GEOGRAPHY_REGEX_PARSE_LINE =
+    /(-?\d+(?:\.\d+)?) +(-?\d*(?:\.\d+)?)/g;
+  private static GEOGRAPHY_REGEX_PARSE_POLYGON =
+    /\(((?:-?\d+(?:\.\d+)?) +(?:-?\d*(?:\.\d+)?)(?: *, *|\)))+/g;
   private point: GeographyPoint;
   private line: GeographyLineString;
   private polygon: GeographyPolygon;
@@ -88,14 +96,14 @@ export class Geography {
         return `POINT (${this.longitude} ${this.latitude})`;
       case "LINE":
         return `LINESTRING (${this.line
-          .map(point => `${point.longitude} ${point.latitude}`)
+          .map((point) => `${point.longitude} ${point.latitude}`)
           .join(", ")})`;
       case "POLYGON":
         return `POLYGON (${this.polygon
           .map(
-            ring =>
+            (ring) =>
               `(${ring
-                .map(point => `${point.longitude} ${point.latitude}`)
+                .map((point) => `${point.longitude} ${point.latitude}`)
                 .join(", ")})`
           )
           .join(", ")})`;
@@ -115,27 +123,30 @@ export class Geography {
       case "POINT":
         geoJson = {
           type: "Point",
-          coordinates: [this.longitude, this.latitude]
+          coordinates: [this.longitude, this.latitude],
         };
         break;
       case "LINE":
         geoJson = {
           type: "LineString",
-          coordinates: this.line.map(point => [point.longitude, point.latitude])
+          coordinates: this.line.map((point) => [
+            point.longitude,
+            point.latitude,
+          ]),
         };
         break;
       case "POLYGON":
         geoJson = {
           type: "Polygon",
-          coordinates: this.polygon.map(ring =>
-            ring.map(point => [point.longitude, point.latitude])
-          )
+          coordinates: this.polygon.map((ring) =>
+            ring.map((point) => [point.longitude, point.latitude])
+          ),
         };
         break;
       default:
         geoJson = {
           type: "GeometryCollection",
-          coordinates: []
+          coordinates: [],
         };
         break;
     }
@@ -266,7 +277,7 @@ export class Geography {
     this.featureType = "POINT";
     this.point = {
       longitude: parseFloat(result[2]),
-      latitude: parseFloat(result[1])
+      latitude: parseFloat(result[1]),
     };
   }
 
@@ -276,7 +287,7 @@ export class Geography {
     this.featureType = "POINT";
     this.point = {
       longitude: parseFloat(result[1]),
-      latitude: parseFloat(result[2])
+      latitude: parseFloat(result[2]),
     };
   }
 
@@ -284,12 +295,12 @@ export class Geography {
     const points = value.match(Geography.GEOGRAPHY_REGEX_PARSE_LINE);
 
     this.featureType = "LINE";
-    this.line = points.map(point => {
+    this.line = points.map((point) => {
       const coords = point.match(Geography.GEOGRAPHY_REGEX_PARSE_POINT_COORDS);
 
       return {
         longitude: parseFloat(coords[0]),
-        latitude: parseFloat(coords[1])
+        latitude: parseFloat(coords[1]),
       };
     });
   }
@@ -298,17 +309,17 @@ export class Geography {
     const rings = value.match(Geography.GEOGRAPHY_REGEX_PARSE_POLYGON);
 
     this.featureType = "POLYGON";
-    this.polygon = rings.map(ring => {
+    this.polygon = rings.map((ring) => {
       const points = ring.match(Geography.GEOGRAPHY_REGEX_PARSE_LINE);
 
-      return points.map(point => {
+      return points.map((point) => {
         const coords = point.match(
           Geography.GEOGRAPHY_REGEX_PARSE_POINT_COORDS
         );
 
         return {
           longitude: parseFloat(coords[0]),
-          latitude: parseFloat(coords[1])
+          latitude: parseFloat(coords[1]),
         };
       });
     });

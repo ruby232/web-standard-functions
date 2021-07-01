@@ -6,12 +6,10 @@ export let gxToLibLangMapping = (gxlang: string): string => {
     ["ita", "it"] /*Italian*/,
     ["chs", "zh-Hans"] /*Simplified Chinese*/,
     ["cht", "zh-Hant"] /*Traditional Chinese*/,
-    ["jap", "jpn"] /*Japanese*/
+    ["jap", "jpn"] /*Japanese*/,
   ]);
   let luxonLang = gxtoluxonLang.get(gxlang);
   return luxonLang || "en";
 };
 
-
 export const EMPTY_DATE_VALUE = new Date(0, 0, 0, 0, 0, 0, 0);
-

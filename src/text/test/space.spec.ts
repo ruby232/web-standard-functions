@@ -3,7 +3,7 @@ import { space } from "../space";
 const testCases: Array<[number, string]> = [
   [0, ""],
   [1, " "],
-  [12, "            "]
+  [12, "            "],
 ];
 
 describe("Space function", () => {

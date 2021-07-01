@@ -19,7 +19,6 @@ export class TranslationService {
 
   private constructor() {}
 
-
   private translations: LanguageTranslations = {};
   private images: LanguageTranslations = {};
   private loadedTranslations: LanguageTanslationFlags = {};
@@ -28,7 +27,7 @@ export class TranslationService {
   async loadTranslations(language: string, data: TranslationsData) {
     if (!this.loadedTranslations[language]) {
       const msgTranslations: MessagesTranslations = {};
-      data.Translations.forEach(t => (msgTranslations[t.M] = t.T));
+      data.Translations.forEach((t) => (msgTranslations[t.M] = t.T));
       this.translations[language] = msgTranslations;
       this.loadedTranslations[language] = true;
     }
@@ -38,10 +37,10 @@ export class TranslationService {
     if (!this.loadedImages[language + theme]) {
       const imgTranslations: MessagesTranslations = {};
       data.images.forEach(
-        t =>
-          (imgTranslations[this.resolveImageKey(t.name, theme)] = `resources/${
-            t.location
-          }`)
+        (t) =>
+          (imgTranslations[
+            this.resolveImageKey(t.name, theme)
+          ] = `resources/${t.location}`)
       );
       this.images[language] = imgTranslations;
       this.loadedImages[language + theme] = true;
@@ -74,9 +73,8 @@ export class TranslationService {
   }
 
   private getHostName() {
-    const hostName = ConfigurationState.getInstance().getDynStoredValue(
-      "SERVICE_HOSTNAME"
-    );
+    const hostName =
+      ConfigurationState.getInstance().getDynStoredValue("SERVICE_HOSTNAME");
     if (hostName) {
       return hostName;
     } else {

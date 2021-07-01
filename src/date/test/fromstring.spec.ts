@@ -7,7 +7,7 @@ export const testCases: Array<[string, Date]> = [
   ["28/09/1891", new Date(1891, 8, 28)],
   ["28/9/1891", new Date(1891, 8, 28)],
   ["28-9-1891", EMPTY_DATE_VALUE],
-  ["TEXTO", EMPTY_DATE_VALUE]
+  ["TEXTO", EMPTY_DATE_VALUE],
 ];
 
 describe("fromString operation", () => {

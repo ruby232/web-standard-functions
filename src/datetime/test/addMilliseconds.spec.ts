@@ -7,15 +7,13 @@ export const testCases: Array<[Date, number, Date]> = [
   [
     new Date(2019, 8, 28, 2, 1, 1, 0),
     14400000,
-    new Date(2019, 8, 28, 6, 1, 1, 0)
-  ]
+    new Date(2019, 8, 28, 6, 1, 1, 0),
+  ],
 ];
 
 describe("addMilliseconds operation", () => {
   for (const t of testCases) {
-    it(`addMilliseconds for ${t[0]} add ${t[1]} should be equal to ${
-      t[2]
-    }`, () => {
+    it(`addMilliseconds for ${t[0]} add ${t[1]} should be equal to ${t[2]}`, () => {
       expect(addMilliseconds(t[0], t[1])).toEqual(t[2]);
     });
   }

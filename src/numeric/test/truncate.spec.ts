@@ -5,7 +5,7 @@ const testCases: Array<[number, number, number]> = [
   [1.4, 0, 1],
   [1.25, 1, 1.2],
   [1.24, 1, 1.2],
-  [125.11, -1, 120]
+  [125.11, -1, 120],
 ];
 
 describe("Numeric::truncate", () => {

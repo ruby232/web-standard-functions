@@ -9,7 +9,7 @@ enum GXNodeType {
   whiteSpace = 16,
   cdata = 32,
   processingInstruction = 64,
-  documentType = 128
+  documentType = 128,
 }
 
 export class XMLReader extends XMLBase {
@@ -19,7 +19,7 @@ export class XMLReader extends XMLBase {
 
   private currentNodeInfo = {
     node: null,
-    gxType: null
+    gxType: null,
   };
 
   // Properties

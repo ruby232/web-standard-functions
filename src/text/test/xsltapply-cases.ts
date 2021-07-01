@@ -29,6 +29,6 @@ export const testCases: Array<[string, string, string]> = [
         Article - My Article
         Authors:
       - Mr. Foo
-      - Mr. Bar`
-  ]
+      - Mr. Bar`,
+  ],
 ];

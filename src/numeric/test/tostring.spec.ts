@@ -7,7 +7,7 @@ const testCases: Array<[number, string]> = [
   [-3, "-3"],
   [0.6, "0.6"],
   [1.3, "1.3"],
-  [-2.4, "-2.4"]
+  [-2.4, "-2.4"],
 ];
 
 describe("Numeric::toString", () => {

@@ -4,7 +4,7 @@
  */
 export enum time_format {
   format_12 = 12,
-  format_24 = 24
+  format_24 = 24,
 }
 
 import { DateTime } from "luxon";

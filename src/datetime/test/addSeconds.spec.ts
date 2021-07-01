@@ -4,7 +4,7 @@ export const testCases: Array<[Date, number, Date]> = [
   [new Date(2019, 8, 28, 2, 1, 1, 0), 1, new Date(2019, 8, 28, 2, 1, 2, 0)],
   [new Date(2019, 8, 28, 2, 1, 1, 0), 10, new Date(2019, 8, 28, 2, 1, 11, 0)],
   [new Date(2019, 8, 28, 2, 1, 1, 0), 6, new Date(2019, 8, 28, 2, 1, 7, 0)],
-  [new Date(2019, 8, 28, 2, 1, 1, 0), 14400, new Date(2019, 8, 28, 6, 1, 1, 0)]
+  [new Date(2019, 8, 28, 2, 1, 1, 0), 14400, new Date(2019, 8, 28, 6, 1, 1, 0)],
 ];
 
 describe("addSeconds operation", () => {

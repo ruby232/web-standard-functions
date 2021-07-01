@@ -18,3 +18,4 @@ export * from "./text/trim";
 export * from "./text/toUpper";
 export * from "./text/toLower";
 export * from "./text/toNumeric";
+export { isEmpty as Varchar_isEmpty } from "./text/isEmpty";

@@ -11,5 +11,5 @@ export const testCases: Array<[string, string, number]> = [
   ["1891Peñarol", ",", 1891],
   ["Peñarol1891", "", 0],
   ["Peñarol1891", ".", 0],
-  ["Peñarol1891", ",", 0]
+  ["Peñarol1891", ",", 0],
 ];

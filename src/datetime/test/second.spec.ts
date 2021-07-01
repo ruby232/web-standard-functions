@@ -6,7 +6,7 @@ export const testCases: Array<[Date, number]> = [
   [new Date(1891, 8, 28, 1, 0, 15), 15],
   [new Date(1891, 8, 28, 1, 0, 20), 20],
   [new Date(1891, 8, 28, 1, 0, 60), 0],
-  [new Date(1891, 8, 28, 1, 0, 61), 1]
+  [new Date(1891, 8, 28, 1, 0, 61), 1],
 ];
 
 describe("second operation", () => {

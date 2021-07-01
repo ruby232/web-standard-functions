@@ -90,7 +90,7 @@ export class WS {
       }
     };
 
-    this.websocket.onclose = e => {
+    this.websocket.onclose = (e) => {
       switch (e.code) {
         case 1000:
           this.logger.debug("Connection closed");
@@ -105,7 +105,7 @@ export class WS {
       }
     };
 
-    this.websocket.onerror = e => {
+    this.websocket.onerror = (e) => {
       this.logger.error("Connection error", JSON.stringify(e));
       if (this.onError) {
         this.onError(e);
