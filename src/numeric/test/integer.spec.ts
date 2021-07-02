@@ -8,7 +8,7 @@ const testCases: Array<[number, number]> = [
   [0.6, 0],
   [1.3, 1],
   [-2.4, -2],
-  [5 / 3, 1]
+  [5 / 3, 1],
 ];
 
 describe("Numeric::integer", () => {

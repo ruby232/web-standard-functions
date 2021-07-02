@@ -4,7 +4,7 @@ import { EMPTY_DATE_VALUE } from "../core";
 export const testCases: Array<[number, number, number, Date]> = [
   [1891, 9, 28, new Date(1891, 8, 28, 0, 0, 0, 0)],
   [1891, 13, 1, EMPTY_DATE_VALUE],
-  [1891, 1891, 1891, EMPTY_DATE_VALUE]
+  [1891, 1891, 1891, EMPTY_DATE_VALUE],
 ];
 
 describe("newInstance operation", () => {

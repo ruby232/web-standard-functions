@@ -6,7 +6,7 @@ const testCases: Array<[any, boolean]> = [
   [null, true],
   [undefined, true],
   [0, true],
-  [1, false]
+  [1, false],
 ];
 
 describe("IsEmpty function", () => {

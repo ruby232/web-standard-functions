@@ -23,7 +23,8 @@ var __exportStar =
         __createBinding(exports, m, p);
   };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Text_toString =
+exports.Varchar_isEmpty =
+  exports.Text_toString =
   exports.Text_isEmpty =
   exports.Numeric_toString =
   exports.Numeric_isEmpty =
@@ -54,4 +55,11 @@ __exportStar(require("./text/trim"), exports);
 __exportStar(require("./text/toUpper"), exports);
 __exportStar(require("./text/toLower"), exports);
 __exportStar(require("./text/toNumeric"), exports);
+var isEmpty_1 = require("./text/isEmpty");
+Object.defineProperty(exports, "Varchar_isEmpty", {
+  enumerable: true,
+  get: function () {
+    return isEmpty_1.isEmpty;
+  },
+});
 //# sourceMappingURL=web-standard-functions.js.map

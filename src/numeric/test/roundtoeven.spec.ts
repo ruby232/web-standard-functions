@@ -10,7 +10,7 @@ const testCases: Array<[number, number, number]> = [
   [125, -1, 120],
   [135, -1, 140],
   [125.11, -1, 130],
-  [135.11, -1, 140]
+  [135.11, -1, 140],
 ];
 
 describe("Numeric::roundToEven", () => {

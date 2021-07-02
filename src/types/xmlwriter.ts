@@ -43,9 +43,7 @@ export class XMLWriter extends XMLBase {
     let content = this.document.firstElementChild.outerHTML;
     if (this.encoding) {
       let standalone = this.standalone ? ' standalone="yes"' : "";
-      let hedader = `<?xml version="1.0" encoding="${
-        this.encoding
-      }"${standalone}?>`;
+      let hedader = `<?xml version="1.0" encoding="${this.encoding}"${standalone}?>`;
       content = `${hedader}${content}`;
     }
     return content;

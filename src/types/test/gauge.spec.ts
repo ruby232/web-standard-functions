@@ -6,38 +6,34 @@ const GAUGE_UNDEFINED = {
   min: 0,
   max: 0,
   value: 0,
-  ranges: []
+  ranges: [],
 };
 const GAUGE_EMPTY = {
-  json:
-    '{"Type":"","Title":"","Height":0,"Width":0,"MaxValue":0,"MinValue":0,"Value":0,"Thickness":0,"ShowMinMax":false,"ShowValue":false}',
+  json: '{"Type":"","Title":"","Height":0,"Width":0,"MaxValue":0,"MinValue":0,"Value":0,"Thickness":0,"ShowMinMax":false,"ShowValue":false}',
   type: "line",
   min: 0,
   max: 0,
   value: 0,
-  ranges: []
+  ranges: [],
 };
 const GAUGE_LINE = {
-  json:
-    '{"Type":"Line","Title":"","Height":0,"Width":0,"MaxValue":100,"MinValue":0,"Value":75,"Thickness":0,"ShowMinMax":false,"ShowValue":true}',
+  json: '{"Type":"Line","Title":"","Height":0,"Width":0,"MaxValue":100,"MinValue":0,"Value":75,"Thickness":0,"ShowMinMax":false,"ShowValue":true}',
   type: "line",
   min: 0,
   max: 100,
   value: 75,
-  ranges: []
+  ranges: [],
 };
 const GAUGE_CIRCLE = {
-  json:
-    '{"Type":"Circular","Title":"","Height":0,"Width":0,"MaxValue":100,"MinValue":0,"Value":75,"Thickness":0,"ShowMinMax":false,"ShowValue":true}',
+  json: '{"Type":"Circular","Title":"","Height":0,"Width":0,"MaxValue":100,"MinValue":0,"Value":75,"Thickness":0,"ShowMinMax":false,"ShowValue":true}',
   type: "circle",
   min: 0,
   max: 100,
   value: 75,
-  ranges: []
+  ranges: [],
 };
 const GAUGE_RANGE = {
-  json:
-    '{"Type":"Line","Title":"","Height":0,"Width":0,"MaxValue":100,"MinValue":0,"Value":75,"Thickness":0,"ShowMinMax":false,"ShowValue":true,"Ranges":[{"Color":"#00FF00","Name":"Low","Length":25},{"Color":"#FF8000","Name":"Medium","Length":50},{"Color":"#FF0000","Name":"High","Length":25}]}',
+  json: '{"Type":"Line","Title":"","Height":0,"Width":0,"MaxValue":100,"MinValue":0,"Value":75,"Thickness":0,"ShowMinMax":false,"ShowValue":true,"Ranges":[{"Color":"#00FF00","Name":"Low","Length":25},{"Color":"#FF8000","Name":"Medium","Length":50},{"Color":"#FF0000","Name":"High","Length":25}]}',
   type: "line",
   min: 0,
   max: 100,
@@ -45,8 +41,8 @@ const GAUGE_RANGE = {
   ranges: [
     { name: "Low", amount: 25, color: "#00FF00" },
     { name: "Medium", amount: 50, color: "#FF8000" },
-    { name: "High", amount: 25, color: "#FF0000" }
-  ]
+    { name: "High", amount: 25, color: "#FF0000" },
+  ],
 };
 
 describe("Test new() from Json of GaugeSDT", () => {

@@ -15,7 +15,7 @@ describe("ConfigurationState without settings", () => {
 
   it("shuold set the default language from application settings as the current language", () => {
     ConfigurationState.loadApplicationSettings({
-      DEFAULT_LANGUAGE: "English"
+      DEFAULT_LANGUAGE: "English",
     });
     let conf = ConfigurationState.getInstance();
     let defaultLanguage = conf.getDynStoredValue("DEFAULT_LANGUAGE");
@@ -30,7 +30,7 @@ describe("ConfigurationState date type", () => {
     let conf = ConfigurationState.getInstance();
     conf.loadProperties({
       languages: "English,Spanish,Portuguese,French",
-      language: "English"
+      language: "English",
     });
   });
 
@@ -71,7 +71,7 @@ describe("ConfigurationState date type", () => {
       GAM_CLIENT_LOGIN: "",
       GAM_CLIENT_NOTAUTHORIZED: "",
       GAM_CLIENT_CHANGEPASSWORD: "",
-      DEFAULT_LANGUAGE: "English"
+      DEFAULT_LANGUAGE: "English",
     });
     let conf = ConfigurationState.getInstance();
     let hostName = conf.getDynStoredValue("SERVICE_HOSTNAME");

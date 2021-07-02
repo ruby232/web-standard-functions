@@ -25,7 +25,7 @@ export const subscribe = (
   options?: PubSubscriptionOptions
 ): EventSubscription => {
   const subscribeWrapper = (handler: Function) => {
-    return function(topic: string, data: any) {
+    return function (topic: string, data: any) {
       handler.apply(this, data);
     };
   };

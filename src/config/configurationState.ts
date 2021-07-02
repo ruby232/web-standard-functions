@@ -1,6 +1,6 @@
 import {
   detect as timezoneDetect,
-  storageKey as timezoneStorageKey
+  storageKey as timezoneStorageKey,
 } from "../datetime/timezone";
 import { storage } from "../common/storage";
 
