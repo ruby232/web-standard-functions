@@ -114,11 +114,6 @@ var GeneXusClientClientInformation = /** @class */ (function () {
     return osVersion;
   };
   /**
-   * Returns a unique identifier for the device
-   * Current implementation returns the same as the `id` property
-   */
-  GeneXusClientClientInformation.networkID = GeneXusClientClientInformation.id;
-  /**
    * A character string is returned with the device language
    */
   GeneXusClientClientInformation.language = function () {
@@ -162,6 +157,11 @@ var GeneXusClientClientInformation = /** @class */ (function () {
     notImplemented();
     return null;
   };
+  /**
+   * Returns a unique identifier for the device
+   * Current implementation returns the same as the `id` property
+   */
+  GeneXusClientClientInformation.networkID = GeneXusClientClientInformation.id;
   return GeneXusClientClientInformation;
 })();
 export { GeneXusClientClientInformation };
