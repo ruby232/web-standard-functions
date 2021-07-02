@@ -5,8 +5,11 @@
  * @return string
  */
 
-import * as htmltidy from "tidy-html5";
+// El paquete  "tidy-html5": "^0.1.1", es muy pesado para wechat, hay qu ebiscar una alternativa
+
+/*import * as htmltidy from "tidy-html5";
 
 export const htmlClean = (s: string): string => {
   return htmltidy.tidy_html5(s, { quiet: true, "tidy-mark": false });
 };
+*/
