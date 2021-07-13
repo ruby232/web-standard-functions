@@ -27,3 +27,5 @@ export * from "./text/toLower";
 export * from "./text/toNumeric";
 
 export { isEmpty as Varchar_isEmpty } from "./text/isEmpty";
+
+export * from "./gxcore/common/log";
