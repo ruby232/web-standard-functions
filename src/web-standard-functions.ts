@@ -19,6 +19,7 @@ export * as Numeric_toString from "./numeric/toString";
 
 export * as Text_isEmpty from "./text/isEmpty";
 export * as Text_toString from "./text/toString";
+export * as Core_format from "./text/format";
 
 export * from "./text/trim";
 export * from "./text/toUpper";
