@@ -24,6 +24,7 @@ var __exportStar =
   };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Varchar_isEmpty =
+  exports.Core_format =
   exports.Text_toString =
   exports.Text_isEmpty =
   exports.Numeric_toString =
@@ -51,6 +52,7 @@ exports.Numeric_isEmpty = require("./numeric/isEmpty");
 exports.Numeric_toString = require("./numeric/toString");
 exports.Text_isEmpty = require("./text/isEmpty");
 exports.Text_toString = require("./text/toString");
+exports.Core_format = require("./text/format");
 __exportStar(require("./text/trim"), exports);
 __exportStar(require("./text/toUpper"), exports);
 __exportStar(require("./text/toLower"), exports);
@@ -62,4 +64,5 @@ Object.defineProperty(exports, "Varchar_isEmpty", {
     return isEmpty_1.isEmpty;
   },
 });
+__exportStar(require("./gxcore/common/log"), exports);
 //# sourceMappingURL=web-standard-functions.js.map

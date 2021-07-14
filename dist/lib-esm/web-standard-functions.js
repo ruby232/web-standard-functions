@@ -24,9 +24,12 @@ import * as Text_isEmpty_1 from "./text/isEmpty";
 export { Text_isEmpty_1 as Text_isEmpty };
 import * as Text_toString_1 from "./text/toString";
 export { Text_toString_1 as Text_toString };
+import * as Core_format_1 from "./text/format";
+export { Core_format_1 as Core_format };
 export * from "./text/trim";
 export * from "./text/toUpper";
 export * from "./text/toLower";
 export * from "./text/toNumeric";
 export { isEmpty as Varchar_isEmpty } from "./text/isEmpty";
+export * from "./gxcore/common/log";
 //# sourceMappingURL=web-standard-functions.js.map
