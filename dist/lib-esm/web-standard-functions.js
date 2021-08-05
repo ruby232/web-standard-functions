@@ -20,6 +20,7 @@ import * as Numeric_isEmpty_1 from "./numeric/isEmpty";
 export { Numeric_isEmpty_1 as Numeric_isEmpty };
 import * as Numeric_toString_1 from "./numeric/toString";
 export { Numeric_toString_1 as Numeric_toString };
+export { toString as mytest_toString } from "./numeric/toString";
 import * as Text_isEmpty_1 from "./text/isEmpty";
 export { Text_isEmpty_1 as Text_isEmpty };
 import * as Text_toString_1 from "./text/toString";

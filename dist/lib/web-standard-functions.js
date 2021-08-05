@@ -26,6 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Varchar_isEmpty =
   exports.Text_toString =
   exports.Text_isEmpty =
+  exports.mytest_toString =
   exports.Numeric_toString =
   exports.Numeric_isEmpty =
   exports.Misc_isEmpty =
@@ -49,6 +50,13 @@ exports.DateTime_toString = require("./datetime/toString");
 exports.Misc_isEmpty = require("./misc/isEmpty");
 exports.Numeric_isEmpty = require("./numeric/isEmpty");
 exports.Numeric_toString = require("./numeric/toString");
+var toString_1 = require("./numeric/toString");
+Object.defineProperty(exports, "mytest_toString", {
+  enumerable: true,
+  get: function () {
+    return toString_1.toString;
+  },
+});
 exports.Text_isEmpty = require("./text/isEmpty");
 exports.Text_toString = require("./text/toString");
 __exportStar(require("./text/format"), exports);

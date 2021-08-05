@@ -16,6 +16,7 @@ export * as Misc_isEmpty from "./misc/isEmpty";
 
 export * as Numeric_isEmpty from "./numeric/isEmpty";
 export * as Numeric_toString from "./numeric/toString";
+export { toString as mytest_toString } from "./numeric/toString";
 
 export * as Text_isEmpty from "./text/isEmpty";
 export * as Text_toString from "./text/toString";
