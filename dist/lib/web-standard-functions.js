@@ -72,4 +72,5 @@ Object.defineProperty(exports, "Varchar_isEmpty", {
   },
 });
 __exportStar(require("./gxcore/common/log"), exports);
+__exportStar(require("./pubSub/pubSubscription"), exports);
 //# sourceMappingURL=web-standard-functions.js.map
