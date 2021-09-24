@@ -10,6 +10,7 @@ export * from "./text/trim";
 export * from "./text/toUpper";
 export * from "./text/toLower";
 export * from "./text/toNumeric";
+export * from "./text/newline";
 
 export * from "./gxcore/common/log";
 export * from "./pubSub/pubSubscription";
