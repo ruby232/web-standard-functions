@@ -29,6 +29,7 @@ exports.Core_str =
   exports.DateTime_toString =
   exports.Date_toString =
   exports.Boolean_toString =
+  exports.Character_isEmpty =
   exports.Varchar_isEmpty =
   exports.Text_isEmpty =
   exports.Numeric_isEmpty =
@@ -90,6 +91,13 @@ Object.defineProperty(exports, "Varchar_isEmpty", {
   enumerable: true,
   get: function () {
     return isEmpty_6.isEmpty;
+  },
+});
+var isEmpty_7 = require("./text/isEmpty");
+Object.defineProperty(exports, "Character_isEmpty", {
+  enumerable: true,
+  get: function () {
+    return isEmpty_7.isEmpty;
   },
 });
 var toString_1 = require("./bool/toString");

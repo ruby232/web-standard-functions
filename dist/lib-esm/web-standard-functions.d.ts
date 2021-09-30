@@ -18,6 +18,7 @@ export { isEmpty as Misc_isEmpty } from "./misc/isEmpty";
 export { isEmpty as Numeric_isEmpty } from "./numeric/isEmpty";
 export { isEmpty as Text_isEmpty } from "./text/isEmpty";
 export { isEmpty as Varchar_isEmpty } from "./text/isEmpty";
+export { isEmpty as Character_isEmpty } from "./text/isEmpty";
 export { toString as Boolean_toString } from "./bool/toString";
 export { toString as Date_toString } from "./date/toString";
 export { toString as DateTime_toString } from "./datetime/toString";
