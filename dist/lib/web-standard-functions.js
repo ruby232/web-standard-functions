@@ -50,6 +50,7 @@ __exportStar(require("./text/toLower"), exports);
 __exportStar(require("./text/toNumeric"), exports);
 __exportStar(require("./text/newline"), exports);
 __exportStar(require("./text/replace"), exports);
+__exportStar(require("./date/addYears"), exports);
 __exportStar(require("./gxcore/common/log"), exports);
 __exportStar(require("./pubSub/pubSubscription"), exports);
 var isEmpty_1 = require("./bool/isEmpty");

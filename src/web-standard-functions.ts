@@ -12,6 +12,7 @@ export * from "./text/toLower";
 export * from "./text/toNumeric";
 export * from "./text/newline";
 export * from "./text/replace";
+export * from "./date/addYears";
 
 export * from "./gxcore/common/log";
 export * from "./pubSub/pubSubscription";
