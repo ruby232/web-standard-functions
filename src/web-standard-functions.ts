@@ -15,6 +15,7 @@ export * from "./text/replace";
 export * from "./date/addYears";
 
 export * from "./gxcore/common/log";
+export * from "./gxcore/common/geolocation";
 export * from "./pubSub/pubSubscription";
 
 export { isEmpty as Boolean_isEmpty } from "./bool/isEmpty";
