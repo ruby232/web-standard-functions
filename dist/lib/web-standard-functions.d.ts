@@ -15,6 +15,7 @@ export * from "./date/addYears";
 export * from "./gxcore/common/log";
 export * from "./gxcore/common/geolocation";
 export * from "./pubSub/pubSubscription";
+export * from "./misc/publishCall";
 export { isEmpty as Boolean_isEmpty } from "./bool/isEmpty";
 export { isEmpty as Date_isEmpty } from "./date/isEmpty";
 export { isEmpty as Misc_isEmpty } from "./misc/isEmpty";
