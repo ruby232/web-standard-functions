@@ -23,7 +23,8 @@ var __exportStar =
         __createBinding(exports, m, p);
   };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Core_str =
+exports.Core_iif =
+  exports.Core_str =
   exports.Text_toString =
   exports.Numeric_toString =
   exports.DateTime_toString =
@@ -146,6 +147,13 @@ Object.defineProperty(exports, "Core_str", {
   enumerable: true,
   get: function () {
     return str_1.str;
+  },
+});
+var iif_1 = require("./misc/iif");
+Object.defineProperty(exports, "Core_iif", {
+  enumerable: true,
+  get: function () {
+    return iif_1.iif;
   },
 });
 //# sourceMappingURL=web-standard-functions.js.map
