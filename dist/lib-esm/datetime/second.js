@@ -4,6 +4,6 @@
  * @return number
  */
 export var second = function (dateFrom) {
-  return dateFrom.getSeconds();
+    return dateFrom.getSeconds();
 };
 //# sourceMappingURL=second.js.map

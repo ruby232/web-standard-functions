@@ -7,7 +7,7 @@ exports.fromBase64 = void 0;
  * @return string The decodede ASCII string
  */
 var fromBase64 = function (str64) {
-  return atob(str64);
+    return atob(str64);
 };
 exports.fromBase64 = fromBase64;
 //# sourceMappingURL=fromBase64.js.map

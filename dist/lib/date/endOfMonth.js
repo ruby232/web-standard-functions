@@ -8,11 +8,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.endOfMonth = void 0;
 var luxon_1 = require("luxon");
 var endOfMonth = function (dateFrom) {
-  return new Date(
-    dateFrom.getFullYear(),
-    dateFrom.getMonth(),
-    luxon_1.DateTime.fromJSDate(dateFrom).daysInMonth
-  );
+    return new Date(dateFrom.getFullYear(), dateFrom.getMonth(), luxon_1.DateTime.fromJSDate(dateFrom).daysInMonth);
 };
 exports.endOfMonth = endOfMonth;
 //# sourceMappingURL=endOfMonth.js.map

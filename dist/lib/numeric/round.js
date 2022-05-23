@@ -8,8 +8,8 @@ exports.round = void 0;
  * @returns number
  */
 var round = function (value, digits) {
-  var multiplier = Math.pow(10, digits || 0);
-  return Math.round(value * multiplier) / multiplier;
+    var multiplier = Math.pow(10, digits || 0);
+    return Math.round(value * multiplier) / multiplier;
 };
 exports.round = round;
 //# sourceMappingURL=round.js.map

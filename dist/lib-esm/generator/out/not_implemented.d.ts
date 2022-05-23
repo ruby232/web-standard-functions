@@ -1491,7 +1491,8 @@ export declare function invalidateCache(...args: any[]): any;
  * @return any
  */
 export declare function calculateDirections(...args: any[]): any;
-export declare class GeneXusClientClientInformation {}
+export declare class GeneXusClientClientInformation {
+}
 /**
  * @param key
  * @param value
@@ -1582,9 +1583,7 @@ export declare function requestLocationPermissionAlways(...args: any[]): any;
  * Deprecated. Use RequestUserNotificationsPermission instead.
  * @return any
  */
-export declare function requestRemoteNotificationsPermission(
-  ...args: any[]
-): any;
+export declare function requestRemoteNotificationsPermission(...args: any[]): any;
 /**
  * @param productIdentifiers
  * @return any
@@ -1956,27 +1955,27 @@ export declare function scanBarcode(...args: any[]): any;
  */
 export declare function scanInLoop(...args: any[]): any;
 export declare class GeneXusSDNetwork {
-  /**
-   * @param url
-   * @return boolean
-   */
-  static isServerAvailable(...args: any[]): any;
-  /**
-   * @param url
-   * @return any
-   */
-  static type(...args: any[]): any;
-  /**
-   * @param url
-   * @return boolean
-   */
-  static trafficBasedCost(...args: any[]): any;
-  /**
-   * If the property Dynamic Services URL is set to True, changes the URL at runtime.
-   * @param url
-   * @return any
-   */
-  static setApplicationServerURL(...args: any[]): any;
+    /**
+     * @param url
+     * @return boolean
+     */
+    static isServerAvailable(...args: any[]): any;
+    /**
+     * @param url
+     * @return any
+     */
+    static type(...args: any[]): any;
+    /**
+     * @param url
+     * @return boolean
+     */
+    static trafficBasedCost(...args: any[]): any;
+    /**
+     * If the property Dynamic Services URL is set to True, changes the URL at runtime.
+     * @param url
+     * @return any
+     */
+    static setApplicationServerURL(...args: any[]): any;
 }
 /**
  * Start monitoring the specified beacon region.

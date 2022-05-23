@@ -4,9 +4,9 @@
  * @returns The ASCII value of the first character in the string
  */
 export var asc = function (str) {
-  if (Array.from(str).length === 0) {
-    return 0;
-  }
-  return str.charCodeAt(0);
+    if (Array.from(str).length === 0) {
+        return 0;
+    }
+    return str.charCodeAt(0);
 };
 //# sourceMappingURL=asc.js.map

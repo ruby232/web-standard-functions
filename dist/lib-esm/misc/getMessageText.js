@@ -6,11 +6,12 @@ import { TranslationService } from "../config/translationService";
  * @return {string} The translation of the given message in the specified language or the current language
  */
 export var getMessageText = function (str, languageName) {
-  var translator = TranslationService.getInstance();
-  if (!languageName) {
-    return translator.translate(str);
-  } else {
-    return translator.translate(str, languageName);
-  }
+    var translator = TranslationService.getInstance();
+    if (!languageName) {
+        return translator.translate(str);
+    }
+    else {
+        return translator.translate(str, languageName);
+    }
 };
 //# sourceMappingURL=getMessageText.js.map

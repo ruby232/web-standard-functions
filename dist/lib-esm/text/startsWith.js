@@ -5,6 +5,6 @@
  * @return boolean
  */
 export var startsWith = function (target, pattern) {
-  return target.startsWith(pattern);
+    return target.startsWith(pattern);
 };
 //# sourceMappingURL=startsWith.js.map

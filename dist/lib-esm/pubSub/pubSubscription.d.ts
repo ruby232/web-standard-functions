@@ -1,5 +1,5 @@
 export default class PubSubscription {
-  private subscription;
-  constructor(s: any);
-  unsubscribe(): void;
+    private subscription;
+    constructor(s: any);
+    unsubscribe(): void;
 }

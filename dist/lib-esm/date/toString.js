@@ -4,12 +4,8 @@
  */
 import { isEmpty } from "./isEmpty";
 export var toString = function (targetDate) {
-  return isEmpty(targetDate)
-    ? ""
-    : targetDate.getDate() +
-        "/" +
-        (targetDate.getMonth() + 1) +
-        "/" +
-        targetDate.getFullYear();
+    return isEmpty(targetDate)
+        ? ""
+        : targetDate.getDate() + "/" + (targetDate.getMonth() + 1) + "/" + targetDate.getFullYear();
 };
 //# sourceMappingURL=toString.js.map

@@ -6,8 +6,8 @@
  */
 import { DateTime } from "luxon";
 export var addMonths = function (date, months) {
-  return DateTime.fromJSDate(date)
-    .plus({ months: Math.trunc(months) })
-    .toJSDate();
+    return DateTime.fromJSDate(date)
+        .plus({ months: Math.trunc(months) })
+        .toJSDate();
 };
 //# sourceMappingURL=addMonths.js.map

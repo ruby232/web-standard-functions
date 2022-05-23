@@ -7,7 +7,7 @@ exports.isEmpty = void 0;
  * @returns boolean
  */
 var isEmpty = function (target) {
-  return target === 0;
+    return target === 0;
 };
 exports.isEmpty = isEmpty;
 //# sourceMappingURL=isEmpty.js.map

@@ -4,9 +4,9 @@ import { canOpen } from "./canOpen";
  * @param url
  */
 export var openInBrowser = function (url) {
-  if (canOpen(url)) {
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
+    if (canOpen(url)) {
+        var win = window.open(url, "_blank");
+        win.focus();
+    }
 };
 //# sourceMappingURL=openInBrowser.js.map

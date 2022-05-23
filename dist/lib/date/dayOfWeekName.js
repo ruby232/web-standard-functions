@@ -10,9 +10,9 @@ exports.dayOfWeekName = void 0;
 var luxon_1 = require("luxon");
 var core_1 = require("./core");
 var dayOfWeekName = function (dateFrom, language) {
-  return luxon_1.DateTime.fromJSDate(dateFrom)
-    .setLocale(core_1.gxToLibLangMapping(language))
-    .toFormat("cccc");
+    return luxon_1.DateTime.fromJSDate(dateFrom)
+        .setLocale(core_1.gxToLibLangMapping(language))
+        .toFormat("cccc");
 };
 exports.dayOfWeekName = dayOfWeekName;
 //# sourceMappingURL=dayOfWeekName.js.map

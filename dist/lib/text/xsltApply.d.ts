@@ -4,7 +4,4 @@
  * @param {string} xsltString
  * @return string
  */
-export declare const xsltApply: (
-  xmlString: string,
-  xsltString: string
-) => string;
+export declare const xsltApply: (xmlString: string, xsltString: string) => string;

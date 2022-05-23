@@ -5,7 +5,7 @@ exports.space = void 0;
  * Returns a string filled with blank characters
  */
 function space(n) {
-  return "".padEnd(n, " ");
+    return "".padEnd(n, " ");
 }
 exports.space = space;
 //# sourceMappingURL=space.js.map

@@ -3,7 +3,4 @@
  * @param replaceString
  * @return string
  */
-export declare const splitRegExp: (
-  target: string,
-  pattern: string | RegExp
-) => string[];
+export declare const splitRegExp: (target: string, pattern: string | RegExp) => string[];

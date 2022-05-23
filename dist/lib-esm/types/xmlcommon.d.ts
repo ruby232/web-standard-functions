@@ -1,19 +1,19 @@
 export declare enum XMLErrorCodes {
-  no_error = 0,
-  open_file = 1,
-  no_open_document = 2,
-  missing_start_element = 3,
-  unknown_error = 99,
+    no_error = 0,
+    open_file = 1,
+    no_open_document = 2,
+    missing_start_element = 3,
+    unknown_error = 99
 }
 export declare class XMLBase {
-  /**
-   * Returns the error code for the last operation.
-   */
-  protected mErrCode: number;
-  get errCode(): number;
-  /**
-   * Returns the error description for the last operation.
-   */
-  protected mErrDescription: string;
-  get errDescription(): string;
+    /**
+     * Returns the error code for the last operation.
+     */
+    protected mErrCode: number;
+    get errCode(): number;
+    /**
+     * Returns the error description for the last operation.
+     */
+    protected mErrDescription: string;
+    get errDescription(): string;
 }

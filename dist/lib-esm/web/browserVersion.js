@@ -4,6 +4,6 @@ import { browserIdFromAgent } from "./browserCommon";
  * @return string
  */
 export function browserVersion() {
-  return browserIdFromAgent(navigator.userAgent).version;
+    return browserIdFromAgent(navigator.userAgent).version;
 }
 //# sourceMappingURL=browserVersion.js.map

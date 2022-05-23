@@ -4,6 +4,6 @@ import { browserIdFromAgent } from "./browserCommon";
  * @return number
  */
 export function browserId() {
-  return browserIdFromAgent(navigator.userAgent).id;
+    return browserIdFromAgent(navigator.userAgent).id;
 }
 //# sourceMappingURL=browserId.js.map

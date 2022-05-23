@@ -5,9 +5,8 @@ import { prefixKey, storage } from "./common";
  * @return {string}
  */
 export function get(key) {
-  var pKey = prefixKey(key);
-  var value =
-    storage === null || storage === void 0 ? void 0 : storage.getItem(pKey);
-  return value || "";
+    var pKey = prefixKey(key);
+    var value = storage === null || storage === void 0 ? void 0 : storage.getItem(pKey);
+    return value || "";
 }
 //# sourceMappingURL=get.js.map

@@ -3,8 +3,4 @@
  * @param replaceString
  * @return string
  */
-export declare const replaceRegExp: (
-  target: string,
-  pattern: string | RegExp,
-  repstr: string
-) => string;
+export declare const replaceRegExp: (target: string, pattern: string | RegExp, repstr: string) => string;

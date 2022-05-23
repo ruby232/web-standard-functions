@@ -5,6 +5,6 @@
  * @return boolean
  */
 export var endsWith = function (target, pattern) {
-  return target.endsWith(pattern);
+    return target.endsWith(pattern);
 };
 //# sourceMappingURL=endsWith.js.map

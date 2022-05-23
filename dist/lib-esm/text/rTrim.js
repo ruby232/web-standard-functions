@@ -5,6 +5,6 @@ var regExp = / +$/g;
  * @return string
  */
 export var rTrim = function (s) {
-  return s.replace(regExp, "");
+    return s.replace(regExp, "");
 };
 //# sourceMappingURL=rTrim.js.map

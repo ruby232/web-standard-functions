@@ -7,10 +7,10 @@ var canOpen_1 = require("./canOpen");
  * @param url
  */
 var openInBrowser = function (url) {
-  if (canOpen_1.canOpen(url)) {
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
+    if (canOpen_1.canOpen(url)) {
+        var win = window.open(url, "_blank");
+        win.focus();
+    }
 };
 exports.openInBrowser = openInBrowser;
 //# sourceMappingURL=openInBrowser.js.map

@@ -6,10 +6,10 @@ import { prefixKey, storage } from "./common";
  * @param {string} value
  */
 export function set(key, value) {
-  if (!storage) {
-    return;
-  }
-  var pKey = prefixKey(key);
-  storage.setItem(pKey, value);
+    if (!storage) {
+        return;
+    }
+    var pKey = prefixKey(key);
+    storage.setItem(pKey, value);
 }
 //# sourceMappingURL=set.js.map

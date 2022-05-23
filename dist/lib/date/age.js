@@ -11,15 +11,11 @@ exports.age = void 0;
 var luxon_1 = require("luxon");
 var today_1 = require("../date/today");
 var age = function (dateFrom, dateTo) {
-  if (dateTo === undefined) {
-    dateTo = today_1.today();
-  }
-  return Math.trunc(
-    luxon_1.DateTime.fromJSDate(dateTo).diff(
-      luxon_1.DateTime.fromJSDate(dateFrom),
-      "years"
-    ).years
-  );
+    if (dateTo === undefined) {
+        dateTo = today_1.today();
+    }
+    return Math.trunc(luxon_1.DateTime.fromJSDate(dateTo).diff(luxon_1.DateTime.fromJSDate(dateFrom), "years")
+        .years);
 };
 exports.age = age;
 //# sourceMappingURL=age.js.map

@@ -4,8 +4,4 @@
  * @param fillChar
  * @return string
  */
-export declare const padLeft: (
-  target: string,
-  length: number,
-  fillChar: string
-) => string;
+export declare const padLeft: (target: string, length: number, fillChar: string) => string;

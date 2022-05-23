@@ -5,10 +5,6 @@
  */
 import { DateTime } from "luxon";
 export var endOfMonth = function (dateFrom) {
-  return new Date(
-    dateFrom.getFullYear(),
-    dateFrom.getMonth(),
-    DateTime.fromJSDate(dateFrom).daysInMonth
-  );
+    return new Date(dateFrom.getFullYear(), dateFrom.getMonth(), DateTime.fromJSDate(dateFrom).daysInMonth);
 };
 //# sourceMappingURL=endOfMonth.js.map

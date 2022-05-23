@@ -10,18 +10,10 @@ import { getCookie } from "./getCookie";
  * @param {number} secure
  * @return number
  */
-export var setCookie = function (
-  name,
-  value,
-  path,
-  expiration,
-  domain,
-  secure
-) {
-  path = path ? ";path=" + path + ";" : "";
-  expiration = expiration || addDays(new Date(), 1);
-  document.cookie =
-    name + "=" + escape(value) + ";expires=" + expiration.toUTCString() + path;
-  return getCookie(name) === value ? 1 : 0;
+export var setCookie = function (name, value, path, expiration, domain, secure) {
+    path = path ? ";path=" + path + ";" : "";
+    expiration = expiration || addDays(new Date(), 1);
+    document.cookie = name + "=" + escape(value) + ";expires=" + expiration.toUTCString() + path;
+    return getCookie(name) === value ? 1 : 0;
 };
 //# sourceMappingURL=setCookie.js.map

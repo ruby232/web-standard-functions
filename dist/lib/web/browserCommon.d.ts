@@ -4,16 +4,16 @@
  */
 export declare function browserIdFromAgent(userAgent: string): BrowserResult;
 export interface BrowserResult {
-  id: BrowserIdValues;
-  version: string;
+    id: BrowserIdValues;
+    version: string;
 }
 export declare enum BrowserIdValues {
-  UnknownAgent = 0,
-  InternetExplorer = 1,
-  Netscape = 2,
-  Opera = 3,
-  MozillaFirefox = 6,
-  Chrome = 7,
-  Safari = 8,
-  Edge = 9,
+    UnknownAgent = 0,
+    InternetExplorer = 1,
+    Netscape = 2,
+    Opera = 3,
+    MozillaFirefox = 6,
+    Chrome = 7,
+    Safari = 8,
+    Edge = 9
 }

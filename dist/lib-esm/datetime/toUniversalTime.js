@@ -7,9 +7,9 @@ import { DateTime } from "luxon";
 import { getTimezone } from "./getTimezone";
 import { minutesToMilliseconds } from "./core";
 export var toUniversalTime = function (fromDate) {
-  var offset = DateTime.fromJSDate(fromDate).setZone(getTimezone()).offset;
-  var ret = new Date();
-  ret.setTime(fromDate.getTime() - minutesToMilliseconds(offset));
-  return ret;
+    var offset = DateTime.fromJSDate(fromDate).setZone(getTimezone()).offset;
+    var ret = new Date();
+    ret.setTime(fromDate.getTime() - minutesToMilliseconds(offset));
+    return ret;
 };
 //# sourceMappingURL=toUniversalTime.js.map

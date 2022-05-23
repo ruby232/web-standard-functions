@@ -8,11 +8,4 @@
  * @param {number} seconds
  * @return Date
  */
-export declare const newInstance: (
-  year: number,
-  month: number,
-  day: number,
-  hour: number,
-  minutes: number,
-  seconds: number
-) => Date;
+export declare const newInstance: (year: number, month: number, day: number, hour: number, minutes: number, seconds: number) => Date;

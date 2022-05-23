@@ -5,6 +5,6 @@
  * @return string
  */
 export var padRight = function (target, length, fillChar) {
-  return target.padEnd(length, fillChar);
+    return target.padEnd(length, fillChar);
 };
 //# sourceMappingURL=padRight.js.map

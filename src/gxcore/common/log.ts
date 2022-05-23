@@ -35,6 +35,6 @@ export class GeneXusCommonLog {
   }
 
   public static fatal(message: any, topic: any = "") {
-    console.exception(message);
+    console.error(message);
   }
 }

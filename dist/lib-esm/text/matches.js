@@ -5,6 +5,6 @@
  * @return Array
  */
 export var matches = function (target, rex) {
-  return new RegExp(rex).exec(target) || [];
+    return new RegExp(rex).exec(target) || [];
 };
 //# sourceMappingURL=matches.js.map

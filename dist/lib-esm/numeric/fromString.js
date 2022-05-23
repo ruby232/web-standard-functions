@@ -4,6 +4,6 @@
  * @returns number
  */
 export var fromString = function (target, value) {
-  return Number.parseFloat(value);
+    return Number.parseFloat(value);
 };
 //# sourceMappingURL=fromString.js.map

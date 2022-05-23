@@ -5,8 +5,4 @@
  * @param {string} separator Optional separator
  * @return string
  */
-export declare const concat: (
-  value1: string,
-  value2: string,
-  separator?: string
-) => string;
+export declare const concat: (value1: string, value2: string, separator?: string) => string;

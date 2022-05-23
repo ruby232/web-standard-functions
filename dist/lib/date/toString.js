@@ -7,13 +7,9 @@ exports.toString = void 0;
  */
 var isEmpty_1 = require("./isEmpty");
 var toString = function (targetDate) {
-  return isEmpty_1.isEmpty(targetDate)
-    ? ""
-    : targetDate.getDate() +
-        "/" +
-        (targetDate.getMonth() + 1) +
-        "/" +
-        targetDate.getFullYear();
+    return isEmpty_1.isEmpty(targetDate)
+        ? ""
+        : targetDate.getDate() + "/" + (targetDate.getMonth() + 1) + "/" + targetDate.getFullYear();
 };
 exports.toString = toString;
 //# sourceMappingURL=toString.js.map

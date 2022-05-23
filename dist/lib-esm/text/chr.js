@@ -4,10 +4,11 @@
  * @returns The string with the character defined by the given ASCII value
  */
 export var chr = function (val) {
-  if (val >= 0) {
-    return String.fromCharCode(val);
-  } else {
-    return "";
-  }
+    if (val >= 0) {
+        return String.fromCharCode(val);
+    }
+    else {
+        return "";
+    }
 };
 //# sourceMappingURL=chr.js.map

@@ -4,6 +4,6 @@
  * @return number
  */
 export var setEmpty = function (target) {
-  return 0;
+    return 0;
 };
 //# sourceMappingURL=setEmpty.js.map

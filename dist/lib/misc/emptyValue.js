@@ -10,16 +10,19 @@ var setEmpty_4 = require("../bool/setEmpty");
  * @return any
  */
 var emptyValue = function (value) {
-  if (value instanceof Date) {
-    return setEmpty_1.setEmpty(value);
-  } else if (typeof value === "string") {
-    return setEmpty_2.setEmpty(value);
-  } else if (typeof value === "number") {
-    return setEmpty_3.setEmpty(value);
-  } else if (typeof value === "boolean") {
-    return setEmpty_4.setEmpty(value);
-  }
-  return null;
+    if (value instanceof Date) {
+        return setEmpty_1.setEmpty(value);
+    }
+    else if (typeof value === "string") {
+        return setEmpty_2.setEmpty(value);
+    }
+    else if (typeof value === "number") {
+        return setEmpty_3.setEmpty(value);
+    }
+    else if (typeof value === "boolean") {
+        return setEmpty_4.setEmpty(value);
+    }
+    return null;
 };
 exports.emptyValue = emptyValue;
 //# sourceMappingURL=emptyValue.js.map

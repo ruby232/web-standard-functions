@@ -4,6 +4,6 @@
  * @return string
  */
 export var toLower = function (target) {
-  return target.toLowerCase();
+    return target.toLowerCase();
 };
 //# sourceMappingURL=toLower.js.map

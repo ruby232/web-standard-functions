@@ -7,11 +7,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.toDate = void 0;
 var toDate = function (dateFrom) {
-  return new Date(
-    dateFrom.getFullYear(),
-    dateFrom.getMonth(),
-    dateFrom.getDate()
-  );
+    return new Date(dateFrom.getFullYear(), dateFrom.getMonth(), dateFrom.getDate());
 };
 exports.toDate = toDate;
 //# sourceMappingURL=toDate.js.map

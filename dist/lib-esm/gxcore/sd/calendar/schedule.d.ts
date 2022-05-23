@@ -7,17 +7,5 @@
  * @param {Date} endTime
  * @param {string} place
  */
-export declare const schedule: (
-  title: string,
-  startDate: Date,
-  endDate: Date,
-  startTime: Date,
-  endTime: Date,
-  place: string
-) => void;
-export declare const createCalendarEvent: (
-  start: Date,
-  end: Date,
-  title: string,
-  place: string
-) => string;
+export declare const schedule: (title: string, startDate: Date, endDate: Date, startTime: Date, endTime: Date, place: string) => void;
+export declare const createCalendarEvent: (start: Date, end: Date, title: string, place: string) => string;

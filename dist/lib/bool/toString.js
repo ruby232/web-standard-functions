@@ -6,7 +6,7 @@ exports.toString = void 0;
  * @param b
  */
 var toString = function (b) {
-  return b ? "true" : "false";
+    return b ? "true" : "false";
 };
 exports.toString = toString;
 //# sourceMappingURL=toString.js.map

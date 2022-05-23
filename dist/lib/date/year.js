@@ -8,7 +8,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.year = void 0;
 var luxon_1 = require("luxon");
 var year = function (dateFrom) {
-  return luxon_1.DateTime.fromJSDate(dateFrom).year;
+    return luxon_1.DateTime.fromJSDate(dateFrom).year;
 };
 exports.year = year;
 //# sourceMappingURL=year.js.map

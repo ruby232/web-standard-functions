@@ -4,7 +4,4 @@
  * @param {number} tabIndex
  * @return any
  */
-export declare const setBadgeText: (
-  text: string,
-  tabIndex: number
-) => Promise<void>;
+export declare const setBadgeText: (text: string, tabIndex: number) => Promise<void>;

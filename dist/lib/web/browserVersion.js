@@ -7,7 +7,7 @@ var browserCommon_1 = require("./browserCommon");
  * @return string
  */
 function browserVersion() {
-  return browserCommon_1.browserIdFromAgent(navigator.userAgent).version;
+    return browserCommon_1.browserIdFromAgent(navigator.userAgent).version;
 }
 exports.browserVersion = browserVersion;
 //# sourceMappingURL=browserVersion.js.map

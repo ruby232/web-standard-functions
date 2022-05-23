@@ -7,7 +7,8 @@ import { length } from "../text/length";
  * @return number
  */
 export var lastIndexOf = function (target, pattern, from) {
-  if (from < 1 || from > length(target)) return 0;
-  return target.lastIndexOf(pattern, from - 1) + 1;
+    if (from < 1 || from > length(target))
+        return 0;
+    return target.lastIndexOf(pattern, from - 1) + 1;
 };
 //# sourceMappingURL=lastIndexOf.js.map

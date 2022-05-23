@@ -7,11 +7,12 @@ exports.chr = void 0;
  * @returns The string with the character defined by the given ASCII value
  */
 var chr = function (val) {
-  if (val >= 0) {
-    return String.fromCharCode(val);
-  } else {
-    return "";
-  }
+    if (val >= 0) {
+        return String.fromCharCode(val);
+    }
+    else {
+        return "";
+    }
 };
 exports.chr = chr;
 //# sourceMappingURL=chr.js.map

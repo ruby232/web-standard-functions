@@ -3,7 +3,4 @@
  * @param decimalSeparator
  * @return number
  */
-export declare const toNumeric: (
-  strNumber: string,
-  decimalSep?: string
-) => number;
+export declare const toNumeric: (strNumber: string, decimalSep?: string) => number;

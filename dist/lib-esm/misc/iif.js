@@ -6,6 +6,6 @@
  * @return any Either valueIfTrue or valueIfFalse depending on the condition
  */
 export var iif = function (condition, valueIfTrue, valueIfFalse) {
-  return condition ? valueIfTrue : valueIfFalse;
+    return condition ? valueIfTrue : valueIfFalse;
 };
 //# sourceMappingURL=iif.js.map

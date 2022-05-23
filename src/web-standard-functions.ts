@@ -1,3 +1,5 @@
+import { notImplemented } from "./misc/helpers";
+
 export * from "./gxcore/client/client-information";
 export * from "./types/gauge";
 export * from "./types/geography";
@@ -7,12 +9,22 @@ export * from "./types/guid";
 
 export * from "./text/format";
 export * from "./text/trim";
+
+export * from "./text/indexOf";
+export * from "./text/lastIndexOf";
+export * from "./text/padLeft";
+export * from "./text/padRight";
+export * from "./text/subString";
+export * from "./text/rTrim";
+export * from "./text/lTrim";
+
 export * from "./text/toUpper";
 export * from "./text/toLower";
 export * from "./text/toNumeric";
 export * from "./text/newline";
 export * from "./text/replace";
 export * from "./text/length";
+export * from "./text/concat";
 
 export * from "./date/addYears";
 

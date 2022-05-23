@@ -4,10 +4,6 @@
  * @return Date
  */
 export var toDate = function (dateFrom) {
-  return new Date(
-    dateFrom.getFullYear(),
-    dateFrom.getMonth(),
-    dateFrom.getDate()
-  );
+    return new Date(dateFrom.getFullYear(), dateFrom.getMonth(), dateFrom.getDate());
 };
 //# sourceMappingURL=toDate.js.map

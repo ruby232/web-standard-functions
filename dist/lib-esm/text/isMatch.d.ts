@@ -4,7 +4,4 @@
  * @param {string} regExp
  * @return boolean
  */
-export declare const isMatch: (
-  target: string,
-  regExp: string | RegExp
-) => boolean;
+export declare const isMatch: (target: string, regExp: string | RegExp) => boolean;

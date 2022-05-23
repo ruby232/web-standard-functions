@@ -3,6 +3,6 @@
  * @param b
  */
 export var toString = function (b) {
-  return b ? "true" : "false";
+    return b ? "true" : "false";
 };
 //# sourceMappingURL=toString.js.map

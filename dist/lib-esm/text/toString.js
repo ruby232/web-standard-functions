@@ -4,6 +4,6 @@
  * @return string
  */
 export var toString = function (target) {
-  return target;
+    return target;
 };
 //# sourceMappingURL=toString.js.map

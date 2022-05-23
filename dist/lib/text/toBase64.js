@@ -7,7 +7,7 @@ exports.toBase64 = void 0;
  * @return string The base64 representation of the input string
  */
 var toBase64 = function (str) {
-  return btoa(str);
+    return btoa(str);
 };
 exports.toBase64 = toBase64;
 //# sourceMappingURL=toBase64.js.map

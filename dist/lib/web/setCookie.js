@@ -14,11 +14,10 @@ var getCookie_1 = require("./getCookie");
  * @return number
  */
 var setCookie = function (name, value, path, expiration, domain, secure) {
-  path = path ? ";path=" + path + ";" : "";
-  expiration = expiration || addDays_1.addDays(new Date(), 1);
-  document.cookie =
-    name + "=" + escape(value) + ";expires=" + expiration.toUTCString() + path;
-  return getCookie_1.getCookie(name) === value ? 1 : 0;
+    path = path ? ";path=" + path + ";" : "";
+    expiration = expiration || addDays_1.addDays(new Date(), 1);
+    document.cookie = name + "=" + escape(value) + ";expires=" + expiration.toUTCString() + path;
+    return getCookie_1.getCookie(name) === value ? 1 : 0;
 };
 exports.setCookie = setCookie;
 //# sourceMappingURL=setCookie.js.map

@@ -6,7 +6,7 @@ exports.isEmpty = void 0;
  * @param b
  */
 var isEmpty = function (b) {
-  return b === false;
+    return b === false;
 };
 exports.isEmpty = isEmpty;
 //# sourceMappingURL=isEmpty.js.map

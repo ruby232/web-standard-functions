@@ -9,23 +9,14 @@ var toString_1 = require("../numeric/toString");
  * @return Date
  */
 var toString = function (targetDate) {
-  if (isEmpty_1.isEmpty(targetDate)) {
-    return "";
-  } else {
-    var datePart =
-      targetDate.getDate() +
-      "/" +
-      (targetDate.getMonth() + 1) +
-      "/" +
-      targetDate.getFullYear();
-    var timePart =
-      padLeft_1.padLeft(toString_1.toString(targetDate.getHours()), 2, "0") +
-      ":" +
-      padLeft_1.padLeft(toString_1.toString(targetDate.getMinutes()), 2, "0") +
-      ":" +
-      padLeft_1.padLeft(toString_1.toString(targetDate.getSeconds()), 2, "0");
-    return datePart + " " + timePart;
-  }
+    if (isEmpty_1.isEmpty(targetDate)) {
+        return "";
+    }
+    else {
+        var datePart = targetDate.getDate() + "/" + (targetDate.getMonth() + 1) + "/" + targetDate.getFullYear();
+        var timePart = padLeft_1.padLeft(toString_1.toString(targetDate.getHours()), 2, "0") + ":" + padLeft_1.padLeft(toString_1.toString(targetDate.getMinutes()), 2, "0") + ":" + padLeft_1.padLeft(toString_1.toString(targetDate.getSeconds()), 2, "0");
+        return datePart + " " + timePart;
+    }
 };
 exports.toString = toString;
 //# sourceMappingURL=toString.js.map

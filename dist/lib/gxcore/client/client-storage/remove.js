@@ -7,11 +7,11 @@ var common_1 = require("./common");
  * @param {string} key
  */
 function remove(key) {
-  if (!common_1.storage) {
-    return;
-  }
-  var pKey = common_1.prefixKey(key);
-  common_1.storage.removeItem(pKey);
+    if (!common_1.storage) {
+        return;
+    }
+    var pKey = common_1.prefixKey(key);
+    common_1.storage.removeItem(pKey);
 }
 exports.remove = remove;
 //# sourceMappingURL=remove.js.map

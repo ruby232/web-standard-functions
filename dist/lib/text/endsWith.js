@@ -8,7 +8,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.endsWith = void 0;
 var endsWith = function (target, pattern) {
-  return target.endsWith(pattern);
+    return target.endsWith(pattern);
 };
 exports.endsWith = endsWith;
 //# sourceMappingURL=endsWith.js.map

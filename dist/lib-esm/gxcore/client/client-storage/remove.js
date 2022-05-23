@@ -4,10 +4,10 @@ import { prefixKey, storage } from "./common";
  * @param {string} key
  */
 export function remove(key) {
-  if (!storage) {
-    return;
-  }
-  var pKey = prefixKey(key);
-  storage.removeItem(pKey);
+    if (!storage) {
+        return;
+    }
+    var pKey = prefixKey(key);
+    storage.removeItem(pKey);
 }
 //# sourceMappingURL=remove.js.map

@@ -14,11 +14,7 @@ export declare const publish: (topicName: string, ...data: any[]) => Boolean;
  * @param options Subscribe advanced options: such as subscribe only once to the topic.
  * @return Returns Subscription object
  */
-export declare const subscribe: (
-  topicName: string,
-  handler: Function,
-  options?: PubSubscriptionOptions
-) => EventSubscription;
+export declare const subscribe: (topicName: string, handler: Function, options?: PubSubscriptionOptions) => EventSubscription;
 /**
  * Cancel a specific subscription.
  * @param suscription The suscription object
@@ -28,9 +24,7 @@ export declare const cancelTopic: (topicName: string) => void;
  * Cancel a specific subscription.
  * @param suscription The suscription object
  */
-export declare const cancelSubscription: (
-  subscription: EventSubscription
-) => void;
+export declare const cancelSubscription: (subscription: EventSubscription) => void;
 /**
  * Clears all subscribed events.
  */

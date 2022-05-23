@@ -8,8 +8,8 @@ exports.truncate = void 0;
  * @returns number
  */
 var truncate = function (value, digits) {
-  var multiplier = Math.pow(10, digits || 0);
-  return Math.trunc(value * multiplier) / multiplier;
+    var multiplier = Math.pow(10, digits || 0);
+    return Math.trunc(value * multiplier) / multiplier;
 };
 exports.truncate = truncate;
 //# sourceMappingURL=truncate.js.map

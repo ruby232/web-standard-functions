@@ -7,11 +7,11 @@ import * as PubSubJs from "pubsub-js";
  * @return Returns true if there are subscribers to the topic
  */
 export var publish = function (topicName) {
-  var data = [];
-  for (var _i = 1; _i < arguments.length; _i++) {
-    data[_i - 1] = arguments[_i];
-  }
-  return PubSubJs.publish(normalizeTopicName(topicName), data);
+    var data = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        data[_i - 1] = arguments[_i];
+    }
+    return PubSubJs.publish(normalizeTopicName(topicName), data);
 };
 /**
  * Subscribe to topic name. Automatically gets notified when someone publish to the topic name.
@@ -21,42 +21,43 @@ export var publish = function (topicName) {
  * @return Returns Subscription object
  */
 export var subscribe = function (topicName, handler, options) {
-  var subscribeWrapper = function (handler) {
-    return function (topic, data) {
-      handler.apply(this, data);
+    var subscribeWrapper = function (handler) {
+        return function (topic, data) {
+            handler.apply(this, data);
+        };
     };
-  };
-  topicName = normalizeTopicName(topicName);
-  var token;
-  if (options && options.once) {
-    // @ts-ignore
-    token = PubSubJs.subscribeOnce(topicName, subscribeWrapper(handler));
-  } else {
-    token = PubSubJs.subscribe(topicName, subscribeWrapper(handler));
-  }
-  return new EventSubscription(token);
+    topicName = normalizeTopicName(topicName);
+    var token;
+    if (options && options.once) {
+        // @ts-ignore
+        token = PubSubJs.subscribeOnce(topicName, subscribeWrapper(handler));
+    }
+    else {
+        token = PubSubJs.subscribe(topicName, subscribeWrapper(handler));
+    }
+    return new EventSubscription(token);
 };
 /**
  * Cancel a specific subscription.
  * @param suscription The suscription object
  */
 export var cancelTopic = function (topicName) {
-  PubSubJs.unsubscribe(normalizeTopicName(topicName));
+    PubSubJs.unsubscribe(normalizeTopicName(topicName));
 };
 /**
  * Cancel a specific subscription.
  * @param suscription The suscription object
  */
 export var cancelSubscription = function (subscription) {
-  subscription.unsubscribe();
+    subscription.unsubscribe();
 };
 /**
  * Clears all subscribed events.
  */
 export var cancelAllSubscriptions = function () {
-  PubSubJs.clearAllSubscriptions();
+    PubSubJs.clearAllSubscriptions();
 };
 var normalizeTopicName = function (name) {
-  return name.toLocaleLowerCase();
+    return name.toLocaleLowerCase();
 };
 //# sourceMappingURL=pubSub.js.map

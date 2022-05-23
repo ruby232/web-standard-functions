@@ -7,7 +7,7 @@ exports.fromString = void 0;
  * @returns number
  */
 var fromString = function (target, value) {
-  return Number.parseFloat(value);
+    return Number.parseFloat(value);
 };
 exports.fromString = fromString;
 //# sourceMappingURL=fromString.js.map

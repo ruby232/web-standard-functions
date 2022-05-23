@@ -7,7 +7,7 @@ var browserCommon_1 = require("./browserCommon");
  * @return number
  */
 function browserId() {
-  return browserCommon_1.browserIdFromAgent(navigator.userAgent).id;
+    return browserCommon_1.browserIdFromAgent(navigator.userAgent).id;
 }
 exports.browserId = browserId;
 //# sourceMappingURL=browserId.js.map

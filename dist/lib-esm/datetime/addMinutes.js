@@ -6,6 +6,6 @@
  */
 import { minutesToMilliseconds } from "./core";
 export var addMinutes = function (dateFrom, minutes) {
-  return new Date(dateFrom.getTime() + minutesToMilliseconds(minutes));
+    return new Date(dateFrom.getTime() + minutesToMilliseconds(minutes));
 };
 //# sourceMappingURL=addMinutes.js.map

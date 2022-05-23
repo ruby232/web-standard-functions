@@ -5,7 +5,4 @@
  * @return Date
  */
 import { timezones } from "./timezone";
-export declare const fromTimezone: (
-  fromDate: Date,
-  timezoneFrom: timezones
-) => Date;
+export declare const fromTimezone: (fromDate: Date, timezoneFrom: timezones) => Date;

@@ -5,8 +5,4 @@
  * @param {number} decimals
  * @returns string
  */
-export declare const str: (
-  value: number,
-  length?: number,
-  decimals?: number
-) => string;
+export declare const str: (value: number, length?: number, decimals?: number) => string;

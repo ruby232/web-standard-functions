@@ -4,7 +4,4 @@
  * @param {number} millisecconds
  * @return Date
  */
-export declare const addMilliseconds: (
-  dateFrom: Date,
-  milliseconds: number
-) => Date;
+export declare const addMilliseconds: (dateFrom: Date, milliseconds: number) => Date;

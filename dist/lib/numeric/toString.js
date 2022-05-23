@@ -7,7 +7,7 @@ exports.toString = void 0;
  * @returns string
  */
 var toString = function (value) {
-  return value.toString();
+    return value.toString();
 };
 exports.toString = toString;
 //# sourceMappingURL=toString.js.map

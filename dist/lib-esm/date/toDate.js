@@ -4,6 +4,6 @@
  * @return Date
  */
 export var toDate = function (dateFrom) {
-  return dateFrom;
+    return dateFrom;
 };
 //# sourceMappingURL=toDate.js.map

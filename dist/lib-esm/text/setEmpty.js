@@ -4,6 +4,6 @@
  * @return string
  */
 export var setEmpty = function (target) {
-  return "";
+    return "";
 };
 //# sourceMappingURL=setEmpty.js.map

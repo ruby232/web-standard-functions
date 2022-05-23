@@ -4,6 +4,6 @@
  * @return string
  */
 export var toUpper = function (target) {
-  return target.toUpperCase();
+    return target.toUpperCase();
 };
 //# sourceMappingURL=toUpper.js.map

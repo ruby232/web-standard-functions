@@ -9,11 +9,11 @@ var common_1 = require("./common");
  * @param {string} value
  */
 function set(key, value) {
-  if (!common_1.storage) {
-    return;
-  }
-  var pKey = common_1.prefixKey(key);
-  common_1.storage.setItem(pKey, value);
+    if (!common_1.storage) {
+        return;
+    }
+    var pKey = common_1.prefixKey(key);
+    common_1.storage.setItem(pKey, value);
 }
 exports.set = set;
 //# sourceMappingURL=set.js.map

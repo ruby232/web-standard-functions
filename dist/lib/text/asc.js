@@ -7,10 +7,10 @@ exports.asc = void 0;
  * @returns The ASCII value of the first character in the string
  */
 var asc = function (str) {
-  if (Array.from(str).length === 0) {
-    return 0;
-  }
-  return str.charCodeAt(0);
+    if (Array.from(str).length === 0) {
+        return 0;
+    }
+    return str.charCodeAt(0);
 };
 exports.asc = asc;
 //# sourceMappingURL=asc.js.map

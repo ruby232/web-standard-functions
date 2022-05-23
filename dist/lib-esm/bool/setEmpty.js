@@ -4,6 +4,6 @@
  * @return boolean
  */
 export var setEmpty = function (target) {
-  return false;
+    return false;
 };
 //# sourceMappingURL=setEmpty.js.map

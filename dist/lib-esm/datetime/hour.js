@@ -4,6 +4,6 @@
  * @return number
  */
 export var hour = function (dateFrom) {
-  return dateFrom.getHours();
+    return dateFrom.getHours();
 };
 //# sourceMappingURL=hour.js.map

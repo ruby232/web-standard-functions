@@ -3,6 +3,6 @@
  * @param b
  */
 export var isEmpty = function (b) {
-  return b === false;
+    return b === false;
 };
 //# sourceMappingURL=isEmpty.js.map

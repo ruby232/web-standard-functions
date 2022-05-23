@@ -5,7 +5,7 @@
  * @return boolean
  */
 export var isMatch = function (target, regExp) {
-  var rex = typeof regExp === "string" ? new RegExp(regExp) : regExp;
-  return rex.exec(target) !== null;
+    var rex = typeof regExp === "string" ? new RegExp(regExp) : regExp;
+    return rex.exec(target) !== null;
 };
 //# sourceMappingURL=isMatch.js.map

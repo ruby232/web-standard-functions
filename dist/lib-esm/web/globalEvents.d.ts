@@ -5,10 +5,7 @@ import EventSubscription from "../pubSub/pubSubscription";
  * @param handler The function to be called when someone publish to the topic name.
  * @return Returns Subscription object
  */
-export declare function subscribe(
-  name: string,
-  handler: Function
-): EventSubscription;
+export declare function subscribe(name: string, handler: Function): EventSubscription;
 /**
  * Cancel a specific subscription.
  * @param suscription The suscription object

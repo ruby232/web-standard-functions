@@ -7,7 +7,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.millisecond = void 0;
 var millisecond = function (dateFrom) {
-  return dateFrom.getMilliseconds();
+    return dateFrom.getMilliseconds();
 };
 exports.millisecond = millisecond;
 //# sourceMappingURL=millisecond.js.map

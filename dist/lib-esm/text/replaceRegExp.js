@@ -4,8 +4,7 @@
  * @return string
  */
 export var replaceRegExp = function (target, pattern, repstr) {
-  var regularExp =
-    typeof pattern === "string" ? new RegExp(pattern, "g") : pattern;
-  return target.replace(regularExp, repstr);
+    var regularExp = typeof pattern === "string" ? new RegExp(pattern, "g") : pattern;
+    return target.replace(regularExp, repstr);
 };
 //# sourceMappingURL=replaceRegExp.js.map

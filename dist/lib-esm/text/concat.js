@@ -7,9 +7,7 @@ import { rTrim } from "./rTrim";
  * @return string
  */
 export var concat = function (value1, value2, separator) {
-  if (separator === void 0) {
-    separator = undefined;
-  }
-  return rTrim(value1) + (separator ? separator : "") + value2;
+    if (separator === void 0) { separator = undefined; }
+    return rTrim(value1) + (separator ? separator : "") + value2;
 };
 //# sourceMappingURL=concat.js.map

@@ -6,9 +6,4 @@
  * @param {number} day
  * @return Date
  */
-export declare const set: (
-  targetDate: Date,
-  year: number,
-  month: number,
-  day: number
-) => Date;
+export declare const set: (targetDate: Date, year: number, month: number, day: number) => Date;

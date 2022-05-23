@@ -10,8 +10,9 @@ var length_1 = require("../text/length");
  * @return number
  */
 var lastIndexOf = function (target, pattern, from) {
-  if (from < 1 || from > length_1.length(target)) return 0;
-  return target.lastIndexOf(pattern, from - 1) + 1;
+    if (from < 1 || from > length_1.length(target))
+        return 0;
+    return target.lastIndexOf(pattern, from - 1) + 1;
 };
 exports.lastIndexOf = lastIndexOf;
 //# sourceMappingURL=lastIndexOf.js.map

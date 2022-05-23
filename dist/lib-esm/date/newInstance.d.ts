@@ -5,8 +5,4 @@
  * @param {number} day
  * @return Date
  */
-export declare const newInstance: (
-  year: number,
-  month: number,
-  day: number
-) => Date;
+export declare const newInstance: (year: number, month: number, day: number) => Date;

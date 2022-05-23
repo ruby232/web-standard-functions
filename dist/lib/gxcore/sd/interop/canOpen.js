@@ -8,17 +8,15 @@ var knownProtocols = ["http:", "https:", "mailto:", "tel:"];
  * @param {string} urlStr
  */
 var canOpen = function (urlStr) {
-  var baseURL =
-    configurationState_1.ConfigurationState.getInstance().getDynStoredValue(
-      "SERVICE_HOSTNAME"
-    );
-  try {
-    var url = baseURL ? new URL(urlStr, baseURL) : new URL(urlStr);
-    return knownProtocols.includes(url.protocol);
-  } catch (e) {
-    // could not construct URL object
-    return false;
-  }
+    var baseURL = configurationState_1.ConfigurationState.getInstance().getDynStoredValue("SERVICE_HOSTNAME");
+    try {
+        var url = baseURL ? new URL(urlStr, baseURL) : new URL(urlStr);
+        return knownProtocols.includes(url.protocol);
+    }
+    catch (e) {
+        // could not construct URL object
+        return false;
+    }
 };
 exports.canOpen = canOpen;
 //# sourceMappingURL=canOpen.js.map

@@ -5,6 +5,6 @@ import { trim } from "./trim";
  * @return boolean
  */
 export var isEmpty = function (target) {
-  return trim(target) === "";
+    return trim(target) === "";
 };
 //# sourceMappingURL=isEmpty.js.map

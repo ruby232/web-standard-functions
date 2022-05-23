@@ -8,7 +8,7 @@ var trim_1 = require("./trim");
  * @return boolean
  */
 var isEmpty = function (target) {
-  return trim_1.trim(target) === "";
+    return trim_1.trim(target) === "";
 };
 exports.isEmpty = isEmpty;
 //# sourceMappingURL=isEmpty.js.map

@@ -5,6 +5,6 @@
  * @return boolean
  */
 export var contains = function (target, pattern) {
-  return target.indexOf(pattern) !== -1;
+    return target.indexOf(pattern) !== -1;
 };
 //# sourceMappingURL=contains.js.map

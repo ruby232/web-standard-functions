@@ -4,7 +4,4 @@
  * @param {string} languageName The language name, may be omitted
  * @return {string} The translation of the given message in the specified language or the current language
  */
-export declare const getMessageText: (
-  str: string,
-  languageName: string
-) => string;
+export declare const getMessageText: (str: string, languageName: string) => string;

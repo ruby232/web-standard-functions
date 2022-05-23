@@ -8,11 +8,4 @@
  * @param {number} secure
  * @return number
  */
-export declare const setCookie: (
-  name: string,
-  value: string,
-  path?: string,
-  expiration?: Date,
-  domain?: string,
-  secure?: number
-) => number;
+export declare const setCookie: (name: string, value: string, path?: string, expiration?: Date, domain?: string, secure?: number) => number;

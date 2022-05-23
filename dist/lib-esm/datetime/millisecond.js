@@ -4,6 +4,6 @@
  * @return number
  */
 export var millisecond = function (dateFrom) {
-  return dateFrom.getMilliseconds();
+    return dateFrom.getMilliseconds();
 };
 //# sourceMappingURL=millisecond.js.map

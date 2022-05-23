@@ -7,10 +7,9 @@ import { length } from "./length";
  * @return number
  */
 export var indexOf = function (target, pattern, from) {
-  if (from === void 0) {
-    from = 1;
-  }
-  if (from < 1 || from > length(target)) return 0;
-  return target.indexOf(pattern, from - 1) + 1;
+    if (from === void 0) { from = 1; }
+    if (from < 1 || from > length(target))
+        return 0;
+    return target.indexOf(pattern, from - 1) + 1;
 };
 //# sourceMappingURL=indexOf.js.map

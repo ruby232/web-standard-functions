@@ -8,12 +8,10 @@
 import { DateTime } from "luxon";
 import { today } from "../date/today";
 export var age = function (dateFrom, dateTo) {
-  if (dateTo === undefined) {
-    dateTo = today();
-  }
-  return Math.trunc(
-    DateTime.fromJSDate(dateTo).diff(DateTime.fromJSDate(dateFrom), "years")
-      .years
-  );
+    if (dateTo === undefined) {
+        dateTo = today();
+    }
+    return Math.trunc(DateTime.fromJSDate(dateTo).diff(DateTime.fromJSDate(dateFrom), "years")
+        .years);
 };
 //# sourceMappingURL=age.js.map

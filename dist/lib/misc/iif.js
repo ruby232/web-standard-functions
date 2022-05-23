@@ -9,7 +9,7 @@ exports.iif = void 0;
  * @return any Either valueIfTrue or valueIfFalse depending on the condition
  */
 var iif = function (condition, valueIfTrue, valueIfFalse) {
-  return condition ? valueIfTrue : valueIfFalse;
+    return condition ? valueIfTrue : valueIfFalse;
 };
 exports.iif = iif;
 //# sourceMappingURL=iif.js.map

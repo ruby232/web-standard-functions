@@ -5,8 +5,4 @@
  * @param {any} valueIfFalse Return value if the condition evaluates to false
  * @return any Either valueIfTrue or valueIfFalse depending on the condition
  */
-export declare const iif: (
-  condition: boolean,
-  valueIfTrue: any,
-  valueIfFalse: any
-) => any;
+export declare const iif: (condition: boolean, valueIfTrue: any, valueIfFalse: any) => any;

@@ -7,7 +7,7 @@ exports.integer = void 0;
  * @returns number
  */
 var integer = function (target) {
-  return Math.trunc(target);
+    return Math.trunc(target);
 };
 exports.integer = integer;
 //# sourceMappingURL=integer.js.map

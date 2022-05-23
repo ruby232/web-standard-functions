@@ -7,15 +7,18 @@ import { setEmpty as bSetEmpty } from "../bool/setEmpty";
  * @return any
  */
 export var emptyValue = function (value) {
-  if (value instanceof Date) {
-    return dSetEmpty(value);
-  } else if (typeof value === "string") {
-    return sSetEmpty(value);
-  } else if (typeof value === "number") {
-    return nSetEmpty(value);
-  } else if (typeof value === "boolean") {
-    return bSetEmpty(value);
-  }
-  return null;
+    if (value instanceof Date) {
+        return dSetEmpty(value);
+    }
+    else if (typeof value === "string") {
+        return sSetEmpty(value);
+    }
+    else if (typeof value === "number") {
+        return nSetEmpty(value);
+    }
+    else if (typeof value === "boolean") {
+        return bSetEmpty(value);
+    }
+    return null;
 };
 //# sourceMappingURL=emptyValue.js.map

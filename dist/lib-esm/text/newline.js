@@ -3,6 +3,6 @@
  * @return {string}
  */
 export var newLine = function () {
-  return "\n";
+    return "\n";
 };
 //# sourceMappingURL=newline.js.map

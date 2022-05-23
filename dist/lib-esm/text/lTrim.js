@@ -5,6 +5,6 @@ var regExp = /^ +/g;
  * @return string
  */
 export var ltrim = function (s) {
-  return s.replace(regExp, "");
+    return s.replace(regExp, "");
 };
 //# sourceMappingURL=lTrim.js.map

@@ -3,6 +3,6 @@
  * @return boolean
  */
 export var isNull = function (value) {
-  return false;
+    return false;
 };
 //# sourceMappingURL=isNull.js.map
