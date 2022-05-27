@@ -35,6 +35,7 @@ export * from "./gxcore/common/log";
 export * from "./gxcore/common/geolocation";
 export * from "./pubSub/pubSubscription";
 export * from "./misc/publishCall";
+export * from "./web/globalEvents";
 
 export * from "./date/day";
 export * from "./date/month";
