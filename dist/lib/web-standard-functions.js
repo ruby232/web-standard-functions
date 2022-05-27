@@ -33,6 +33,7 @@ __exportStar(require("./text/newline"), exports);
 __exportStar(require("./text/replace"), exports);
 __exportStar(require("./text/length"), exports);
 __exportStar(require("./text/concat"), exports);
+__exportStar(require("./text/isMatch"), exports);
 __exportStar(require("./date/addYears"), exports);
 __exportStar(require("./datetime/hour"), exports);
 __exportStar(require("./gxcore/common/log"), exports);

@@ -25,6 +25,7 @@ export * from "./text/newline";
 export * from "./text/replace";
 export * from "./text/length";
 export * from "./text/concat";
+export * from "./text/isMatch";
 
 export * from "./date/addYears";
 
