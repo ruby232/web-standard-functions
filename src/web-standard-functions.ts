@@ -53,6 +53,7 @@ export * from "./date/addMonths";
 export * from "./date/age";
 export * from "./date/age";
 export * from "./date/monthName";
+export * from "./date/addDays";
 
 export * from "./numeric/integer";
 export * from "./numeric/round";
@@ -67,6 +68,9 @@ export * from "./datetime/minute";
 export * from "./datetime/second";
 export * from "./datetime/addSeconds";
 export * from "./datetime/difference";
+export * from "./datetime/addHours";
+export * from "./datetime/addMinutes";
+export * from "./datetime/toDate";
 
 export { fromString as Date_fromString } from "./date/fromString";
 export { fromString as DateTime_fromString } from "./datetime/fromString";
