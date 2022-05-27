@@ -26,6 +26,12 @@ export * from "./text/replace";
 export * from "./text/length";
 export * from "./text/concat";
 export * from "./text/isMatch";
+export * from "./text/startsWith";
+export * from "./text/endsWith";
+export * from "./text/contains";
+export * from "./text/charAt";
+export * from "./text/removeDiacritics";
+
 
 export * from "./date/addYears";
 
