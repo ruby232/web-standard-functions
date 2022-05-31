@@ -49,6 +49,7 @@ export * from "./numeric/round";
 export * from "./numeric/roundToEven";
 export * from "./numeric/integer";
 export * from "./numeric/truncate";
+export * from "./numeric/toFormattedString";
 export * from "./math/mod";
 export * from "./datetime/hour";
 export * from "./datetime/minute";

@@ -62,6 +62,7 @@ __exportStar(require("./numeric/round"), exports);
 __exportStar(require("./numeric/roundToEven"), exports);
 __exportStar(require("./numeric/integer"), exports);
 __exportStar(require("./numeric/truncate"), exports);
+__exportStar(require("./numeric/toFormattedString"), exports);
 __exportStar(require("./math/mod"), exports);
 __exportStar(require("./datetime/hour"), exports);
 __exportStar(require("./datetime/minute"), exports);
