@@ -10,7 +10,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Core_iif = exports.Core_str = exports.Text_toString = exports.Numeric_toString = exports.DateTime_toString = exports.Date_toString = exports.Boolean_toString = exports.Character_isEmpty = exports.Varchar_isEmpty = exports.Text_isEmpty = exports.Numeric_isEmpty = exports.Misc_isEmpty = exports.DateTime_isEmpty = exports.Date_isEmpty = exports.Boolean_isEmpty = exports.Core_yMDHMStoT = exports.Core_yMDtoD = exports.DateTime_fromString = exports.Date_fromString = void 0;
+exports.Core_iif = exports.Core_str = exports.Text_toString = exports.Numeric_toString = exports.DateTime_toString = exports.Date_toString = exports.Boolean_toString = exports.Character_isEmpty = exports.LongVarchar_isEmpty = exports.Varchar_isEmpty = exports.Text_isEmpty = exports.Numeric_isEmpty = exports.Misc_isEmpty = exports.DateTime_isEmpty = exports.Date_isEmpty = exports.Boolean_isEmpty = exports.Core_yMDHMStoT = exports.Core_yMDtoD = exports.DateTime_fromString = exports.Date_fromString = void 0;
 __exportStar(require("./gxcore/client/client-information"), exports);
 __exportStar(require("./types/gauge"), exports);
 __exportStar(require("./types/geography"), exports);
@@ -95,7 +95,9 @@ Object.defineProperty(exports, "Text_isEmpty", { enumerable: true, get: function
 var isEmpty_7 = require("./text/isEmpty");
 Object.defineProperty(exports, "Varchar_isEmpty", { enumerable: true, get: function () { return isEmpty_7.isEmpty; } });
 var isEmpty_8 = require("./text/isEmpty");
-Object.defineProperty(exports, "Character_isEmpty", { enumerable: true, get: function () { return isEmpty_8.isEmpty; } });
+Object.defineProperty(exports, "LongVarchar_isEmpty", { enumerable: true, get: function () { return isEmpty_8.isEmpty; } });
+var isEmpty_9 = require("./text/isEmpty");
+Object.defineProperty(exports, "Character_isEmpty", { enumerable: true, get: function () { return isEmpty_9.isEmpty; } });
 var toString_1 = require("./bool/toString");
 Object.defineProperty(exports, "Boolean_toString", { enumerable: true, get: function () { return toString_1.toString; } });
 var toString_2 = require("./date/toString");
