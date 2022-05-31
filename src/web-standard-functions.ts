@@ -81,6 +81,7 @@ export { newInstance as Core_yMDHMStoT } from "./datetime/newInstance";
 
 export { isEmpty as Boolean_isEmpty } from "./bool/isEmpty";
 export { isEmpty as Date_isEmpty } from "./date/isEmpty";
+export { isEmpty as DateTime_isEmpty } from "./date/isEmpty";
 export { isEmpty as Misc_isEmpty } from "./misc/isEmpty";
 export { isEmpty as Numeric_isEmpty } from "./numeric/isEmpty";
 export { isEmpty as Text_isEmpty } from "./text/isEmpty";
