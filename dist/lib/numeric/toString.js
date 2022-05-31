@@ -4,10 +4,12 @@ exports.toString = void 0;
 /**
  * Converts the give number to string
  * @param {number} value
+ * @param {number} characters
+ * @param {number} decimals
  * @returns string
  */
-var toString = function (value) {
-    return value.toString();
+var toString = function (value, characters, decimals) {
+    return value.toFixed(decimals).padStart(characters);
 };
 exports.toString = toString;
 //# sourceMappingURL=toString.js.map

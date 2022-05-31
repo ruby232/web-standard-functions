@@ -2,7 +2,7 @@ import { pickMultimedia } from "../pickMultimedia";
 import {
   publish,
   subscribe,
-  cancelSubscription,
+  cancelSubscription
 } from "../../../../../pubSub/pubSub";
 import { stdToGeneratorPublishedMessage as prefix } from "../../../../../misc/helpers";
 

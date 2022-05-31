@@ -5,7 +5,10 @@
  * @return Date
  */
 import { secondsToMilliseconds } from "./core";
+import { EMPTY_DATE_VALUE } from "../date/core";
 export var addSeconds = function (dateFrom, seconds) {
-    return new Date(dateFrom.getTime() + secondsToMilliseconds(seconds));
+    return dateFrom.getTime() === EMPTY_DATE_VALUE.getTime()
+        ? EMPTY_DATE_VALUE
+        : new Date(dateFrom.getTime() + secondsToMilliseconds(seconds));
 };
 //# sourceMappingURL=addSeconds.js.map

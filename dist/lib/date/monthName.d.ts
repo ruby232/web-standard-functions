@@ -4,4 +4,4 @@
  * @param {string} language
  * @return string
  */
-export declare const monthName: (dateFrom: Date, language: string) => string;
+export declare const monthName: (dateFrom: Date, language?: string) => string;

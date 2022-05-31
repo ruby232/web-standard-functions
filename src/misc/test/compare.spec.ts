@@ -45,7 +45,7 @@ const testCases: Array<[any, string, any, boolean]> = [
   ["abc", "like", "a", true],
   ["abc", "like", "b", false],
   ["abc", "like", "%c", true],
-  ["abc", "like", "%x", false],
+  ["abc", "like", "%x", false]
 ];
 
 describe("compare operator", () => {

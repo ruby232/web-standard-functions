@@ -5,6 +5,13 @@
  * @return string
  */
 export var padLeft = function (target, length, fillChar) {
-    return target.padStart(length, fillChar);
+    var res = "";
+    if (length === 0) {
+        res = "";
+    }
+    else {
+        res = target.padStart(length, fillChar);
+    }
+    return res;
 };
 //# sourceMappingURL=padLeft.js.map

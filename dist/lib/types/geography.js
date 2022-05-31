@@ -107,16 +107,13 @@ var Geography = /** @class */ (function () {
             case "POINT":
                 geoJson = {
                     type: "Point",
-                    coordinates: [this.longitude, this.latitude],
+                    coordinates: [this.longitude, this.latitude]
                 };
                 break;
             case "LINE":
                 geoJson = {
                     type: "LineString",
-                    coordinates: this.line.map(function (point) { return [
-                        point.longitude,
-                        point.latitude,
-                    ]; }),
+                    coordinates: this.line.map(function (point) { return [point.longitude, point.latitude]; })
                 };
                 break;
             case "POLYGON":
@@ -124,13 +121,13 @@ var Geography = /** @class */ (function () {
                     type: "Polygon",
                     coordinates: this.polygon.map(function (ring) {
                         return ring.map(function (point) { return [point.longitude, point.latitude]; });
-                    }),
+                    })
                 };
                 break;
             default:
                 geoJson = {
                     type: "GeometryCollection",
-                    coordinates: [],
+                    coordinates: []
                 };
                 break;
         }
@@ -242,7 +239,7 @@ var Geography = /** @class */ (function () {
         this.featureType = "POINT";
         this.point = {
             longitude: parseFloat(result[2]),
-            latitude: parseFloat(result[1]),
+            latitude: parseFloat(result[1])
         };
     };
     Geography.prototype.parsePoint = function (value) {
@@ -250,7 +247,7 @@ var Geography = /** @class */ (function () {
         this.featureType = "POINT";
         this.point = {
             longitude: parseFloat(result[1]),
-            latitude: parseFloat(result[2]),
+            latitude: parseFloat(result[2])
         };
     };
     Geography.prototype.parseLineString = function (value) {
@@ -260,7 +257,7 @@ var Geography = /** @class */ (function () {
             var coords = point.match(Geography.GEOGRAPHY_REGEX_PARSE_POINT_COORDS);
             return {
                 longitude: parseFloat(coords[0]),
-                latitude: parseFloat(coords[1]),
+                latitude: parseFloat(coords[1])
             };
         });
     };
@@ -273,7 +270,7 @@ var Geography = /** @class */ (function () {
                 var coords = point.match(Geography.GEOGRAPHY_REGEX_PARSE_POINT_COORDS);
                 return {
                     longitude: parseFloat(coords[0]),
-                    latitude: parseFloat(coords[1]),
+                    latitude: parseFloat(coords[1])
                 };
             });
         });

@@ -8,7 +8,7 @@ export const testCases: Array<[timezones, number]> = [
   [timezones.Darwin, 570],
   [timezones.Cape_Verde, -60],
   [timezones.Caracas, -240],
-  [timezones.Kabul, 270],
+  [timezones.Kabul, 270]
 ];
 
 describe("getCurrentoffset operation", () => {

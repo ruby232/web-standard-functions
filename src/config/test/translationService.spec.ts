@@ -1,7 +1,7 @@
 import {
   TranslationService,
   TranslationsData,
-  ImagesData,
+  ImagesData
 } from "../translationService";
 
 describe("Translation service without loding translations", () => {
@@ -32,10 +32,7 @@ describe("Loading translations", () => {
   it("should be able to load translations", () => {
     const ts = TranslationService.getInstance();
     const data = new TranslationsData();
-    data.Translations = [
-      { M: "Hello", T: "Hola" },
-      { M: "world", T: "mundo" },
-    ];
+    data.Translations = [{ M: "Hello", T: "Hola" }, { M: "world", T: "mundo" }];
     ts.loadTranslations("Spanish", data);
   });
 });
@@ -44,10 +41,7 @@ describe("Translation service with one loaded language", () => {
   const ts = TranslationService.getInstance();
   beforeAll(() => {
     const spa = new TranslationsData();
-    spa.Translations = [
-      { M: "Hello", T: "Hola" },
-      { M: "world", T: "mundo" },
-    ];
+    spa.Translations = [{ M: "Hello", T: "Hola" }, { M: "world", T: "mundo" }];
     ts.loadTranslations("Spanish", spa);
   });
   it("should return the translation for an existing message", () => {
@@ -65,15 +59,12 @@ describe("Translation service with more than one loaded language", () => {
   const ts = TranslationService.getInstance();
   beforeAll(() => {
     const spa = new TranslationsData();
-    spa.Translations = [
-      { M: "Hello", T: "Hola" },
-      { M: "world", T: "mundo" },
-    ];
+    spa.Translations = [{ M: "Hello", T: "Hola" }, { M: "world", T: "mundo" }];
     ts.loadTranslations("Spanish", spa);
     const fre = new TranslationsData();
     fre.Translations = [
       { M: "Hello", T: "Bonjour" },
-      { M: "world", T: "le monde" },
+      { M: "world", T: "le monde" }
     ];
     ts.loadTranslations("French", fre);
   });
@@ -100,8 +91,8 @@ describe("Image translation service with one loaded language", () => {
         name: "img.png",
         theme: "CarmineSD",
         lang: "Spanish",
-        location: "img_spa.png",
-      },
+        location: "img_spa.png"
+      }
     ];
     ts.loadImages("Spanish", "CarmineSD", spa);
   });

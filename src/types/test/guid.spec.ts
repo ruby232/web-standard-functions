@@ -11,7 +11,7 @@ const fromStringTestCases: Array<[string, string]> = [
   [validGuidStr.toUpperCase(), validGuidStr],
   ["xyxyxyxy-f67d-46a6-b68b-db6795244394", emptyGuidStr],
   ["123abc", emptyGuidStr],
-  ["xyz", emptyGuidStr],
+  ["xyz", emptyGuidStr]
 ];
 
 describe("create new GUID", () => {

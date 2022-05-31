@@ -17,7 +17,7 @@ describe("WebSocket Tests", () => {
   it(`Opens a websocket connection`, async () => {
     const doWork = jest.fn();
     let ws = new WS();
-    ws.onOpen = (ev) => {
+    ws.onOpen = ev => {
       doWork();
     };
     await ws.open(SOCKET_TEST_SERVER);
@@ -30,7 +30,7 @@ describe("WebSocket Tests", () => {
     const sendMessage = "websocket test";
     let ws = new WS();
     await ws.open(SOCKET_TEST_SERVER);
-    ws.onMessage = (ev) => {
+    ws.onMessage = ev => {
       if (ev.data === sendMessage) {
         doWork();
       }
@@ -45,7 +45,7 @@ describe("WebSocket Tests", () => {
     const sendMessage = "websocket test";
     let ws = new WS();
     await ws.open(SOCKET_TEST_SERVER);
-    ws.onMessage = (ev) => {
+    ws.onMessage = ev => {
       if (ev.data === sendMessage) {
         doWork();
       }
@@ -62,7 +62,7 @@ describe("WebSocket Tests", () => {
     let sendMessage = "test.1";
     let ws = new WS();
     await ws.open(SOCKET_TEST_SERVER);
-    ws.onMessage = (ev) => {
+    ws.onMessage = ev => {
       if (ev.data === sendMessage) {
         doWork();
       }

@@ -60,7 +60,7 @@ function intiBigNumberConfig() {
   BigNumber.config({
     FORMAT: {
       decimalSeparator: ".",
-      groupSeparator: ",",
-    },
+      groupSeparator: ","
+    }
   });
 }

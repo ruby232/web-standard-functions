@@ -6,7 +6,7 @@ const testCases: Array<[any, any]> = [
   [null, null],
   [undefined, null],
   [0, 0],
-  [1, 0],
+  [1, 0]
 ];
 
 describe("NullValue function", () => {

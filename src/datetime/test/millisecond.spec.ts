@@ -6,7 +6,7 @@ export const testCases: Array<[Date, number]> = [
   [new Date(1891, 8, 28, 1, 0, 0, 15), 15],
   [new Date(1891, 8, 28, 1, 0, 0, 20), 20],
   [new Date(1891, 8, 28, 1, 0, 0, 1000), 0],
-  [new Date(1891, 8, 28, 1, 0, 0, 1001), 1],
+  [new Date(1891, 8, 28, 1, 0, 0, 1001), 1]
 ];
 
 describe("millisecond operation", () => {

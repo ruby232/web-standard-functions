@@ -30,7 +30,7 @@ export enum BrowserIdValues {
   MozillaFirefox = 6,
   Chrome = 7,
   Safari = 8,
-  Edge = 9,
+  Edge = 9
 }
 
 interface BrowserMatcher {
@@ -53,5 +53,5 @@ const browserMatchers: Array<BrowserMatcher> = [
   { regExp: safariRegEx, browserId: BrowserIdValues.Safari },
   { regExp: operaRegEx, browserId: BrowserIdValues.Opera },
   { regExp: firefoxRegEx, browserId: BrowserIdValues.MozillaFirefox },
-  { regExp: netscapeRegEx, browserId: BrowserIdValues.Netscape },
+  { regExp: netscapeRegEx, browserId: BrowserIdValues.Netscape }
 ];

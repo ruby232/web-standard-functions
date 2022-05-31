@@ -4,7 +4,7 @@ import { GeneXusClientClientInformation } from "./client-information";
 
 export enum SocketStatus {
   Disconnected = 0,
-  Connected = 1,
+  Connected = 1
 }
 
 export class GeneXusClientSocket {

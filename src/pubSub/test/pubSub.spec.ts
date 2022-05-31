@@ -3,7 +3,7 @@ import {
   subscribe,
   cancelAllSubscriptions,
   cancelSubscription,
-  cancelTopic,
+  cancelTopic
 } from "../pubSub";
 import waitForExpect from "wait-for-expect";
 import PubSubscriptionOptions from "../pubSubscribeOptions";
@@ -20,7 +20,7 @@ describe("Event Emitter Tests", () => {
 
   it(`should publish the message`, async () => {
     const doWork = jest.fn();
-    subscribe(TOPIC_NAME, (callback) => {
+    subscribe(TOPIC_NAME, callback => {
       callback();
     });
     publish(TOPIC_NAME, doWork);
@@ -42,7 +42,7 @@ describe("Event Emitter Tests", () => {
   it(`should NOT listen to the published message`, async () => {
     const doWork = jest.fn();
     publish(TOPIC_NAME, doWork);
-    subscribe(TOPIC_NAME, (callback) => {
+    subscribe(TOPIC_NAME, callback => {
       callback();
     });
 
@@ -51,7 +51,7 @@ describe("Event Emitter Tests", () => {
 
   it(`should publish the message multiple times`, async () => {
     const doWork = jest.fn();
-    subscribe(TOPIC_NAME, (callback) => {
+    subscribe(TOPIC_NAME, callback => {
       callback();
     });
     let index = 1;
@@ -65,7 +65,7 @@ describe("Event Emitter Tests", () => {
     const doWork = jest.fn();
     subscribe(
       TOPIC_NAME,
-      (callback) => {
+      callback => {
         callback();
       },
       new PubSubscriptionOptions({ once: true })
@@ -79,7 +79,7 @@ describe("Event Emitter Tests", () => {
 
   it(`should cancel all previous subscriptions`, async () => {
     const doWork = jest.fn();
-    subscribe(TOPIC_NAME, (callback) => {
+    subscribe(TOPIC_NAME, callback => {
       callback();
     });
 
@@ -92,7 +92,7 @@ describe("Event Emitter Tests", () => {
 
   it(`should cancel subscription`, async () => {
     const doWork = jest.fn();
-    const subscription = subscribe(TOPIC_NAME, (callback) => {
+    const subscription = subscribe(TOPIC_NAME, callback => {
       callback();
     });
 
@@ -105,7 +105,7 @@ describe("Event Emitter Tests", () => {
 
   it(`should cancel a topic`, async () => {
     const doWork = jest.fn();
-    subscribe(TOPIC_NAME, (callback) => {
+    subscribe(TOPIC_NAME, callback => {
       callback();
     });
 

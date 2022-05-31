@@ -4,6 +4,6 @@ exports.testCases = void 0;
 // Boolean::IsEmpty test cases
 exports.testCases = [
     [false, true],
-    [true, false],
+    [true, false]
 ];
 //# sourceMappingURL=isempty-cases.js.map

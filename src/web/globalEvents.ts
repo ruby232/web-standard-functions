@@ -2,7 +2,7 @@ import {
   cancelSubscription as cancel,
   publish as publishTopic,
   subscribe as subscribeTopic,
-  cancelAllSubscriptions,
+  cancelAllSubscriptions
 } from "../pubSub/pubSub";
 import EventSubscription from "../pubSub/pubSubscription";
 

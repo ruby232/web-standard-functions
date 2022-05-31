@@ -4,7 +4,7 @@ const testCases: Array<[number, boolean]> = [
   [0, true],
   [1, false],
   [0.6, false],
-  [-2.4, false],
+  [-2.4, false]
 ];
 
 describe("Numeric::isEmtpy", () => {

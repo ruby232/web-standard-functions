@@ -62,12 +62,12 @@ export enum timezones {
   Auckland = "Pacific/Auckland",
   Honolulu = "Pacific/Honolulu",
   Noumea = "Pacific/Noumea",
-  Tongatapu = "Pacific/Tongatapu",
+  Tongatapu = "Pacific/Tongatapu"
 }
 
 export const fromString = (stz: string): timezones => {
   let arrTimezones = Object.keys(timezones);
   return (
-    arrTimezones.find((e) => timezones[e] === stz) || timezones[timezones.UTC]
+    arrTimezones.find(e => timezones[e] === stz) || timezones[timezones.UTC]
   );
 };

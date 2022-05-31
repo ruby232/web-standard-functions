@@ -7,7 +7,7 @@ export const testCases: Array<[string, string, string, string]> = [
     "Texto Peñarol Campeón del Siglo XX Texto",
     "^Texto ",
     "",
-    "Peñarol Campeón del Siglo XX Texto",
+    "Peñarol Campeón del Siglo XX Texto"
   ],
-  ["Peñarol Campeón del Siglo XX", "e", "", "Pñarol Campón dl Siglo XX"],
+  ["Peñarol Campeón del Siglo XX", "e", "", "Pñarol Campón dl Siglo XX"]
 ];

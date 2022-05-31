@@ -64,11 +64,11 @@
           "notifiesGenerator": true
         },
         "CtoD": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/fromString",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/CtoD",
           "name": "fromString"
         },
         "CtoT": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/fromString",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/CtoT",
           "name": "fromString"
         },
         "Day": {
@@ -85,6 +85,10 @@
         },
         "EoM": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
+          "name": "endOfMonth"
+        },
+        "EoMdt": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/endOfMonth",
           "name": "endOfMonth"
         },
         "Format": {
@@ -175,6 +179,10 @@
         "PadR": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
           "name": "padRight"
+        },
+        "Random": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/math/random",
+          "name": "random"
         },
         "Round": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
@@ -279,6 +287,10 @@
         "YMDHMStoT": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/newInstance",
           "name": "newInstance"
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toFormattedString",
+          "name": "toFormattedString"
         }
       }
     },
@@ -744,8 +756,8 @@
           "modifiesInstance": true
         },
         "ToFormattedString": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
-          "name": "toString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toFormattedString",
+          "name": "toFormattedString"
         },
         "ToString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
@@ -904,12 +916,12 @@
           "name": "difference"
         },
         "EndOfMonth": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/endOfMonth",
           "name": "endOfMonth"
         },
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/fromString",
-          "name": "dtFromString",
+          "name": "fromString",
           "modifiesInstance": true
         },
         "FromTimeZone": {
@@ -1103,6 +1115,28 @@
         }
       }
     },
+    "GeneXus.Common.UI.DesignSystem": {
+      "members": {
+        "GetOption": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/ui/designsystem",
+          "name": "getOption"
+        },
+        "GetOptions": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/ui/designsystem",
+          "name": "getOptions"
+        },
+        "SetOption": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/ui/designsystem",
+          "name": "setOption",
+          "notifiesGenerator": true
+        },
+        "ClearOption": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/ui/designsystem",
+          "name": "clearOption",
+          "notifiesGenerator": true
+        }
+      }
+    },
     "GeneXus.SD.Calendar": {
       "members": {
         "Schedule": {
@@ -1156,6 +1190,11 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/camera/takePhoto",
           "name": "takePhoto",
           "notifiesGenerator": true
+        },
+        "RecordVideo": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/camera/recordVideo",
+          "name": "recordVideo",
+          "notifiesGenerator": true
         }
       }
     },
@@ -1185,6 +1224,16 @@
         "ShareText": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/social/share/shareText",
           "name": "shareText"
+        },
+        "ShareImage": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/social/share/shareImage",
+          "name": "shareImage",
+          "isAsync": true
+        },
+        "ShareFile": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/social/share/shareFile",
+          "name": "shareFile",
+          "isAsync": true
         }
       }
     },
@@ -1450,7 +1499,31 @@
       "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/log"
     },
     "GeneXus.Common.Geolocation": {
-      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/geolocation"
+      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/geolocation",
+      "members": {
+        "GetMyLocation": {
+          "name": "getMyLocation",
+          "isAsync": true
+        },
+        "GetLocation": {
+          "name": "getGeolocation",
+          "alias": "getGeolocation"
+        }
+      }
+    },
+    "GeneXus.SD.Scanner": {
+      "members": {
+        "ScanBarcode": {
+          "name": "scanBarcode",
+          "alias": "scanBarcode",
+          "isAsync": true
+        },
+        "ScanInLoop": {
+          "name": "scanInLoop",
+          "alias": "scanInLoop",
+          "isAsync": true
+        }
+      }
     }
   },
   "disambiguated": {
@@ -1645,9 +1718,6 @@
     },
     "GeneXus.Common.Analytics": {
       "SetUserId": "setAnalyticsUserId"
-    },
-    "GeneXus.Common.Geolocation": {
-      "GetLocation": "getGeolocation"
     },
     "GeneXus.Common.Log": {
       "Error": "logError"

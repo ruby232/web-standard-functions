@@ -8,5 +8,5 @@ export const testCases: Array<[string, boolean]> = [
   ["FALSE", false],
   ["0", false],
   ["1", false],
-  ["X", false],
+  ["X", false]
 ];

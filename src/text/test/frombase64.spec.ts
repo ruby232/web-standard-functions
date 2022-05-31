@@ -2,7 +2,7 @@ import { fromBase64 } from "../fromBase64";
 
 const testCases: Array<[string, string]> = [
   ["", ""],
-  ["SGVsbG8gd29ybGQh", "Hello world!"],
+  ["SGVsbG8gd29ybGQh", "Hello world!"]
 ];
 
 describe("fromBase64 operation", () => {

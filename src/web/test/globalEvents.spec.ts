@@ -2,7 +2,7 @@ import {
   publish,
   subscribe,
   unSubscribe,
-  unSubscribeAll,
+  unSubscribeAll
 } from "../globalEvents";
 import waitForExpect from "wait-for-expect";
 
@@ -15,7 +15,7 @@ describe("Global Events Tests", () => {
 
   it(`should publish the message with data`, async () => {
     const doWork = jest.fn();
-    subscribe(TOPIC_NAME, (callback) => {
+    subscribe(TOPIC_NAME, callback => {
       callback();
     });
     publish(TOPIC_NAME, doWork);
@@ -47,7 +47,7 @@ describe("Global Events Tests", () => {
   it(`should NOT listen to the emitted event`, async () => {
     const doWork = jest.fn();
     publish(TOPIC_NAME, doWork);
-    subscribe(TOPIC_NAME, (callback) => {
+    subscribe(TOPIC_NAME, callback => {
       callback();
     });
 
@@ -57,7 +57,7 @@ describe("Global Events Tests", () => {
   it(`should emit the event with data multiple times`, async () => {
     const doWork = jest.fn();
     let index;
-    subscribe(TOPIC_NAME, (callback) => {
+    subscribe(TOPIC_NAME, callback => {
       callback();
     });
     for (index = 1; index <= 3; index++) {
@@ -68,7 +68,7 @@ describe("Global Events Tests", () => {
 
   it(`should unsubscribe listener`, async () => {
     const doWork = jest.fn();
-    const subscription = subscribe(TOPIC_NAME, (callback) => {
+    const subscription = subscribe(TOPIC_NAME, callback => {
       callback();
     });
 

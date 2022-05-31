@@ -4,3 +4,4 @@
  * @param {string} target
  * @return string
  */
+export declare const htmlClean: (s: string) => string;

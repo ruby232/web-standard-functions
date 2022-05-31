@@ -41,8 +41,8 @@ function intiBigNumberConfig() {
     BigNumber.config({
         FORMAT: {
             decimalSeparator: ".",
-            groupSeparator: ",",
-        },
+            groupSeparator: ","
+        }
     });
 }
 //# sourceMappingURL=operation.js.map

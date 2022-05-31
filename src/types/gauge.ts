@@ -42,11 +42,11 @@ export class Gauge {
     this.showMinMax = sdt.ShowMinMax || false;
     this.ranges = sdt.Ranges
       ? sdt.Ranges.map(
-          (range) =>
+          range =>
             ({
               name: range.Name,
               amount: range.Length,
-              color: range.Color,
+              color: range.Color
             } as GaugeRange)
         )
       : [];

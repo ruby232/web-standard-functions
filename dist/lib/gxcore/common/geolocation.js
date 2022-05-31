@@ -18,10 +18,7 @@ var GeneXusCommonGeolocation = /** @class */ (function () {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
                     var geoPosition = new GeneXusCommonGeolocationInfoData();
-                    geoPosition.Location =
-                        position.coords.latitude.toString() +
-                            "," +
-                            position.coords.longitude.toString();
+                    geoPosition.Location = position.coords.latitude.toString() + "," + position.coords.longitude.toString();
                     geoPosition.Heading = position.coords.heading;
                     geoPosition.Precision = position.coords.accuracy;
                     geoPosition.Description = "";
@@ -75,7 +72,7 @@ var GeneXusCommonGeolocation = /** @class */ (function () {
      * @return any
      */
     GeneXusCommonGeolocation.startTracking = function (changesInterval, distance, action, actionTimeInterval, accuracy) {
-        helpers_1.notImplemented("GeneXusCommonGeolocation.startTracking");
+        helpers_1.notImplemented('GeneXusCommonGeolocation.startTracking');
         return null;
     };
     /**
@@ -83,7 +80,7 @@ var GeneXusCommonGeolocation = /** @class */ (function () {
      * @return any
      */
     GeneXusCommonGeolocation.endTracking = function () {
-        helpers_1.notImplemented("GeneXusCommonGeolocation.endTracking");
+        helpers_1.notImplemented('GeneXusCommonGeolocation.endTracking');
         return null;
     };
     /**
@@ -92,7 +89,7 @@ var GeneXusCommonGeolocation = /** @class */ (function () {
      * @return any
      */
     GeneXusCommonGeolocation.getLocationHistory = function (startTime) {
-        helpers_1.notImplemented("GeneXusCommonGeolocation.getLocationHistory");
+        helpers_1.notImplemented('GeneXusCommonGeolocation.getLocationHistory');
         return null;
     };
     /**
@@ -100,7 +97,7 @@ var GeneXusCommonGeolocation = /** @class */ (function () {
      * @return any
      */
     GeneXusCommonGeolocation.clearLocationHistory = function () {
-        helpers_1.notImplemented("GeneXusCommonGeolocation.clearLocationHistory");
+        helpers_1.notImplemented('GeneXusCommonGeolocation.clearLocationHistory');
         return null;
     };
     /**
@@ -142,10 +139,8 @@ var GeneXusCommonGeolocation = /** @class */ (function () {
         var latRadians = this.toRadians(lat2 - lat1);
         var lonRadians = this.toRadians(lon2 - lon1);
         var a = Math.sin(latRadians / 2) * Math.sin(latRadians / 2) +
-            Math.cos(lat1radians) *
-                Math.cos(lat2radians) *
-                Math.sin(lonRadians / 2) *
-                Math.sin(lonRadians / 2);
+            Math.cos(lat1radians) * Math.cos(lat2radians) *
+                Math.sin(lonRadians / 2) * Math.sin(lonRadians / 2);
         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         return Math.round(R * c);
     };
@@ -155,7 +150,7 @@ var GeneXusCommonGeolocation = /** @class */ (function () {
      * @return any
      */
     GeneXusCommonGeolocation.getAddress = function (location) {
-        helpers_1.notImplemented("GeneXusCommonGeolocation.getAddress");
+        helpers_1.notImplemented('GeneXusCommonGeolocation.getAddress');
         return null;
     };
     /**
@@ -164,7 +159,7 @@ var GeneXusCommonGeolocation = /** @class */ (function () {
      * @return any
      */
     GeneXusCommonGeolocation.getGeolocation = function (address) {
-        helpers_1.notImplemented("GeneXusCommonGeolocation.getGeolocation");
+        helpers_1.notImplemented('GeneXusCommonGeolocation.getGeolocation');
         return null;
     };
     /**
@@ -172,28 +167,28 @@ var GeneXusCommonGeolocation = /** @class */ (function () {
      * @return boolean
      */
     GeneXusCommonGeolocation.setProximityAlerts = function (proximityAlerts) {
-        helpers_1.notImplemented("GeneXusCommonGeolocation.setProximityAlerts");
+        helpers_1.notImplemented('GeneXusCommonGeolocation.setProximityAlerts');
         return false;
     };
     /**
      * @return any
      */
     GeneXusCommonGeolocation.getProximityAlerts = function () {
-        helpers_1.notImplemented("GeneXusCommonGeolocation.getProximityAlerts");
+        helpers_1.notImplemented('GeneXusCommonGeolocation.getProximityAlerts');
         return null;
     };
     /**
      * @return any
      */
     GeneXusCommonGeolocation.getCurrentProximityAlert = function () {
-        helpers_1.notImplemented("GeneXusCommonGeolocation.getCurrentProximityAlert");
+        helpers_1.notImplemented('GeneXusCommonGeolocation.getCurrentProximityAlert');
         return null;
     };
     /**
      * @return any
      */
     GeneXusCommonGeolocation.clearProximityAlerts = function () {
-        helpers_1.notImplemented("GeneXusCommonGeolocation.clearProximityAlerts");
+        helpers_1.notImplemented('GeneXusCommonGeolocation.clearProximityAlerts');
         return null;
     };
     /**
@@ -201,12 +196,12 @@ var GeneXusCommonGeolocation = /** @class */ (function () {
      * @return any
      */
     GeneXusCommonGeolocation.pickLocation = function (geoLocationPickerParameters) {
-        helpers_1.notImplemented("GeneXusCommonGeolocation.pickLocation");
+        helpers_1.notImplemented('GeneXusCommonGeolocation.pickLocation');
         return null;
     };
     GeneXusCommonGeolocation.toRadians = function (val) {
         var PI = 3.1415926535;
-        return (val / 180.0) * PI;
+        return val / 180.0 * PI;
     };
     return GeneXusCommonGeolocation;
 }());

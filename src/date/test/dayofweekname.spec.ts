@@ -21,12 +21,14 @@ export const testCases: Array<[Date, string, string]> = [
   [new Date(2019, 3, 3), "cht", "星期三"],
   [new Date(1891, 8, 28), "jap", "月曜日"],
   [new Date(1968, 7, 9), "jap", "金曜日"],
-  [new Date(2019, 3, 3), "jap", "水曜日"],
+  [new Date(2019, 3, 3), "jap", "水曜日"]
 ];
 
 describe("dayOfWeekName operation", () => {
   for (const t of testCases) {
-    it(`dayOfWeekName for "${t[0]}" with lang "${t[1]}" should be equal to "${t[2]}"`, () => {
+    it(`dayOfWeekName for "${t[0]}" with lang "${t[1]}" should be equal to "${
+      t[2]
+    }"`, () => {
       expect(dayOfWeekName(t[0], t[1])).toEqual(t[2]);
     });
   }

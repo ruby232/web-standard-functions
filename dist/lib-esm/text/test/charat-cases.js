@@ -11,6 +11,6 @@ export var testCases = [
     [" 😀texto", 3, "t"],
     [" 😀te xto\t\r\n ", 3, "t"],
     [" 😀\tte xto\t\r\n ", 6, " "],
-    [" 😀\tte xto\t\r\n ", 11, "\r"],
+    [" 😀\tte xto\t\r\n ", 11, "\r"]
 ];
 //# sourceMappingURL=charat-cases.js.map

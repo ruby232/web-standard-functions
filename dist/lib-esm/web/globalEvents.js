@@ -1,4 +1,4 @@
-import { cancelSubscription as cancel, publish as publishTopic, subscribe as subscribeTopic, cancelAllSubscriptions, } from "../pubSub/pubSub";
+import { cancelSubscription as cancel, publish as publishTopic, subscribe as subscribeTopic, cancelAllSubscriptions } from "../pubSub/pubSub";
 /**
  * Subscribe to topic name. Automatically gets notified when someone publish to the topic name.
  * @param topicName The topic name to be subscribed.

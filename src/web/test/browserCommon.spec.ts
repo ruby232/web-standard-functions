@@ -7,14 +7,14 @@ let testCases: Array<[string, string, number, string]> = [
     "Edge",
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 13.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134",
     BrowserIdValues.Edge,
-    "17.17134",
+    "17.17134"
   ],
   [
     "Chrome",
     "5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
     BrowserIdValues.Chrome,
-    "78.0.3904.108",
-  ],
+    "78.0.3904.108"
+  ]
 ];
 
 describe("BrowserID and BrowserVersion function", () => {

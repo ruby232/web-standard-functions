@@ -3,7 +3,7 @@ export enum XMLErrorCodes {
   open_file = 1,
   no_open_document = 2,
   missing_start_element = 3,
-  unknown_error = 99,
+  unknown_error = 99
 }
 
 export class XMLBase {

@@ -7,7 +7,7 @@ const testCases1: Array<[number, string]> = [
   [-3, "        -3"],
   [0.6, "         1"],
   [1.3, "         1"],
-  [-2.4, "        -2"],
+  [-2.4, "        -2"]
 ];
 
 describe("Core::str without optional parameters", () => {
@@ -24,7 +24,7 @@ const testCases2: Array<[number, number, number, string]> = [
   [-1.25, 5, 1, " -1.3"],
   [-1.25, 5, 2, "-1.25"],
   [123456.12, 5, 2, "*****"],
-  [1234.4, 5, 1, " 1234"],
+  [1234.4, 5, 1, " 1234"]
 ];
 
 describe("Core::str with length and decimals", () => {

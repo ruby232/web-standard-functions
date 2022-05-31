@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GUID = void 0;
-var uuid_1 = require("@lukeed/uuid");
+var uuid_1 = require("uuid");
 var GUID = /** @class */ (function () {
     function GUID(val) {
         this.value = this.normalizeValue(val);

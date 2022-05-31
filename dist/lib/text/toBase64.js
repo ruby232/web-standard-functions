@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.toBase64 = void 0;
+var btoa = require("btoa");
 /**
  * Converts the given string to base64 representation
  * @param {string} str Input string

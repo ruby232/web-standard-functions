@@ -44,6 +44,6 @@ var browserMatchers = [
     { regExp: safariRegEx, browserId: BrowserIdValues.Safari },
     { regExp: operaRegEx, browserId: BrowserIdValues.Opera },
     { regExp: firefoxRegEx, browserId: BrowserIdValues.MozillaFirefox },
-    { regExp: netscapeRegEx, browserId: BrowserIdValues.Netscape },
+    { regExp: netscapeRegEx, browserId: BrowserIdValues.Netscape }
 ];
 //# sourceMappingURL=browserCommon.js.map

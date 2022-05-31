@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.fromBase64 = void 0;
+var atob = require("atob");
 /**
  * Converts the given base64 encoded string to and ASCII string
  * @param {string} str64 Base64 encoded string

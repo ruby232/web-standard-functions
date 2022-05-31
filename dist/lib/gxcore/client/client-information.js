@@ -5,6 +5,7 @@ var getCookie_1 = require("../../web/getCookie");
 var setCookie_1 = require("../../web/setCookie");
 var guid_1 = require("../../types/guid");
 var addYears_1 = require("../../date/addYears");
+var configurationState_1 = require("../../config/configurationState");
 function notImplemented() {
     console.log("Not yet implemented");
 }
@@ -19,8 +20,8 @@ var GeneXusClientClientInformation = /** @class */ (function () {
     /**
      * This property returns a device identifier
      * The value of ClientInformation.Id is:
-     *  - Universally unique
-     *  - Stable
+     * - Universally unique
+     * - Stable
      */
     GeneXusClientClientInformation.id = function () {
         var id = getCookie_1.getCookie("GX_CLIENT_ID");
@@ -50,8 +51,8 @@ var GeneXusClientClientInformation = /** @class */ (function () {
             { s: "OS/2", r: /OS\/2/ },
             {
                 s: "Search Bot",
-                r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/,
-            },
+                r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/
+            }
         ]);
     };
     /**
@@ -87,8 +88,8 @@ var GeneXusClientClientInformation = /** @class */ (function () {
             { s: "OS/2", r: /OS\/2/ },
             {
                 s: "Search Bot",
-                r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/,
-            },
+                r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/
+            }
         ]);
         var osVersion = "Unknown";
         if (/Windows/.test(os)) {
@@ -116,6 +117,11 @@ var GeneXusClientClientInformation = /** @class */ (function () {
         return osVersion;
     };
     /**
+     * Returns a unique identifier for the device
+     * Current implementation returns the same as the `id` property
+     */
+    GeneXusClientClientInformation.networkID = GeneXusClientClientInformation.id;
+    /**
      * A character string is returned with the device language
      */
     GeneXusClientClientInformation.language = function () {
@@ -136,21 +142,19 @@ var GeneXusClientClientInformation = /** @class */ (function () {
     GeneXusClientClientInformation.platformName = function () {
         var nVer = navigator.appVersion;
         var mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
-        return "Web" + mobile ? " Mobile" : "";
+        return "Web" + (mobile ? " Mobile" : "");
     };
     /**
      * Returns the version number of the application which it was set by the developer
      */
     GeneXusClientClientInformation.appVersionCode = function () {
-        notImplemented();
-        return null;
+        return configurationState_1.ConfigurationState.getInstance().getProperty("APPLICATION_VERSION_CODE");
     };
     /**
      * Returns the version name of the application which it was set by the developer
      */
     GeneXusClientClientInformation.appVersionName = function () {
-        notImplemented();
-        return null;
+        return configurationState_1.ConfigurationState.getInstance().getProperty("APPLICATION_VERSION_NAME");
     };
     /**
      * Returns the application identifier
@@ -159,11 +163,6 @@ var GeneXusClientClientInformation = /** @class */ (function () {
         notImplemented();
         return null;
     };
-    /**
-     * Returns a unique identifier for the device
-     * Current implementation returns the same as the `id` property
-     */
-    GeneXusClientClientInformation.networkID = GeneXusClientClientInformation.id;
     return GeneXusClientClientInformation;
 }());
 exports.GeneXusClientClientInformation = GeneXusClientClientInformation;

@@ -1,11 +1,23 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.mod = void 0;
-var operation_1 = require("./operation");
 /**
- * Return the result of `operand1` modulo `operand2` operation
- * @param operand1 First operand
- * @param operand2 Second operand
+ * @param {number} dividend
+ * @param {number} divisor
+ * @returns number
  */
-exports.mod = operation_1.defineBinaryOperation("mod");
+var mod = function (dividend, divisor) {
+    if (dividend === 0) {
+        return undefined;
+    }
+    else {
+        if (dividend > 0) {
+            return Math.trunc(Math.abs(dividend) % Math.abs(divisor));
+        }
+        else {
+            return -Math.trunc(Math.abs(dividend) % Math.abs(divisor));
+        }
+    }
+};
+exports.mod = mod;
 //# sourceMappingURL=mod.js.map

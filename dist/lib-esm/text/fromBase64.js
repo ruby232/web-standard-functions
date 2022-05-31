@@ -1,3 +1,4 @@
+var atob = require("atob");
 /**
  * Converts the given base64 encoded string to and ASCII string
  * @param {string} str64 Base64 encoded string

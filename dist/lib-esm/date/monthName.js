@@ -6,9 +6,16 @@
  */
 import { DateTime } from "luxon";
 import { gxToLibLangMapping } from "./core";
+import { EMPTY_DATE_VALUE } from "../date/core";
 export var monthName = function (dateFrom, language) {
-    return DateTime.fromJSDate(dateFrom)
+    var month = DateTime.fromJSDate(dateFrom)
         .setLocale(gxToLibLangMapping(language))
         .toFormat("LLLL");
+    return dateFrom.getTime() === EMPTY_DATE_VALUE.getTime()
+        ? ""
+        : month
+            .charAt(0)
+            .toUpperCase()
+            .concat(month.substring(1, month.length));
 };
 //# sourceMappingURL=monthName.js.map

@@ -5,11 +5,14 @@
  */
 
 import { DateTime } from "luxon";
+import { EMPTY_DATE_VALUE } from "../date/core";
 
 export const endOfMonth = (dateFrom: Date): Date => {
-  return new Date(
-    dateFrom.getFullYear(),
-    dateFrom.getMonth(),
-    DateTime.fromJSDate(dateFrom).daysInMonth
-  );
+  return dateFrom.getTime() === EMPTY_DATE_VALUE.getTime()
+    ? EMPTY_DATE_VALUE
+    : new Date(
+        dateFrom.getFullYear(),
+        dateFrom.getMonth(),
+        DateTime.fromJSDate(dateFrom).daysInMonth
+      );
 };

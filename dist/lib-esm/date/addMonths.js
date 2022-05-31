@@ -5,9 +5,15 @@
  * @return Date
  */
 import { DateTime } from "luxon";
+import { EMPTY_DATE_VALUE } from "../date/core";
 export var addMonths = function (date, months) {
-    return DateTime.fromJSDate(date)
-        .plus({ months: Math.trunc(months) })
-        .toJSDate();
+    if (date.getTime() === EMPTY_DATE_VALUE.getTime()) {
+        return EMPTY_DATE_VALUE;
+    }
+    else {
+        return DateTime.fromJSDate(date)
+            .plus({ months: Math.trunc(months) })
+            .toJSDate();
+    }
 };
 //# sourceMappingURL=addMonths.js.map

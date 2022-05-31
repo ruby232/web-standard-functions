@@ -5,4 +5,4 @@
  * @param {number} from
  * @return number
  */
-export declare const lastIndexOf: (target: string, pattern: string, from: number) => number;
+export declare const lastIndexOf: (target: string, pattern: string, from?: number) => number;

@@ -1,4 +1,4 @@
-import { detect as timezoneDetect, storageKey as timezoneStorageKey, } from "../datetime/timezone";
+import { detect as timezoneDetect, storageKey as timezoneStorageKey } from "../datetime/timezone";
 import { storage } from "../common/storage";
 var keyPrefix = "gx.config.configurationstate";
 var keyDynPtyPrefix = "gx.config.configurationstate.dynpty";

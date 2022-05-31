@@ -4,7 +4,7 @@ const testCases: Array<[number, string]> = [
   [116, "t"],
   [84, "T"],
   [-1, ""],
-  [241, "ñ"],
+  [241, "ñ"]
 ];
 
 describe("chr function", () => {

@@ -7,8 +7,8 @@ export var testCases = [
         "Texto Peñarol Campeón del Siglo XX Texto",
         "^Texto ",
         "",
-        "Peñarol Campeón del Siglo XX Texto",
+        "Peñarol Campeón del Siglo XX Texto"
     ],
-    ["Peñarol Campeón del Siglo XX", "e", "", "Pñarol Campón dl Siglo XX"],
+    ["Peñarol Campeón del Siglo XX", "e", "", "Pñarol Campón dl Siglo XX"]
 ];
 //# sourceMappingURL=replaceregexp-cases.js.map

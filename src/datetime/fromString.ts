@@ -9,7 +9,7 @@ import { newInstance } from "./newInstance";
 
 export const fromString = (target: Date, dateFrom: string): Date => {
   const dateParts = dateFrom.match(
-    /([0-9]?[0-9])\/?([0-9]?[0-9])\/?([0-9][0-9][0-9][0-9]) ([0-9]?[0-9]):([0-9]?[0-9]):?([0-9]?[0-9])?/
+    /([0-9]?[0-9])\/?([0-9]?[0-9])\/?([0-9][0-9][0-9][0-9])\ ([0-9]?[0-9]):([0-9]?[0-9])\:?([0-9][0-9])?\.?([0-9]?[0-9]?[0-9])?/
   );
 
   if (dateParts && dateParts.length > 5) {
@@ -22,7 +22,11 @@ export const fromString = (target: Date, dateFrom: string): Date => {
     if (dateParts.length > 6 && dateParts[6]) {
       seconds = Number(dateParts[6]);
     }
-    return newInstance(year, month, day, hour, minutes, seconds);
+    let milliseconds = 0;
+    if (dateParts.length > 7 && dateParts[7]) {
+      milliseconds = Number(dateParts[7]);
+    }
+    return newInstance(year, month, day, hour, minutes, seconds, milliseconds);
   }
   return EMPTY_DATE_VALUE;
 };

@@ -4,5 +4,5 @@ export const testCases: Array<[string, string, number, number]> = [
   ["Texto 😀 Texto 😀 Texto", "😀", 1, 7],
   ["Texto 😀 Texto 😀 Texto", "😀", undefined, 7],
   ["Texto 😀 Texto 😀 Texto", "😀", 5, 7],
-  ["Texto 😀 Texto 😀 Texto", "😀", 9, 16],
+  ["Texto 😀 Texto 😀 Texto", "😀", 9, 16]
 ];

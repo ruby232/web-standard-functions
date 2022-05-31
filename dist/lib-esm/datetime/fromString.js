@@ -6,7 +6,7 @@
 import { EMPTY_DATE_VALUE } from "../date/core";
 import { newInstance } from "./newInstance";
 export var fromString = function (target, dateFrom) {
-    var dateParts = dateFrom.match(/([0-9]?[0-9])\/?([0-9]?[0-9])\/?([0-9][0-9][0-9][0-9]) ([0-9]?[0-9]):([0-9]?[0-9]):?([0-9]?[0-9])?/);
+    var dateParts = dateFrom.match(/([0-9]?[0-9])\/?([0-9]?[0-9])\/?([0-9][0-9][0-9][0-9])\ ([0-9]?[0-9]):([0-9]?[0-9])\:?([0-9][0-9])?\.?([0-9]?[0-9]?[0-9])?/);
     if (dateParts && dateParts.length > 5) {
         var year = Number(dateParts[3]);
         var month = Number(dateParts[2]);
@@ -17,7 +17,11 @@ export var fromString = function (target, dateFrom) {
         if (dateParts.length > 6 && dateParts[6]) {
             seconds = Number(dateParts[6]);
         }
-        return newInstance(year, month, day, hour, minutes, seconds);
+        var milliseconds = 0;
+        if (dateParts.length > 7 && dateParts[7]) {
+            milliseconds = Number(dateParts[7]);
+        }
+        return newInstance(year, month, day, hour, minutes, seconds, milliseconds);
     }
     return EMPTY_DATE_VALUE;
 };

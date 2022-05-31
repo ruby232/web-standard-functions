@@ -35,7 +35,7 @@ var Gauge = /** @class */ (function () {
                 return ({
                     name: range.Name,
                     amount: range.Length,
-                    color: range.Color,
+                    color: range.Color
                 });
             })
             : [];

@@ -34,7 +34,7 @@ var XMLReader = /** @class */ (function (_super) {
         _this.document = null;
         _this.currentNodeInfo = {
             node: null,
-            gxType: null,
+            gxType: null
         };
         /**
          *

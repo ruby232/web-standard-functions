@@ -2,6 +2,7 @@ import { getCookie } from "../../web/getCookie";
 import { setCookie } from "../../web/setCookie";
 import { GUID } from "../../types/guid";
 import { addYears } from "../../date/addYears";
+import { ConfigurationState } from "../../config/configurationState";
 
 function notImplemented() {
   console.log("Not yet implemented");
@@ -9,7 +10,7 @@ function notImplemented() {
 
 function findOSInUserAgent(clientStrings): string {
   let nAgt = navigator.userAgent;
-  let os = clientStrings.find((cs) => cs.r.test(nAgt));
+  let os = clientStrings.find(cs => cs.r.test(nAgt));
   return os ? os.s : "Unknown";
 }
 
@@ -17,11 +18,11 @@ export class GeneXusClientClientInformation {
   /**
    * This property returns a device identifier
    * The value of ClientInformation.Id is:
-   *  - Universally unique
-   *  - Stable
+   * - Universally unique
+   * - Stable
    */
 
-  public static id(): string {
+  public static id = (): string => {
     let id = getCookie("GX_CLIENT_ID");
     if (!id) {
       id = GUID.newGuid().toString();
@@ -29,12 +30,12 @@ export class GeneXusClientClientInformation {
       setCookie("GX_CLIENT_ID", id, "/", expiration);
     }
     return id;
-  }
+  };
 
   /**
    * Returns the operating system name
    */
-  public static oSName(): string {
+  public static oSName = (): string => {
     return findOSInUserAgent([
       { s: "Windows", r: /(Windows|win32|win64)/ },
       { s: "Android", r: /Android/ },
@@ -50,15 +51,15 @@ export class GeneXusClientClientInformation {
       { s: "OS/2", r: /OS\/2/ },
       {
         s: "Search Bot",
-        r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/,
-      },
+        r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/
+      }
     ]);
-  }
+  };
 
   /**
    * Returns the version of the operating system
    */
-  public static oSVersion(): string {
+  public static oSVersion = (): string => {
     let os = findOSInUserAgent([
       { s: "Windows 10", r: /(Windows 10.0|Windows NT 10.0)/ },
       { s: "Windows 8.1", r: /(Windows 8.1|Windows NT 6.3)/ },
@@ -88,8 +89,8 @@ export class GeneXusClientClientInformation {
       { s: "OS/2", r: /OS\/2/ },
       {
         s: "Search Bot",
-        r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/,
-      },
+        r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/
+      }
     ]);
 
     let osVersion = "Unknown";
@@ -120,7 +121,7 @@ export class GeneXusClientClientInformation {
         break;
     }
     return osVersion;
-  }
+  };
 
   /**
    * Returns a unique identifier for the device
@@ -131,51 +132,53 @@ export class GeneXusClientClientInformation {
   /**
    * A character string is returned with the device language
    */
-  public static language(): string {
+  public static language = (): string => {
     let lang = navigator.languages
       ? navigator.languages[0]
       : navigator.language;
     return lang;
-  }
+  };
 
   /**
    * Returns an enumerated value representing the device type
    */
-  public static deviceType(): number {
+  public static deviceType = (): number => {
     return 4; // SmartDeviceType.Web
-  }
+  };
 
   /**
    * Returns the platform name of the device as much specific as possible
    */
-  public static platformName(): string {
+  public static platformName = (): string => {
     let nVer = navigator.appVersion;
     let mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
 
-    return "Web" + mobile ? " Mobile" : "";
-  }
+    return "Web" + (mobile ? " Mobile" : "");
+  };
 
   /**
    * Returns the version number of the application which it was set by the developer
    */
-  public static appVersionCode(): string {
-    notImplemented();
-    return null;
-  }
+  public static appVersionCode = (): string => {
+    return ConfigurationState.getInstance().getProperty(
+      "APPLICATION_VERSION_CODE"
+    );
+  };
 
   /**
    * Returns the version name of the application which it was set by the developer
    */
-  public static appVersionName(): string {
-    notImplemented();
-    return null;
-  }
+  public static appVersionName = (): string => {
+    return ConfigurationState.getInstance().getProperty(
+      "APPLICATION_VERSION_NAME"
+    );
+  };
 
   /**
    * Returns the application identifier
    */
-  public static applicationId(): string {
+  public static applicationId = (): string => {
     notImplemented();
     return null;
-  }
+  };
 }
