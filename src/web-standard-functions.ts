@@ -75,8 +75,8 @@ export * from "./datetime/toDate";
 
 export { fromString as Date_fromString } from "./date/fromString";
 export { fromString as DateTime_fromString } from "./datetime/fromString";
-export { fromString as Core_ctoD } from "./date/fromString";
-export { fromString as Core_ctoT } from "./date/fromString";
+export { fromString as Core_ctoD } from "./date/CtoD";
+export { fromString as Core_ctoT } from "./datetime/CtoT";
 
 export { newInstance as Core_yMDtoD } from "./date/newInstance";
 export { newInstance as Core_yMDHMStoT } from "./datetime/newInstance";
