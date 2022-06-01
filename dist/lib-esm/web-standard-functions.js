@@ -79,6 +79,8 @@ export { toString as Date_toString } from "./date/toString";
 export { toString as DateTime_toString } from "./datetime/toString";
 export { toString as Numeric_toString } from "./numeric/toString";
 export { toString as Text_toString } from "./text/toString";
+export { toString as Core_ttoC } from "./datetime/toString";
+export { toString as Core_dtoC } from "./date/toString";
 export { str as Core_str } from "./numeric/str";
 export { iif as Core_iif } from "./misc/iif";
 //# sourceMappingURL=web-standard-functions.js.map
