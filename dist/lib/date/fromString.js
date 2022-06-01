@@ -7,7 +7,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.fromString = void 0;
 var core_1 = require("./core");
-var fromString = function (target, dateFrom) {
+var fromString = function (dateFrom) {
     var dateParts = dateFrom.match(/([0-9]?[0-9])\/?([0-9]?[0-9])\/?([0-9][0-9][0-9][0-9])/);
     return dateParts && dateParts.length > 2
         ? new Date(Number(dateParts[3]), Number(dateParts[2]) - 1, Number(dateParts[1]), 0, 0, 0, 0)

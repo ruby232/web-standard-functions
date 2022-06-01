@@ -3,4 +3,4 @@
  * @param {string} dateFrom
  * @return Date
  */
-export declare const fromString: (target: Date, dateFrom: string) => Date;
+export declare const fromString: (dateFrom: string) => Date;
