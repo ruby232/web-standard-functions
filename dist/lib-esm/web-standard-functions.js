@@ -61,6 +61,8 @@ export * from "./datetime/addMinutes";
 export * from "./datetime/toDate";
 export { fromString as Date_fromString } from "./date/fromString";
 export { fromString as DateTime_fromString } from "./datetime/fromString";
+export { fromString as Core_ctoD } from "./date/fromString";
+export { fromString as Core_ctoT } from "./date/fromString";
 export { newInstance as Core_yMDtoD } from "./date/newInstance";
 export { newInstance as Core_yMDHMStoT } from "./datetime/newInstance";
 export { isEmpty as Boolean_isEmpty } from "./bool/isEmpty";
